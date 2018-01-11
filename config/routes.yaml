@@ -1,0 +1,6 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+base:
+  path: /
+  controller: App\Controller\Forum\HomeController::index
