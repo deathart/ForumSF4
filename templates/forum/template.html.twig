@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Welcome!</title>
         {% for data in css %}
-            <link rel="stylesheet" type="text/css" href="{{ data.file }}" />
+            <link rel="stylesheet" type="text/css" href="{{ absolute_url(asset(data.file)) }}" />
         {% endfor %}
     </head>
     <body>
@@ -12,7 +12,7 @@
 
         {% endblock %}
         {% for data in js %}
-            <script type="text/javascript" src="{{ data.file }}"></script>
+            <script type="text/javascript" src="{{ absolute_url(asset(data.file)) }}"></script>
         {% endfor %}
     </body>
 </html>
