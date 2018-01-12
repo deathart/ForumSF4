@@ -29,8 +29,8 @@ class BaseController extends Controller
     public function __construct()
     {
         //Set CSS
-        $this->set_css('assets/css/vendor/bootstrap.css');
         $this->set_css('assets/css/vendor/font-awesome.css');
+        $this->set_css('assets/css/forum/bootstrap.css');
         $this->set_css('assets/css/forum/style.css');
 
         //Set JS

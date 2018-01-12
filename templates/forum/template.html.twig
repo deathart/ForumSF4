@@ -8,9 +8,124 @@
         {% endfor %}
     </head>
     <body>
-        {% block body %}
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-purple">
+            <div class="container">
+                <a class="navbar-brand" href="#">Container</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        {% endblock %}
+                <div class="collapse navbar-collapse" id="navbarsExample07">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown07">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Fluid jumbotron</h1>
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+        </div>
+        <div class="navigation-bot-header">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-9">
+                        breadcrumbs
+                    </div>
+                    <div class="col-2 social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mt-3">
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="container">
+                        {{ include('forum/partial/chatbox.html.twig') }}
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                {% if app.request.getBaseUrl() == "" %}
+                    <div class="col-sm-12 col-md-9">
+                        <div class="container-fluid">
+                            {{ block('body') }}
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-sm-none d-md-block">
+                        <div class="container-fluid">
+                            {{ include('forum/partial/sidebar.html.twig') }}
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="col-12">
+                        {{ block('body') }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        <footer class="footer bg-purple text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mt-3">
+                        <div class="footer-about">
+                            <h4>About Us</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quod mollitia quisquam. Architecto quam in atque sint voluptatem, consequatur consectetur ab ipsum maxime quod consequuntur excepturi illum dolorem ex modi.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <div class="social">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mt-3">
+                        <div class="footer-useful-links">
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">The team</a></li>
+                                <li><a href="#">Delete all board cookies</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mt-3">
+                        <div class="footer-useful-links">
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">The team</a></li>
+                                <li><a href="#">Delete all board cookies</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
         {% for data in js %}
             <script type="text/javascript" src="{{ absolute_url(asset(data.file)) }}"></script>
         {% endfor %}
