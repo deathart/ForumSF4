@@ -84,7 +84,9 @@
                         {% if app.request.pathinfo == "/" %}
                             {{ include('forum/partial/sidebar/home.html.twig') }}
                         {% else %}
-                            {{ include('forum/partial/sidebar/forum.html.twig') }}
+                            {% if app.request.attributes.get('_route') != "topic_show" %}
+                                {{ include('forum/partial/sidebar/forum.html.twig') }}
+                            {% endif %}
                         {% endif %}
                     </div>
                 </div>
