@@ -32,17 +32,38 @@ body {
   padding-left: 10px;
 }
 
+.chatbox-bloc {
+  display: none;
+}
+
 .chatbox-bloc > .title {
   color: #eeeeee;
   padding: 15px;
 }
 
-.chatbox-bloc > .title > small {
-  display: block;
+.chatbox-bloc > .title > a {
+  color: #eeeeee;
+}
+
+.chatbox-bloc > .title > a:hover {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+.chatbox-bloc > .title > span {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.chatbox-bloc > .title > span:hover {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
 }
 
 .chatbox-bloc > .content {
   border: 1px solid rgba(111, 66, 193, 0.5);
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .chatbox-bloc > .content .chat {
@@ -91,6 +112,14 @@ body {
 
 .chatbox-bloc > .content .chat .message > ul > li > .chat-body > .header > small {
   color: #6f42c1;
+}
+
+.chatbox-bloc > .content .chat .message > ul > li > .chat-body > .header > small.float-left {
+  padding-left: 2px;
+}
+
+.chatbox-bloc > .content .chat .message > ul > li > .chat-body > .header > small.float-right {
+  padding-right: 2px;
 }
 
 .chatbox-bloc > .content .chat .message > ul > li > .chat-body > p {

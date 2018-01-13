@@ -12,7 +12,9 @@ App = (function() {
 
     that.init = function() {
         $(function() {
-            $('[data-toggle="tooltip"]').tooltip()
+            $('[data-toggle="tooltip"]').tooltip({
+                container: "body"
+            })
         });
         that.ChatBox();
         that.scroll_top();
@@ -21,11 +23,31 @@ App = (function() {
     that.ChatBox = function() {
         var divmessages = $('.scroll-chatbox-messages');
         var divusers = $('.scroll-chatbox-users');
+        var expandbtn = $('.expand-chat');
 
+        //Initialize scrollbar
         divmessages.scrollTop(divmessages[0].scrollHeight);
         divmessages.scrollbar();
-
         divusers.scrollbar();
+
+        //Expand chatbox
+        if (!Cookies.get('chatbox_expanded')) {
+            Cookies.set("chatbox_expanded", "container")
+        }
+
+        $(".chatbox-bloc").parent().addClass(Cookies.get('chatbox_expanded'));
+
+        $(".chatbox-bloc").slideToggle();
+
+        expandbtn.click(function() {
+            if ($(".chatbox-bloc").parent().hasClass("container")) {
+                $(".chatbox-bloc").parent().removeClass("container").addClass("container-fluid");
+                Cookies.set("chatbox_expanded", "container-fluid")
+            } else {
+                $(".chatbox-bloc").parent().removeClass("container-fluid").addClass("container");
+                Cookies.set("chatbox_expanded", "container")
+            }
+        });
 
     };
     that.scroll_top = function() {
