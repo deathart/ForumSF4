@@ -48,7 +48,7 @@
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col-9">
-                        {% if app.request.getBaseUrl() == "" %}
+                        {% if app.request.pathinfo == "/" %}
                             <a href="#" class="font-weight-bold">Forum NAME</a>
                         {% else %}
                             <a href="#" class="font-weight-bold"><i class="fa fa-home" aria-hidden="true"></i></a>
@@ -72,7 +72,7 @@
                 </div>
             </div>
             <div class="row mt-4">
-                {% if app.request.getBaseUrl() == "" %}
+                {% if app.request.pathinfo == "/" %}
                     <div class="col-sm-12 col-md-9">
                         <div class="container-fluid">
                             {{ block('body') }}
