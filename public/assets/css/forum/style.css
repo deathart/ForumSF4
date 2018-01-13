@@ -32,6 +32,113 @@ body {
   padding-left: 10px;
 }
 
+.chatbox-bloc > .title {
+  color: #eeeeee;
+  padding: 15px;
+}
+
+.chatbox-bloc > .title > small {
+  display: block;
+}
+
+.chatbox-bloc > .content {
+  border: 1px solid rgba(111, 66, 193, 0.5);
+}
+
+.chatbox-bloc > .content .chat {
+  height: 250px;
+  padding: 0;
+}
+
+.chatbox-bloc > .content .chat .message {
+  height: 210px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.chatbox-bloc > .content .chat .message > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chatbox-bloc > .content .chat .message > ul > li {
+  padding: 5px 5px 5px 5px;
+  border-bottom: 1px dotted rgba(111, 66, 193, 0.8);
+  width: 100%;
+}
+
+.chatbox-bloc > .content .chat .message > ul > li.float-left > .chat-body {
+  margin-left: 45px;
+}
+
+.chatbox-bloc > .content .chat .message > ul > li.float-right > .chat-body {
+  margin-right: 45px;
+}
+
+.chatbox-bloc > .content .chat .message > ul > li.float-right > .chat-body > p {
+  text-align: right;
+}
+
+.chatbox-bloc > .content .chat .message > ul > li > .chat-body > .header > a {
+  color: #444444;
+  font-weight: bold;
+}
+
+.chatbox-bloc > .content .chat .message > ul > li > .chat-body > .header > a:hover {
+  text-decoration: none;
+}
+
+.chatbox-bloc > .content .chat .message > ul > li > .chat-body > .header > small {
+  color: #6f42c1;
+}
+
+.chatbox-bloc > .content .chat .message > ul > li > .chat-body > p {
+  margin: 0;
+  color: #777777;
+  font-size: 80%;
+}
+
+.chatbox-bloc > .content .chat > form {
+  height: 40px;
+  border-top: 1px solid rgba(111, 66, 193, 0.5);
+}
+
+.chatbox-bloc > .content .chat > form > input {
+  width: 90%;
+}
+
+.chatbox-bloc > .content .chat > form > button {
+  width: 10%;
+}
+
+.chatbox-bloc > .content .users {
+  border-left: 1px solid rgba(111, 66, 193, 0.5);
+  height: 250px;
+  overflow: hidden;
+}
+
+.chatbox-bloc > .content .users > ul {
+  margin-bottom: 0;
+}
+
+.chatbox-bloc > .content .users > ul > li {
+  padding: 0 3px 2px 3px;
+}
+
+.chatbox-bloc > .content .users > ul > li:nth-child(1n+2) {
+  border-top: 1px solid rgba(111, 66, 193, 0.5);
+}
+
+.chatbox-bloc > .content .users > ul > li > a {
+  color: #444444;
+  font-weight: bold;
+}
+
+.chatbox-bloc > .content .users > ul > li > a:hover {
+  text-decoration: none;
+}
+
 .forum-bloc:nth-child(1n+2) {
   margin-top: 3%;
 }
@@ -169,19 +276,6 @@ body {
   outline: 0;
 }
 
-.chatbox-bloc > .title {
-  color: #eeeeee;
-  padding: 15px;
-}
-
-.chatbox-bloc > .title > small {
-  display: block;
-}
-
-.chatbox-bloc > .content {
-  border: 1px solid rgba(111, 66, 193, 0.5);
-}
-
 .footer {
   bottom: 0;
   width: 100%;
@@ -246,4 +340,334 @@ body {
   opacity: 0.8;
   filter: alpha(opacity=80);
   color: rgba(255, 255, 255, 0.5);
+}
+
+.scroll-top-wrapper {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  text-align: center;
+  z-index: 99999999;
+  background-color: rgba(111, 66, 193, 0.5);
+  color: #eeeeee;
+  width: 50px;
+  height: 48px;
+  line-height: 48px;
+  right: 30px;
+  bottom: 30px;
+  padding-top: 2px;
+  border-radius: 10px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.scroll-top-wrapper:hover {
+  background-color: #6f42c1;
+}
+
+.scroll-top-wrapper.show {
+  visibility: visible;
+  cursor: pointer;
+  opacity: 1.0;
+}
+
+.scroll-top-wrapper i.fa {
+  line-height: inherit;
+}
+
+/*************** SCROLLBAR BASE CSS ***************/
+.scroll-wrapper {
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: relative;
+}
+
+.scroll-wrapper > .scroll-content {
+  border: none !important;
+  -webkit-box-sizing: content-box !important;
+          box-sizing: content-box !important;
+  height: auto;
+  left: 0;
+  margin: 0;
+  max-height: none;
+  max-width: none !important;
+  overflow: scroll !important;
+  padding: 0;
+  position: relative !important;
+  top: 0;
+  width: auto !important;
+}
+
+.scroll-wrapper > .scroll-content::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+
+.scroll-wrapper.scroll--rtl {
+  direction: rtl;
+}
+
+.scroll-element {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: none;
+}
+
+.scroll-element div {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.scroll-element .scroll-bar,
+.scroll-element .scroll-arrow {
+  cursor: default;
+}
+
+.scroll-element.scroll-x.scroll-scrollx_visible, .scroll-element.scroll-y.scroll-scrolly_visible {
+  display: block;
+}
+
+.scroll-textarea {
+  border: 1px solid #cccccc;
+  border-top-color: #999999;
+}
+
+.scroll-textarea > .scroll-content {
+  overflow: hidden !important;
+}
+
+.scroll-textarea > .scroll-content > textarea {
+  border: none !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100% !important;
+  margin: 0;
+  max-height: none !important;
+  max-width: none !important;
+  overflow: scroll !important;
+  outline: none;
+  padding: 2px;
+  position: relative !important;
+  top: 0;
+  width: 100% !important;
+}
+
+.scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+
+.scroll-chatbox-messages > .scroll-element,
+.scroll-chatbox-messages > .scroll-element div {
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 10;
+}
+
+.scroll-chatbox-messages > .scroll-element {
+  background-color: #ffffff;
+}
+
+.scroll-chatbox-messages > .scroll-element div {
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.scroll-chatbox-messages > .scroll-element.scroll-x {
+  bottom: 0;
+  height: 12px;
+  left: 0;
+  width: 100%;
+}
+
+.scroll-chatbox-messages > .scroll-element.scroll-y {
+  height: 100%;
+  right: 0;
+  top: 0;
+  width: 12px;
+}
+
+.scroll-chatbox-messages > .scroll-element.scroll-x .scroll-element_outer {
+  height: 8px;
+  top: 2px;
+}
+
+.scroll-chatbox-messages > .scroll-element.scroll-y .scroll-element_outer {
+  left: 2px;
+  width: 8px;
+}
+
+.scroll-chatbox-messages > .scroll-element .scroll-element_outer {
+  overflow: hidden;
+}
+
+.scroll-chatbox-messages > .scroll-element .scroll-element_track {
+  background-color: #eeeeee;
+}
+
+.scroll-chatbox-messages > .scroll-element .scroll-element_outer,
+.scroll-chatbox-messages > .scroll-element .scroll-element_track,
+.scroll-chatbox-messages > .scroll-element .scroll-bar {
+  border-radius: 8px;
+}
+
+.scroll-chatbox-messages > .scroll-element .scroll-bar {
+  background-color: #d9d9d9;
+}
+
+.scroll-chatbox-messages > .scroll-element .scroll-bar:hover {
+  background-color: #c2c2c2;
+}
+
+.scroll-chatbox-messages > .scroll-element.scroll-draggable .scroll-bar {
+  background-color: #919191;
+}
+
+/* scrollbar height/width & offset from container borders */
+.scroll-chatbox-messages > .scroll-content.scroll-scrolly_visible {
+  left: -12px;
+  margin-left: 12px;
+}
+
+.scroll-chatbox-messages > .scroll-content.scroll-scrollx_visible {
+  top: -12px;
+  margin-top: 12px;
+}
+
+.scroll-chatbox-messages > .scroll-element.scroll-x .scroll-bar {
+  min-width: 10px;
+}
+
+.scroll-chatbox-messages > .scroll-element.scroll-y .scroll-bar {
+  min-height: 10px;
+}
+
+/* update scrollbar offset if both scrolls are visible */
+.scroll-chatbox-messages > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track {
+  left: -14px;
+}
+
+.scroll-chatbox-messages > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track {
+  top: -14px;
+}
+
+.scroll-chatbox-messages > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {
+  left: -14px;
+}
+
+.scroll-chatbox-messages > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
+  top: -14px;
+}
+
+.scroll-chatbox-users > .scroll-element,
+.scroll-chatbox-users > .scroll-element div {
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 10;
+}
+
+.scroll-chatbox-users > .scroll-element {
+  background-color: #ffffff;
+}
+
+.scroll-chatbox-users > .scroll-element div {
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.scroll-chatbox-users > .scroll-element.scroll-x {
+  bottom: 0;
+  height: 12px;
+  left: 0;
+  width: 100%;
+}
+
+.scroll-chatbox-users > .scroll-element.scroll-y {
+  height: 100%;
+  right: 0;
+  top: 0;
+  width: 12px;
+}
+
+.scroll-chatbox-users > .scroll-element.scroll-x .scroll-element_outer {
+  height: 8px;
+  top: 2px;
+}
+
+.scroll-chatbox-users > .scroll-element.scroll-y .scroll-element_outer {
+  left: 2px;
+  width: 8px;
+}
+
+.scroll-chatbox-users > .scroll-element .scroll-element_outer {
+  overflow: hidden;
+}
+
+.scroll-chatbox-users > .scroll-element .scroll-element_track {
+  background-color: #eeeeee;
+}
+
+.scroll-chatbox-users > .scroll-element .scroll-element_outer,
+.scroll-chatbox-users > .scroll-element .scroll-element_track,
+.scroll-chatbox-users > .scroll-element .scroll-bar {
+  border-radius: 8px;
+}
+
+.scroll-chatbox-users > .scroll-element .scroll-bar {
+  background-color: #d9d9d9;
+}
+
+.scroll-chatbox-users > .scroll-element .scroll-bar:hover {
+  background-color: #c2c2c2;
+}
+
+.scroll-chatbox-users > .scroll-element.scroll-draggable .scroll-bar {
+  background-color: #919191;
+}
+
+/* scrollbar height/width & offset from container borders */
+.scroll-chatbox-users > .scroll-content.scroll-scrolly_visible {
+  left: -12px;
+  margin-left: 12px;
+}
+
+.scroll-chatbox-users > .scroll-content.scroll-scrollx_visible {
+  top: -12px;
+  margin-top: 12px;
+}
+
+.scroll-chatbox-users > .scroll-element.scroll-x .scroll-bar {
+  min-width: 10px;
+}
+
+.scroll-chatbox-users > .scroll-element.scroll-y .scroll-bar {
+  min-height: 10px;
+}
+
+/* update scrollbar offset if both scrolls are visible */
+.scroll-chatbox-users > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track {
+  left: -14px;
+}
+
+.scroll-chatbox-users > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track {
+  top: -14px;
+}
+
+.scroll-chatbox-users > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {
+  left: -14px;
+}
+
+.scroll-chatbox-users > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
+  top: -14px;
 }
