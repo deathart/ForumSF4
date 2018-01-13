@@ -64,30 +64,30 @@
             </div>
         </div>
         <div class="container-fluid mt-3">
-            <div class="row mt-4">
-                <div class="col-12">
-                    <div>
-                        {{ include('forum/partial/chatbox.html.twig') }}
+            {% if app.request.attributes.get('_route') != "topic_show" %}
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div>
+                            {{ include('forum/partial/chatbox.html.twig') }}
+                        </div>
                     </div>
                 </div>
-            </div>
+            {% endif %}
             <div class="row mt-4">
-                {% if app.request.pathinfo == "/" %}
-                    <div class="col-sm-12 col-md-9">
-                        <div class="container-fluid">
-                            {{ block('body') }}
-                        </div>
-                    </div>
-                    <div class="col-md-3 d-sm-none d-md-block">
-                        <div class="container-fluid">
-                            {{ include('forum/partial/sidebar.html.twig') }}
-                        </div>
-                    </div>
-                {% else %}
-                    <div class="col-12">
+                <div class="col-sm-12 col-md-9">
+                    <div class="container-fluid">
                         {{ block('body') }}
                     </div>
-                {% endif %}
+                </div>
+                <div class="col-md-3 d-sm-none d-md-block">
+                    <div class="container-fluid">
+                        {% if app.request.pathinfo == "/" %}
+                            {{ include('forum/partial/sidebar/home.html.twig') }}
+                        {% else %}
+                            {{ include('forum/partial/sidebar/forum.html.twig') }}
+                        {% endif %}
+                    </div>
+                </div>
             </div>
         </div>
         <footer class="footer bg-purple text-white">
