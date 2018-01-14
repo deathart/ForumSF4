@@ -96,7 +96,7 @@ class BaseController extends Controller
         if($route_name !== 'base') {
             $bread = '<nav aria-label="breadcrumb"><ol class="breadcrumb">';
             $bread .= '<li class="breadcrumb-item"><a href="#" class="font-weight-bold"><i class="fa fa-home" aria-hidden="true"></i></a></li>';
-            $bread .= '<li class="breadcrumb-item active" aria-current="page">'.$this->data['slug'].'</li>';
+            $bread .= '<li class="breadcrumb-item active" aria-current="page">Slug</li>';
             $bread .= '</ol></nav>';
             return $bread;
         }
