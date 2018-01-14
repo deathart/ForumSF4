@@ -70,22 +70,22 @@
                 </div>
             {% endif %}
             <div class="row mt-4">
-                <div class="col-sm-12 col-md-9">
+                <div class="col-sm-12 {% if app.request.attributes.get('_route') != "topic_show" %}col-md-9{% else %}col-md-12{% endif %}">
                     <div class="container-fluid">
                         {{ block('body') }}
                     </div>
                 </div>
+                {% if app.request.attributes.get('_route') != "topic_show" %}
                 <div class="col-md-3 d-sm-none d-md-block">
                     <div class="container-fluid">
                         {% if app.request.pathinfo == "/" %}
                             {{ include('forum/partial/sidebar/home.html.twig') }}
                         {% else %}
-                            {% if app.request.attributes.get('_route') != "topic_show" %}
-                                {{ include('forum/partial/sidebar/forum.html.twig') }}
-                            {% endif %}
+                            {{ include('forum/partial/sidebar/forum.html.twig') }}
                         {% endif %}
                     </div>
                 </div>
+                {% endif %}
             </div>
         </div>
         <footer class="footer bg-purple text-white">

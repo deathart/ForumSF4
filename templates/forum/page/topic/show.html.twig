@@ -1,0 +1,601 @@
+{% extends "forum/template.html.twig" %}
+
+{% block body %}
+    <div class="post-bloc">
+        <div class="title bg-purple rounded-top clearfix">
+            <span class="float-left"><i class="fa fa-comments" aria-hidden="true"></i> TITRE</span>
+            <span class="rat float-right">
+                Thread Rating :
+                <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+            </span>
+        </div>
+        <div class="content rounded-bottom">
+            <div class="row posts">
+                <div class="col-md-2 user-info">
+                    <a href="#" class="username">Deathart</a>
+                    <span class="etat text-success">Online</span>
+                    <a href="#" class="avatar">
+                        <img src="http://placehold.it/85/55C1E7/fff&text=D" class="rounded-circle" />
+                    </a>
+                    <span class="rang">
+                        <span class="name">Junior Member</span>
+                        <span class="rating">
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        </span>
+                    </span>
+                    <ul class="info list-unstyled">
+                        <li>
+                            <span class="name">Birthday</span>
+                            <span class="value">29/12/1994</span>
+                        </li>
+                        <li>
+                            <span class="name">Genre</span>
+                            <span class="value">Male</span>
+                        </li>
+                        <li>
+                            <span class="name">Location</span>
+                            <span class="value">France</span>
+                        </li>
+                    </ul>
+                    <ul class="stats list-unstyled">
+                        <li>
+                            <span class="name">Topics</span>
+                            <span class="value">41</span>
+                        </li>
+                        <li>
+                            <span class="name">Pots</span>
+                            <span class="value">250</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-10 message">
+                    <div class="post_head">
+                        <span class="post_date"><i class="fa fa-clock-o"></i> 09-16-2017, 10:34 AM</span>
+                        <span class="post_count">
+                            <a href="#">#1</a>
+                        </span>
+                    </div>
+                    <div class="post_cont">
+                        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+                        <h2>Header Level 2</h2>
+                        <ol>
+                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                            <li>Aliquam tincidunt mauris eu risus.</li>
+                        </ol>
+                        <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+                        <h3>Header Level 3</h3>
+                        <ul>
+                            <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+                            <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
+                            <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+                            <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+                        </ul>
+                        <h1>HTML Ipsum Presents</h1>
+                        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+                        <h2>Header Level 2</h2>
+                        <ol>
+                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                            <li>Aliquam tincidunt mauris eu risus.</li>
+                        </ol>
+                        <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+                    </div>
+                </div>
+                <div class="col-md-12 action">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Report"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Quote"><i class="fa fa-comment" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="row posts">
+                <div class="col-md-2 user-info">
+                    <a href="#" class="username">Deathart</a>
+                    <span class="etat text-success">Online</span>
+                    <a href="#" class="avatar">
+                        <img src="http://placehold.it/85/55C1E7/fff&text=D" class="rounded-circle" />
+                    </a>
+                    <span class="rang">
+                        <span class="name">Junior Member</span>
+                        <span class="rating">
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        </span>
+                    </span>
+                    <ul class="info list-unstyled">
+                        <li>
+                            <span class="name">Birthday</span>
+                            <span class="value">29/12/1994</span>
+                        </li>
+                        <li>
+                            <span class="name">Genre</span>
+                            <span class="value">Male</span>
+                        </li>
+                        <li>
+                            <span class="name">Location</span>
+                            <span class="value">France</span>
+                        </li>
+                    </ul>
+                    <ul class="stats list-unstyled">
+                        <li>
+                            <span class="name">Topics</span>
+                            <span class="value">41</span>
+                        </li>
+                        <li>
+                            <span class="name">Pots</span>
+                            <span class="value">250</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-10 message">
+                    <div class="post_head">
+                        <span class="post_date"><i class="fa fa-clock-o"></i> 09-16-2017, 10:34 AM</span>
+                        <span class="post_count">
+                            <a href="#">#1</a>
+                        </span>
+                    </div>
+                    <div class="post_cont">
+                        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+                        <h2>Header Level 2</h2>
+                        <ol>
+                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                            <li>Aliquam tincidunt mauris eu risus.</li>
+                        </ol>
+                        <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+                    </div>
+                </div>
+                <div class="col-md-12 action">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Report"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Quote"><i class="fa fa-comment" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="row posts">
+                <div class="col-md-2 user-info">
+                    <a href="#" class="username">Deathart</a>
+                    <span class="etat text-success">Online</span>
+                    <a href="#" class="avatar">
+                        <img src="http://placehold.it/85/55C1E7/fff&text=D" class="rounded-circle" />
+                    </a>
+                    <span class="rang">
+                        <span class="name">Junior Member</span>
+                        <span class="rating">
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        </span>
+                    </span>
+                    <ul class="info list-unstyled">
+                        <li>
+                            <span class="name">Birthday</span>
+                            <span class="value">29/12/1994</span>
+                        </li>
+                        <li>
+                            <span class="name">Genre</span>
+                            <span class="value">Male</span>
+                        </li>
+                        <li>
+                            <span class="name">Location</span>
+                            <span class="value">France</span>
+                        </li>
+                    </ul>
+                    <ul class="stats list-unstyled">
+                        <li>
+                            <span class="name">Topics</span>
+                            <span class="value">41</span>
+                        </li>
+                        <li>
+                            <span class="name">Pots</span>
+                            <span class="value">250</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-10 message">
+                    <div class="post_head">
+                        <span class="post_date"><i class="fa fa-clock-o"></i> 09-16-2017, 10:34 AM</span>
+                        <span class="post_count">
+                            <a href="#">#1</a>
+                        </span>
+                    </div>
+                    <div class="post_cont">
+                        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+                        <h2>Header Level 2</h2>
+                        <ol>
+                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                            <li>Aliquam tincidunt mauris eu risus.</li>
+                        </ol>
+                        <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+                    </div>
+                </div>
+                <div class="col-md-12 action">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Report"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Quote"><i class="fa fa-comment" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="row posts">
+                <div class="col-md-2 user-info">
+                    <a href="#" class="username">Deathart</a>
+                    <span class="etat text-success">Online</span>
+                    <a href="#" class="avatar">
+                        <img src="http://placehold.it/85/55C1E7/fff&text=D" class="rounded-circle" />
+                    </a>
+                    <span class="rang">
+                        <span class="name">Junior Member</span>
+                        <span class="rating">
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        </span>
+                    </span>
+                    <ul class="info list-unstyled">
+                        <li>
+                            <span class="name">Birthday</span>
+                            <span class="value">29/12/1994</span>
+                        </li>
+                        <li>
+                            <span class="name">Genre</span>
+                            <span class="value">Male</span>
+                        </li>
+                        <li>
+                            <span class="name">Location</span>
+                            <span class="value">France</span>
+                        </li>
+                    </ul>
+                    <ul class="stats list-unstyled">
+                        <li>
+                            <span class="name">Topics</span>
+                            <span class="value">41</span>
+                        </li>
+                        <li>
+                            <span class="name">Pots</span>
+                            <span class="value">250</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-10 message">
+                    <div class="post_head">
+                        <span class="post_date"><i class="fa fa-clock-o"></i> 09-16-2017, 10:34 AM</span>
+                        <span class="post_count">
+                            <a href="#">#1</a>
+                        </span>
+                    </div>
+                    <div class="post_cont">
+                        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+                        <h2>Header Level 2</h2>
+                        <ol>
+                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                            <li>Aliquam tincidunt mauris eu risus.</li>
+                        </ol>
+                        <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+                    </div>
+                </div>
+                <div class="col-md-12 action">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Report"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Quote"><i class="fa fa-comment" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="row posts">
+                <div class="col-md-2 user-info">
+                    <a href="#" class="username">Deathart</a>
+                    <span class="etat text-success">Online</span>
+                    <a href="#" class="avatar">
+                        <img src="http://placehold.it/85/55C1E7/fff&text=D" class="rounded-circle" />
+                    </a>
+                    <span class="rang">
+                        <span class="name">Junior Member</span>
+                        <span class="rating">
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        </span>
+                    </span>
+                    <ul class="info list-unstyled">
+                        <li>
+                            <span class="name">Birthday</span>
+                            <span class="value">29/12/1994</span>
+                        </li>
+                        <li>
+                            <span class="name">Genre</span>
+                            <span class="value">Male</span>
+                        </li>
+                        <li>
+                            <span class="name">Location</span>
+                            <span class="value">France</span>
+                        </li>
+                    </ul>
+                    <ul class="stats list-unstyled">
+                        <li>
+                            <span class="name">Topics</span>
+                            <span class="value">41</span>
+                        </li>
+                        <li>
+                            <span class="name">Pots</span>
+                            <span class="value">250</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-10 message">
+                    <div class="post_head">
+                        <span class="post_date"><i class="fa fa-clock-o"></i> 09-16-2017, 10:34 AM</span>
+                        <span class="post_count">
+                            <a href="#">#1</a>
+                        </span>
+                    </div>
+                    <div class="post_cont">
+                        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+                        <h2>Header Level 2</h2>
+                        <ol>
+                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                            <li>Aliquam tincidunt mauris eu risus.</li>
+                        </ol>
+                        <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+                    </div>
+                </div>
+                <div class="col-md-12 action">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Report"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Quote"><i class="fa fa-comment" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="row posts">
+                <div class="col-md-2 user-info">
+                    <a href="#" class="username">Deathart</a>
+                    <span class="etat text-success">Online</span>
+                    <a href="#" class="avatar">
+                        <img src="http://placehold.it/85/55C1E7/fff&text=D" class="rounded-circle" />
+                    </a>
+                    <span class="rang">
+                        <span class="name">Junior Member</span>
+                        <span class="rating">
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        </span>
+                    </span>
+                    <ul class="info list-unstyled">
+                        <li>
+                            <span class="name">Birthday</span>
+                            <span class="value">29/12/1994</span>
+                        </li>
+                        <li>
+                            <span class="name">Genre</span>
+                            <span class="value">Male</span>
+                        </li>
+                        <li>
+                            <span class="name">Location</span>
+                            <span class="value">France</span>
+                        </li>
+                    </ul>
+                    <ul class="stats list-unstyled">
+                        <li>
+                            <span class="name">Topics</span>
+                            <span class="value">41</span>
+                        </li>
+                        <li>
+                            <span class="name">Pots</span>
+                            <span class="value">250</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-10 message">
+                    <div class="post_head">
+                        <span class="post_date"><i class="fa fa-clock-o"></i> 09-16-2017, 10:34 AM</span>
+                        <span class="post_count">
+                            <a href="#">#1</a>
+                        </span>
+                    </div>
+                    <div class="post_cont">
+                        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+                        <h2>Header Level 2</h2>
+                        <ol>
+                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                            <li>Aliquam tincidunt mauris eu risus.</li>
+                        </ol>
+                        <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+                    </div>
+                </div>
+                <div class="col-md-12 action">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Report"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Quote"><i class="fa fa-comment" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="row posts">
+                <div class="col-md-2 user-info">
+                    <a href="#" class="username">Deathart</a>
+                    <span class="etat text-success">Online</span>
+                    <a href="#" class="avatar">
+                        <img src="http://placehold.it/85/55C1E7/fff&text=D" class="rounded-circle" />
+                    </a>
+                    <span class="rang">
+                        <span class="name">Junior Member</span>
+                        <span class="rating">
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        </span>
+                    </span>
+                    <ul class="info list-unstyled">
+                        <li>
+                            <span class="name">Birthday</span>
+                            <span class="value">29/12/1994</span>
+                        </li>
+                        <li>
+                            <span class="name">Genre</span>
+                            <span class="value">Male</span>
+                        </li>
+                        <li>
+                            <span class="name">Location</span>
+                            <span class="value">France</span>
+                        </li>
+                    </ul>
+                    <ul class="stats list-unstyled">
+                        <li>
+                            <span class="name">Topics</span>
+                            <span class="value">41</span>
+                        </li>
+                        <li>
+                            <span class="name">Pots</span>
+                            <span class="value">250</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-10 message">
+                    <div class="post_head">
+                        <span class="post_date"><i class="fa fa-clock-o"></i> 09-16-2017, 10:34 AM</span>
+                        <span class="post_count">
+                            <a href="#">#1</a>
+                        </span>
+                    </div>
+                    <div class="post_cont">
+                        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+                        <h2>Header Level 2</h2>
+                        <ol>
+                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                            <li>Aliquam tincidunt mauris eu risus.</li>
+                        </ol>
+                        <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+                    </div>
+                </div>
+                <div class="col-md-12 action">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Report"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Quote"><i class="fa fa-comment" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="row posts">
+                <div class="col-md-2 user-info">
+                    <a href="#" class="username">Deathart</a>
+                    <span class="etat text-success">Online</span>
+                    <a href="#" class="avatar">
+                        <img src="http://placehold.it/85/55C1E7/fff&text=D" class="rounded-circle" />
+                    </a>
+                    <span class="rang">
+                        <span class="name">Junior Member</span>
+                        <span class="rating">
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        </span>
+                    </span>
+                    <ul class="info list-unstyled">
+                        <li>
+                            <span class="name">Birthday</span>
+                            <span class="value">29/12/1994</span>
+                        </li>
+                        <li>
+                            <span class="name">Genre</span>
+                            <span class="value">Male</span>
+                        </li>
+                        <li>
+                            <span class="name">Location</span>
+                            <span class="value">France</span>
+                        </li>
+                    </ul>
+                    <ul class="stats list-unstyled">
+                        <li>
+                            <span class="name">Topics</span>
+                            <span class="value">41</span>
+                        </li>
+                        <li>
+                            <span class="name">Pots</span>
+                            <span class="value">250</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-10 message">
+                    <div class="post_head">
+                        <span class="post_date"><i class="fa fa-clock-o"></i> 09-16-2017, 10:34 AM</span>
+                        <span class="post_count">
+                            <a href="#">#1</a>
+                        </span>
+                    </div>
+                    <div class="post_cont">
+                        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+                        <h2>Header Level 2</h2>
+                        <ol>
+                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                            <li>Aliquam tincidunt mauris eu risus.</li>
+                        </ol>
+                        <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+                    </div>
+                </div>
+                <div class="col-md-12 action">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Report"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Quote"><i class="fa fa-comment" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-reply mt-4">
+        <div class="title bg-purple rounded-top">
+            Reply
+        </div>
+        <div class="content rounded-bottom">
+            <form>
+                <div class="form-group row">
+                    <label for="message" class="col-sm-2 col-form-label">Message</label>
+                    <div class="col-sm-10">
+                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                            <div class="btn-group mr-2" role="group" aria-label="Primary">
+                                <button type="button" class="btn btn-purple" data-type="bold"><i class="fa fa-bold" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-purple" data-type="italic"><i class="fa fa-italic" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-purple" data-type="del"><i class="fa fa-strikethrough" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-purple" data-type="underline"><i class="fa fa-underline" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-purple" data-type="quote"><i class="fa fa-quote-right" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="btn-group mr-2" role="group" aria-label="Font">
+                                <div class="btn-group" role="group">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-purple dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-header" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <button class="dropdown-item" type="button" data-type="header" data-header="h1"><h1>H1</h1></button>
+                                        <button class="dropdown-item" type="button" data-type="header" data-header="h2"><h2>H2</h2></button>
+                                        <button class="dropdown-item" type="button" data-type="header" data-header="h3"><h3>H3</h3></button>
+                                        <button class="dropdown-item" type="button" data-type="header" data-header="h4"><h4>H4</h4></button>
+                                        <button class="dropdown-item" type="button" data-type="header" data-header="h5"><h5>H5</h5></button>
+                                        <button class="dropdown-item" type="button" data-type="header" data-header="h6"><h6>H6</h6></button>
+                                    </div>
+                                </div>
+                                <input id="mycp" data-type="color" style="display: none;" type="text"><div class="sp-replacer sp-light"><div class="sp-preview"><div class="sp-preview-inner" style="background-color: rgb(240, 0, 0);"></div></div><div class="sp-dd">▼</div></div>
+                            </div>
+                            <div class="btn-group mr-2" role="group" aria-label="align">
+                                <button type="button" class="btn btn-purple" data-type="align" data-align="left"><i class="fa fa-align-left" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-purple" data-type="align" data-align="center"><i class="fa fa-align-center" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-purple" data-type="align" data-align="right"><i class="fa fa-align-right" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="btn-group mr-2" role="group" aria-label="Link">
+                                <button type="button" class="btn btn-purple" data-type="link"><i class="fa fa-link" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="btn-group mr-2" role="group" aria-label="Code">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-purple dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-code" aria-hidden="true"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <button class="dropdown-item" type="button" data-type="code" data-code="php">PHP</button>
+                                    <button class="dropdown-item" type="button" data-type="code" data-code="css">CSS</button>
+                                    <button class="dropdown-item" type="button" data-type="code" data-code="html">HTML</button>
+                                    <button class="dropdown-item" type="button" data-type="code" data-code="javascript">JavaScript</button>
+                                    <button class="dropdown-item" type="button" data-type="code" data-code="sql">SQL</button>
+                                </div>
+                            </div>
+                            <div class="btn-group mr-2" role="group" aria-label="Alert">
+                                <button id="btnGroupDrop2" type="button" class="btn btn-purple dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Alerte
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
+                                    <button class="dropdown-item" type="button" data-type="alert" data-alert="success">Success</button>
+                                    <button class="dropdown-item" type="button" data-type="alert" data-alert="info">Info</button>
+                                    <button class="dropdown-item" type="button" data-type="alert" data-alert="warning">Warning</button>
+                                    <button class="dropdown-item" type="button" data-type="alert" data-alert="danger">Danger</button>
+                                </div>
+                            </div>
+                            <div class="btn-group mr-2" role="group" aria-label="Media">
+                                <button type="button" class="btn btn-purple" data-type="media"><i class="fa fa-picture-o" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-purple" data-type="youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="btn-group mr-2" role="group" aria-label="Source">
+                                <button type="button" class="btn btn-purple" data-type="source">Source</button>
+                            </div>
+                        </div>
+                        <textarea class="form-control" id="message" rows="7"></textarea>
+                        <button type="submit" class="btn btn-purple">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

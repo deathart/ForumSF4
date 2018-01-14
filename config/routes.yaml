@@ -4,8 +4,16 @@ base:
 
 forum:
   path: /forum/
-  controller: App\Controller\Forum\ForumCOntroller::index
+  controller: App\Controller\Forum\ForumController::index
 
 forum_show:
   path: /forum/{slug}
   controller: App\Controller\Forum\ForumController::show
+
+topic:
+  path: /topic/
+  controller: App\Controller\Forum\TopicController::index
+
+topic_show:
+  path: /topic/{slug}
+  controller: App\Controller\Forum\TopicController::show

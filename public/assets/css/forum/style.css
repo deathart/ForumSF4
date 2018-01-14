@@ -438,6 +438,167 @@ body {
   outline: 0;
 }
 
+.post-bloc > .title {
+  color: #eeeeee;
+  padding: 15px;
+}
+
+.post-bloc > .title > .rat {
+  cursor: pointer;
+}
+
+.post-bloc > .content {
+  border: 1px solid rgba(111, 66, 193, 0.5);
+}
+
+.post-bloc > .content > .posts {
+  margin: 0;
+}
+
+.post-bloc > .content > .posts:nth-child(1n+2) {
+  border-top: 1px solid rgba(111, 66, 193, 0.5);
+}
+
+.post-bloc > .content > .posts > .user-info {
+  border-right: 1px dashed rgba(111, 66, 193, 0.5);
+  min-height: 350px;
+  padding: 5px 10px;
+}
+
+.post-bloc > .content > .posts > .user-info > .username {
+  text-align: center;
+  color: #6f42c1;
+  display: block;
+  font-weight: bold;
+}
+
+.post-bloc > .content > .posts > .user-info > .username:hover {
+  color: rgba(111, 66, 193, 0.5);
+  text-decoration: none;
+}
+
+.post-bloc > .content > .posts > .user-info > .etat {
+  text-align: center;
+  display: block;
+}
+
+.post-bloc > .content > .posts > .user-info > .avatar {
+  text-align: center;
+  display: block;
+  margin: 15px 0;
+}
+
+.post-bloc > .content > .posts > .user-info > .avatar > img {
+  width: 85px;
+  height: 85px;
+}
+
+.post-bloc > .content > .posts > .user-info > .rang {
+  text-align: center;
+}
+
+.post-bloc > .content > .posts > .user-info > .rang > .name {
+  display: block;
+}
+
+.post-bloc > .content > .posts > .user-info > .rang > .rating {
+  display: block;
+}
+
+.post-bloc > .content > .posts > .user-info > .info {
+  border-top: 1px dashed rgba(111, 66, 193, 0.5);
+  padding-top: 10px;
+}
+
+.post-bloc > .content > .posts > .user-info > .info > li > .name {
+  text-align: left;
+}
+
+.post-bloc > .content > .posts > .user-info > .info > li > .value {
+  float: right;
+  text-align: right;
+}
+
+.post-bloc > .content > .posts > .user-info > .stats {
+  border-top: 1px dashed rgba(111, 66, 193, 0.5);
+  padding-top: 10px;
+}
+
+.post-bloc > .content > .posts > .user-info > .stats > li > .name {
+  text-align: left;
+}
+
+.post-bloc > .content > .posts > .user-info > .stats > li > .value {
+  float: right;
+  text-align: right;
+}
+
+.post-bloc > .content > .posts > .message {
+  min-height: 350px;
+  padding: 5px 10px;
+}
+
+.post-bloc > .content > .posts > .message > .post_head {
+  font-size: 11px;
+  padding-bottom: 4px;
+  margin-bottom: 15px;
+}
+
+.post-bloc > .content > .posts > .message > .post_head > .post_count {
+  float: right;
+}
+
+.post-bloc > .content > .posts > .message > .post_head > .post_count > a {
+  font-weight: bold;
+  color: #6f42c1;
+}
+
+.post-bloc > .content > .posts > .message > .post_head > .post_count > a:hover {
+  color: rgba(111, 66, 193, 0.5);
+  text-decoration: none;
+}
+
+.post-bloc > .content > .posts > .action {
+  padding: 5px 10px;
+  border-top: 1px dashed rgba(111, 66, 193, 0.5);
+  text-align: right;
+}
+
+.post-bloc > .content > .posts > .action > a {
+  color: #6f42c1;
+}
+
+.post-bloc > .content > .posts > .action > a:hover {
+  color: rgba(111, 66, 193, 0.5);
+  text-decoration: none;
+}
+
+.post-reply > .title {
+  color: #eeeeee;
+  padding: 15px;
+}
+
+.post-reply > .content {
+  border: 1px solid rgba(111, 66, 193, 0.5);
+}
+
+.post-reply > .content > form {
+  padding: 15px;
+}
+
+.post-reply > .content > form > .form-group > .col-form-label {
+  text-align: center;
+}
+
+.post-reply > .content > form > .form-group > .col-sm-10 > textarea {
+  margin-top: 15px;
+}
+
+.post-reply > .content > form > .form-group > .col-sm-10 > button {
+  float: right;
+  margin-top: 15px;
+}
+
 .footer {
   bottom: 0;
   width: 100%;
