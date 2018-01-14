@@ -37,12 +37,15 @@ class BaseController extends Controller
      */
     public function __construct()
     {
+        parent::__construct();
+        $this->init();
+    }
 
+    public function init() {
         //Set CSS
         $this->set_css('assets/css/vendor/font-awesome.css');
-        $this->set_css('assets/css/forum/bootstrap.css');
-        $this->set_css('assets/css/forum/style.css');
-
+        $this->set_css( 'assets/css/forum/bootstrap.css');
+        $this->set_css( 'assets/css/forum/style.css');
         //Set JS
         $this->set_js('assets/js/vendor/jquery.min.js');
         $this->set_js('assets/js/vendor/popper.min.js');
@@ -50,29 +53,6 @@ class BaseController extends Controller
         $this->set_js('assets/js/vendor/cookie.min.js');
         $this->set_js('assets/js/vendor/scroll.min.js');
         $this->set_js('assets/js/forum/app.js');
-
-    }
-
-    /**
-     * @param string $file link
-     *
-     * @return $this
-     */
-    public function set_css(string $file)
-    {
-        $this->css[]['file'] = $file;
-
-        return $this;
-    }
-
-    /**
-     * @param string $file link
-     *
-     * @return $this
-     */
-    public function set_js(string $file)
-    {
-        $this->js[]['file'] = $file;
 
         return $this;
     }
@@ -118,5 +98,29 @@ class BaseController extends Controller
         $this->data['breadcrumb'] = $this->breadcrumb();
 
         return $this->render('forum/page/'.$view, $this->data);
+    }
+
+    /**
+     * @param string $file link
+     *
+     * @return $this
+     */
+    protected function set_css(string $file)
+    {
+        $this->css[]['file'] = $file;
+
+        return $this;
+    }
+
+    /**
+     * @param string $file link
+     *
+     * @return $this
+     */
+    protected function set_js(string $file)
+    {
+        $this->js[]['file'] = $file;
+
+        return $this;
     }
 }
