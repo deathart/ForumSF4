@@ -3,13 +3,10 @@
 namespace App\Controller\Forum;
 
 /**
- * Class HomeController
- *
- * @package App\Controller\Forum
+ * Class HomeController.
  */
 class HomeController extends BaseController
 {
-
     /**
      * HomeController constructor.
      */

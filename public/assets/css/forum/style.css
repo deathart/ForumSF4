@@ -32,6 +32,18 @@ body {
   padding-left: 10px;
 }
 
+.navigation-bot-header .breadcrumb {
+  background-color: transparent;
+}
+
+.navigation-bot-header .breadcrumb > .breadcrumb-item::before {
+  color: #eeeeee;
+}
+
+.navigation-bot-header .breadcrumb > .breadcrumb-item.active {
+  color: #eeeeee;
+}
+
 .chatbox-bloc {
   display: none;
 }

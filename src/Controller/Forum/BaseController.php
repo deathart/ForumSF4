@@ -37,6 +37,7 @@ class BaseController extends Controller
      */
     public function __construct()
     {
+
         //Set CSS
         $this->set_css('assets/css/vendor/font-awesome.css');
         $this->set_css('assets/css/forum/bootstrap.css');
@@ -49,6 +50,7 @@ class BaseController extends Controller
         $this->set_js('assets/js/vendor/cookie.min.js');
         $this->set_js('assets/js/vendor/scroll.min.js');
         $this->set_js('assets/js/forum/app.js');
+
     }
 
     /**
@@ -88,6 +90,19 @@ class BaseController extends Controller
         return $tf;
     }
 
+    public function breadcrumb(): string
+    {
+        $route_name = $this->get('request_stack')->getCurrentRequest()->attributes->get('_route');
+        if($route_name !== 'base') {
+            $bread = '<nav aria-label="breadcrumb"><ol class="breadcrumb">';
+            $bread .= '<li class="breadcrumb-item"><a href="#" class="font-weight-bold"><i class="fa fa-home" aria-hidden="true"></i></a></li>';
+            $bread .= '<li class="breadcrumb-item active" aria-current="page">'.$this->data['slug'].'</li>';
+            $bread .= '</ol></nav>';
+            return $bread;
+        }
+        return '<a href="#" class="font-weight-bold">Forum NAME</a>';
+    }
+
     /**
      * @param string $view
      *
@@ -99,6 +114,8 @@ class BaseController extends Controller
 
         $this->data['css'] = $this->css;
         $this->data['js'] = $this->js;
+
+        $this->data['breadcrumb'] = $this->breadcrumb();
 
         return $this->render('forum/page/'.$view, $this->data);
     }
