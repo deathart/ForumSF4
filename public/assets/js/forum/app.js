@@ -10,14 +10,24 @@ App = (function() {
         return window.location.protocol + "//" + window.location.host + "/";
     };
 
+    /**
+     * @return {string}
+     */
+    that.GetSegmentUrl = function(segment) {
+        var pathArray = window.location.pathname.split('/');
+        return pathArray[segment];
+    };
+
     that.init = function() {
         $(function() {
             $('[data-toggle="tooltip"]').tooltip({
                 container: "body"
             })
         });
-        that.ChatBox();
         that.scroll_top();
+        if (that.GetSegmentUrl(1) != "topic") {
+            that.ChatBox();
+        }
     };
 
     that.ChatBox = function() {
