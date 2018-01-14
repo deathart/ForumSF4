@@ -24,6 +24,15 @@ class BaseController extends Controller
     protected $js = [];
 
     /**
+     * @var string
+     */
+    public $title;
+    /**
+     * @var string
+     */
+    public $stitle;
+
+    /**
      * BaseController constructor.
      */
     public function __construct()
@@ -45,7 +54,7 @@ class BaseController extends Controller
     /**
      * @param string $file link
      *
-     * @return string $this
+     * @return $this
      */
     public function set_css(string $file)
     {
@@ -57,7 +66,7 @@ class BaseController extends Controller
     /**
      * @param string $file link
      *
-     * @return string $this
+     * @return $this
      */
     public function set_js(string $file)
     {
@@ -67,12 +76,27 @@ class BaseController extends Controller
     }
 
     /**
+     * @return string
+     */
+    public function setTitle(): string
+    {
+        $tf = $this->title;
+        if (!empty($this->stitle)) {
+            $tf .= ' - '.$this->stitle;
+        }
+
+        return $tf;
+    }
+
+    /**
      * @param string $view
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function renderer(string $view): Response
     {
+        $this->data['titlePage'] = $this->setTitle();
+
         $this->data['css'] = $this->css;
         $this->data['js'] = $this->js;
 

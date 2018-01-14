@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Welcome!</title>
+        <title>{{ titlePage }}</title>
         {% for data in css %}
             <link rel="stylesheet" type="text/css" href="{{ absolute_url(asset(data.file)) }}" />
         {% endfor %}
