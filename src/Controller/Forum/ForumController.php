@@ -2,17 +2,24 @@
 
 namespace App\Controller\Forum;
 
+use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
+
 /**
  * Class ForumController.
  */
 class ForumController extends BaseController
 {
+
     /**
      * ForumController constructor.
+     *
+     * @param \Symfony\Component\HttpFoundation\Session\SessionInterface $session
+     * @param \Symfony\Component\HttpFoundation\RequestStack $request
      */
-    public function __construct()
+    public function __construct(SessionInterface $session, RequestStack $request)
     {
-        parent::__construct();
+        parent::__construct ($session, $request);
         $this->title = 'Forum';
     }
 
@@ -31,6 +38,10 @@ class ForumController extends BaseController
      */
     public function show(string $slug)
     {
+        $this->breadcrumb = [
+            //['url' => 'Forum/Communaute', 'name' => 'Communaute'],
+            ['url' => 'active', 'name' => $slug]
+        ];
         $this->data['slug_forum'] = $slug;
 
         $this->stitle = $slug;
