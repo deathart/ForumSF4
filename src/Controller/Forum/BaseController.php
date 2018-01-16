@@ -97,11 +97,11 @@ class BaseController extends Controller
     {
         if($this->request->getCurrentRequest()->attributes->get('_route') !== 'base') {
             $bread = '<nav aria-label="breadcrumb"><ol class="breadcrumb">';
-            $bread .= '<li class="breadcrumb-item"><a href="#" class="font-weight-bold"><i class="fa fa-home" aria-hidden="true"></i></a></li>';
+            $bread .= '<li class="breadcrumb-item"><a href="' . $this->request->getCurrentRequest()->getSchemeAndHttpHost() . '" class="font-weight-bold"><i class="fa fa-home" aria-hidden="true"></i></a></li>';
             if(!empty($this->breadcrumb)) {
                 foreach($this->breadcrumb as $key => $databread) {
-                    if($databread['url'] != 'active') {
-                        $bread .= '<li class="breadcrumb-item"><a href="' . $databread['url'] . '" class="font-weight-bold">' . $databread['name'] . '</a></li>';
+                    if($databread['url'] !== 'active') {
+                        $bread .= '<li class="breadcrumb-item"><a href="' . $this->request->getCurrentRequest()->getSchemeAndHttpHost() . '/' . $databread['url'] . '" class="font-weight-bold">' . $databread['name'] . '</a></li>';
                     }
                     else {
                         $bread .= '<li class="breadcrumb-item active" aria-current="page">' . $databread['name'] . '</li>';
@@ -111,7 +111,7 @@ class BaseController extends Controller
             $bread .= '</ol></nav>';
             return $bread;
         }
-        return '<a href="#" class="font-weight-bold">Forum NAME</a>';
+        return '<a href="' . $this->request->getCurrentRequest()->getSchemeAndHttpHost() . '" class="font-weight-bold">Forum NAME</a>';
     }
 
     /**
