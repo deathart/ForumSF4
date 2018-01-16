@@ -10,7 +10,6 @@
     <body>
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-purple">
             <div class="container">
-                <a class="navbar-brand" href="#">Container</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -21,18 +20,28 @@
                             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#">FAQ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Disabled</a>
+                            <a class="nav-link" href="#">Search</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown07">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Members</a>
+                                <a class="dropdown-item" href="#">Staff</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Unanswered topics</a>
+                                <a class="dropdown-item" href="#">Active topics</a>
                             </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav my-2 my-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Register</a>
                         </li>
                     </ul>
                 </div>
@@ -40,8 +49,8 @@
         </nav>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-4">Fluid jumbotron</h1>
-                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                <h1 class="display-4">Welcome To Board!</h1>
+                <p class="lead">No other bulletin board software offers a greater complement of features, while maintaining efficiency and ease of use.</p>
             </div>
         </div>
         <div class="navigation-bot-header">
@@ -61,7 +70,7 @@
         </div>
         <div class="container-fluid mt-3">
             {% if app.request.attributes.get('_route') != "topic_show" %}
-                <div class="row mt-4">
+                <div class="row mt-4 d-none d-md-block">
                     <div class="col-12">
                         <div>
                             {{ include('forum/partial/chatbox.html.twig') }}
@@ -107,11 +116,11 @@
                     </div>
                     <div class="col-md-3 col-sm-6 mt-3">
                         <div class="footer-useful-links">
-                            <h4>Useful Links</h4>
+                            <h4>Information</h4>
                             <ul>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">The team</a></li>
-                                <li><a href="#">Delete all board cookies</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                                <li><a href="#">Private Policy</a></li>
+                                <li><a href="#">Community Rules</a></li>
                             </ul>
                         </div>
                     </div>
