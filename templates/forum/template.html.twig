@@ -53,7 +53,7 @@
                 <p class="lead">No other bulletin board software offers a greater complement of features, while maintaining efficiency and ease of use.</p>
             </div>
         </div>
-        <div class="navigation-bot-header">
+        <div class="navigation-bot-header d-none d-md-block">
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col-9">
@@ -79,13 +79,13 @@
                 </div>
             {% endif %}
             <div class="row mt-4">
-                <div class="col-sm-12 {% if app.request.attributes.get('_route') != "topic_show" %}col-md-9{% else %}col-md-12{% endif %}">
+                <div class="col-sm-12 {% if app.request.attributes.get('_route') != "topic_show" %}col-lg-9{% else %}col-md-12{% endif %}">
                     <div class="container-fluid">
                         {{ block('body') }}
                     </div>
                 </div>
                 {% if app.request.attributes.get('_route') != "topic_show" %}
-                <div class="col-md-3 d-sm-none d-md-block">
+                <div class="col-md-3 d-none d-lg-block">
                     <div class="container-fluid">
                         {% if app.request.pathinfo == "/" %}
                             {{ include('forum/partial/sidebar/home.html.twig') }}
@@ -100,7 +100,7 @@
         <footer class="footer bg-purple text-white">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 mt-3">
+                    <div class="col-md-12 col-lg-6 mt-3">
                         <div class="footer-about">
                             <h4>About Us</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quod mollitia quisquam. Architecto quam in atque sint voluptatem, consequatur consectetur ab ipsum maxime quod consequuntur excepturi illum dolorem ex modi.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -114,7 +114,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 mt-3">
+                    <div class="col-lg-3 d-none d-lg-block mt-3">
                         <div class="footer-useful-links">
                             <h4>Information</h4>
                             <ul>
@@ -124,7 +124,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 mt-3">
+                    <div class="col-lg-3 d-none d-lg-block mt-3">
                         <div class="footer-useful-links">
                             <h4>Useful Links</h4>
                             <ul>
