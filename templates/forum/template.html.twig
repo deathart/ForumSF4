@@ -37,12 +37,25 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav my-2 my-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Register</a>
-                        </li>
+                        {% if app.session.has('logged') %}
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{USERNAME}</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdown07">
+                                    <a class="dropdown-item" href="#">My Account</a>
+                                    <a class="dropdown-item" href="#">Logout</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">New MP</a>
+                                    <a class="dropdown-item" href="#">Write MP</a>
+                                </div>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Register</a>
+                            </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
