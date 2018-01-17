@@ -55,13 +55,16 @@ class BaseController extends Controller
     {
         $this->request = $request;
         $this->session = $session;
-        $this->init();
     }
 
     /**
      * @return $this
      */
     protected function init() {
+
+        $translator = $this->get('translator');
+        $translator->setLocale('en');
+
         //Set CSS
         $this->set_css('assets/css/vendor/font-awesome.css');
         $this->set_css( 'assets/css/forum/bootstrap.css');
@@ -145,6 +148,8 @@ class BaseController extends Controller
      */
     protected function renderer(string $view): Response
     {
+        $this->init();
+
         $this->data['titlePage'] = $this->setTitle();
 
         $this->data['css'] = $this->css;
