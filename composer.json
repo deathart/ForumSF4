@@ -1,6 +1,8 @@
 {
+    "name": "deathart/forum-sf4",
+    "description": "Develop forum with the symfony 4",
     "type": "project",
-    "license": "proprietary",
+    "license": "MIT",
     "require": {
         "php": "^7.1.3",
         "ext-iconv": "*",
@@ -63,5 +65,18 @@
             "id": "01C3GSSP8837XJ19HBAPDZW107",
             "allow-contrib": false
         }
-    }
+    },
+    "authors": [
+        {
+            "name": "Deathart",
+            "email": "contact@deathart.fr",
+            "homepage": "https://deathart.fr",
+            "role": "Developze"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/deathart/Forum/issues",
+        "source": "https://github.com/deathart/Forum"
+    },
+    "homepage": "https://github.com/deathart/Forum"
 }
