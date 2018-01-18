@@ -1,0 +1,26 @@
+header:
+  navbar:
+    home: Home
+    faq: FAQ
+    search: Search
+    others: Others
+    members: Members
+    staff: Staff
+    unansweredtopics: Unanswered topics
+    activetopics: Active topics
+    myaccount: My account
+    logout: Logout
+    newmp: New MP
+    writemp: Write MP
+    login: Login
+    register: Register
+sidebar:
+  bloc_guest:
+   title: Hello, Guest!
+   content: Please <a href="#">Register</a>, or <a href="#">Login</a> to see entire forum content...
+  info:
+    title: About
+  stats:
+    title: Statitistics
+other:
+  by: by

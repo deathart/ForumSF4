@@ -1,0 +1,7 @@
+title: Chatbox
+newwindow: Open in a new window
+expand: Enlarge/shrink
+content:
+  form:
+    input: Yopur message...
+    btn: Send

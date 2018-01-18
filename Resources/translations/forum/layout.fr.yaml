@@ -1,0 +1,26 @@
+header:
+  navbar:
+    home: Accueil
+    faq: FAQ
+    search: Recherche
+    others: Autres
+    members: Membres
+    staff: Staff
+    unansweredtopics: Sujets sans réponse
+    activetopics: Sujets actifs
+    myaccount: Mon compte
+    logout: Déconnexion
+    newmp: Nouveaux MP
+    writemp: Ecrire un MP
+    login: Connexion
+    register: Inscription
+sidebar:
+  bloc_guest:
+   title: Bonjour, invité!
+   content: S'il vous plaît <a href="#">inscrivez-vous</a>, ou <a href="#">connectez-vous</a> pour voir le contenu du forum en entier...
+  info:
+    title: Informations
+  stats:
+    title: Statistiques
+other:
+  by: par

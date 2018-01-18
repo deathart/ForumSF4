@@ -1,11 +1,11 @@
 <div class="chatbox-bloc">
     <div class="title bg-purple rounded-top">
-        Chatbox
-        <a href="#" class="float-right" data-toggle="tooltip" data-placement="top" title="Open new window">
+        {% trans from 'chatbox'%}title{% endtrans %}
+        <a href="#" class="float-right" data-toggle="tooltip" data-placement="top" title="{% trans from 'chatbox'%}newwindow{% endtrans %}">
             <i class="fa fa-external-link" aria-hidden="true"></i>
         </a>
         <span class="float-right">
-            <i class="fa fa-expand expand-chat" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Expand"></i>
+            <i class="fa fa-expand expand-chat" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="{% trans from 'chatbox'%}expand{% endtrans %}"></i>
         </span>
     </div>
     <div class="content rounded-bottom">
@@ -152,8 +152,8 @@
                     </ul>
                 </div>
                 <form class="form-inline">
-                    <input class="form-control" type="text" placeholder="Your message..." />
-                    <button class="btn btn-purple" type="submit">Send</button>
+                    <input class="form-control" type="text" placeholder="{% trans from 'chatbox'%}content.form.input{% endtrans %}." />
+                    <button class="btn btn-purple" type="submit">{% trans from 'chatbox'%}content.form.btn{% endtrans %}</button>
                 </form>
             </div>
             <div class="col-3 users scroll-chatbox-users">

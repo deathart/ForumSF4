@@ -1,3 +1,4 @@
+{% trans_default_domain 'forum' %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,22 +18,22 @@
                 <div class="collapse navbar-collapse" id="navbarsExample07">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#">{% trans from 'layout'%}header.navbar.home{% endtrans %} <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">FAQ</a>
+                            <a class="nav-link" href="#">{% trans from 'layout'%}header.navbar.faq{% endtrans %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Search</a>
+                            <a class="nav-link" href="#">{% trans from 'layout'%}header.navbar.search{% endtrans %}</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans from 'layout'%}header.navbar.others{% endtrans %}</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown07">
-                                <a class="dropdown-item" href="#">Members</a>
-                                <a class="dropdown-item" href="#">Staff</a>
+                                <a class="dropdown-item" href="#">{% trans from 'layout'%}header.navbar.members{% endtrans %}</a>
+                                <a class="dropdown-item" href="#">{% trans from 'layout'%}header.navbar.staff{% endtrans %}</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Unanswered topics</a>
-                                <a class="dropdown-item" href="#">Active topics</a>
+                                <a class="dropdown-item" href="#">{% trans from 'layout'%}header.navbar.unansweredtopics{% endtrans %}</a>
+                                <a class="dropdown-item" href="#">{% trans from 'layout'%}header.navbar.activetopics{% endtrans %}</a>
                             </div>
                         </li>
                     </ul>
@@ -41,19 +42,19 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{USERNAME}</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdown07">
-                                    <a class="dropdown-item" href="#">My Account</a>
-                                    <a class="dropdown-item" href="#">Logout</a>
+                                    <a class="dropdown-item" href="#">{% trans from 'layout'%}header.navbar.myaccount{% endtrans %}</a>
+                                    <a class="dropdown-item" href="#">{% trans from 'layout'%}header.navbar.logout{% endtrans %}</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">New MP</a>
-                                    <a class="dropdown-item" href="#">Write MP</a>
+                                    <a class="dropdown-item" href="#">{% trans from 'layout'%}header.navbar.newmp{% endtrans %}</a>
+                                    <a class="dropdown-item" href="#">{% trans from 'layout'%}header.navbar.writemp{% endtrans %}</a>
                                 </div>
                             </li>
                         {% else %}
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Login</a>
+                                <a class="nav-link" href="#">{% trans from 'layout'%}header.navbar.login{% endtrans %}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Register</a>
+                                <a class="nav-link" href="#">{% trans from 'layout'%}header.navbar.register{% endtrans %}</a>
                             </li>
                         {% endif %}
                     </ul>

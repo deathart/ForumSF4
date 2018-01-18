@@ -14,7 +14,7 @@ framework:
     php_errors:
         log: true
 
-    cache:
+    #cache:
         # The app cache caches to the filesystem by default. Other options include:
 
         # Redis

@@ -1,0 +1,16 @@
+title:
+  rat: Thread Rating
+user:
+  birthday: Birthday
+  genre: Genre
+  location: Location
+  topics: Topics
+  posts: Posts
+action:
+  report: Report
+  quote: Quote
+reply:
+  title: Reply
+  form:
+    label: Message
+    btn: Submit

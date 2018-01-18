@@ -2,3 +2,4 @@ twig:
     paths: ['%kernel.project_dir%/Resources/templates']
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    cache: false

@@ -1,0 +1,7 @@
+title: Chatbox
+newwindow: Ouvrir dans une nouvel fenêtre
+expand: Agrandir/rétrécir
+content:
+  form:
+    input: Votre message...
+    btn: Envoyer
