@@ -17,3 +17,7 @@ topic:
 topic_show:
   path: /topic/{slug}
   controller: App\Controller\Forum\TopicController::show
+
+faq:
+  path: faq
+  controller: App\Controller\Forum\FaqController::index

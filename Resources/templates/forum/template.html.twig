@@ -21,7 +21,7 @@
                             <a class="nav-link" href="{{ url('base') }}">{% trans from 'layout'%}header.navbar.home{% endtrans %} <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">{% trans from 'layout'%}header.navbar.faq{% endtrans %}</a>
+                            <a class="nav-link" href="{{ url('faq') }}">{% trans from 'layout'%}header.navbar.faq{% endtrans %}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">{% trans from 'layout'%}header.navbar.search{% endtrans %}</a>
@@ -83,7 +83,7 @@
             </div>
         </div>
         <div class="container-fluid mt-3">
-            {% if app.request.attributes.get('_route') != "topic_show" %}
+            {% if app.request.attributes.get('_route') == "home" or app.request.attributes.get('_route') == "forum_show" %}
                 <div class="row mt-4 d-none d-md-block">
                     <div class="col-12">
                         <div>
@@ -93,12 +93,12 @@
                 </div>
             {% endif %}
             <div class="row mt-4">
-                <div class="col-sm-12 {% if app.request.attributes.get('_route') != "topic_show" %}col-lg-9{% else %}col-md-12{% endif %}">
+                <div class="col-sm-12 {% if app.request.attributes.get('_route') == "home" or app.request.attributes.get('_route') == "forum_show" %}col-lg-9{% else %}col-md-12{% endif %}">
                     <div class="container-fluid">
                         {{ block('body') }}
                     </div>
                 </div>
-                {% if app.request.attributes.get('_route') != "topic_show" %}
+                {% if app.request.attributes.get('_route') == "home" or app.request.attributes.get('_route') == "forum_show" %}
                 <div class="col-md-3 d-none d-lg-block">
                     <div class="container-fluid">
                         {% if app.request.pathinfo == "/" %}
