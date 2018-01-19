@@ -83,7 +83,7 @@
             </div>
         </div>
         <div class="container-fluid mt-3">
-            {% if app.request.attributes.get('_route') == "home" or app.request.attributes.get('_route') == "forum_show" %}
+            {% if app.request.attributes.get('_route') in ['base', 'forum_show'] %}
                 <div class="row mt-4 d-none d-md-block">
                     <div class="col-12">
                         <div>
@@ -93,15 +93,15 @@
                 </div>
             {% endif %}
             <div class="row mt-4">
-                <div class="col-sm-12 {% if app.request.attributes.get('_route') == "home" or app.request.attributes.get('_route') == "forum_show" %}col-lg-9{% else %}col-md-12{% endif %}">
+                <div class="col-sm-12 {% if app.request.attributes.get('_route') in ['base', 'forum_show'] %}col-lg-9{% else %}col-md-12{% endif %}">
                     <div class="container-fluid">
                         {{ block('body') }}
                     </div>
                 </div>
-                {% if app.request.attributes.get('_route') == "home" or app.request.attributes.get('_route') == "forum_show" %}
+                {% if app.request.attributes.get('_route') in ['base', 'forum_show'] %}
                 <div class="col-md-3 d-none d-lg-block">
                     <div class="container-fluid">
-                        {% if app.request.pathinfo == "/" %}
+                        {% if app.request.attributes.get('_route') == 'base' %}
                             {{ include('forum/partial/sidebar/home.html.twig') }}
                         {% else %}
                             {{ include('forum/partial/sidebar/forum.html.twig') }}
