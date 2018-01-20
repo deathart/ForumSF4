@@ -69,7 +69,7 @@ App = (function() {
             } else {
                 $('.scroll-top-wrapper').removeClass('show');
                 $("header").removeClass("fixed");
-                $("body").css("margin-top", "0");
+                $("body").css("margin-top", "56px");
             }
         });
 
