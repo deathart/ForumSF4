@@ -3,5 +3,5 @@ newwindow: Open in a new window
 expand: Enlarge/shrink
 content:
   form:
-    input: Yopur message...
+    input: Your message...
     btn: Send

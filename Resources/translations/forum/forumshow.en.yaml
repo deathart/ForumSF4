@@ -1,2 +1,5 @@
+count:
+  topics: Topics
+  posts: Posts
 lastreply:
   author: Last reply by <a href="#">%name%</a>
