@@ -1,0 +1,57 @@
+<?php
+
+namespace App\Twig;
+
+use Doctrine\ORM\EntityManagerInterface;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
+use App\Entity\Config;
+
+/**
+ * Class AppExtension
+ *
+ * @package App\Twig
+ */
+class AppExtension extends AbstractExtension
+{
+
+    /**
+     * @var \Doctrine\ORM\EntityManagerInterface
+     */
+    private $em;
+
+    /**
+     * AppExtension constructor.
+     *
+     * @param \Doctrine\ORM\EntityManagerInterface $em
+     */
+    public function __construct (EntityManagerInterface $em) {
+        $this->em = $em;
+    }
+
+    /**
+     * @return array|\Twig_Filter[]
+     */
+    public function getFilters()
+    {
+        return array(
+            new TwigFilter('config', array($this, 'configFilter')),
+        );
+    }
+
+    /**
+     * @param string $key
+     *
+     * @return mixed
+     * @throws \Doctrine\ORM\NoResultException
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function configFilter(string $key)
+    {
+        $configVal = $this->em->getRepository(Config::class)->findDataByKey($key);
+
+        if($configVal) {
+            return $configVal->getData();
+        }
+    }
+}

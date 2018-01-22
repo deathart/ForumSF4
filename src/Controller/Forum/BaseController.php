@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use App\Entity\Config;
 
 /**
  * Class BaseController.
@@ -63,7 +64,7 @@ class BaseController extends Controller
     protected function init() {
 
         $translator = $this->get('translator');
-        $translator->setLocale('en');
+        $translator->setLocale($this->getConfig("lang"));
 
         //Set CSS
         $this->set_css('assets/css/vendor/font-awesome.css');
@@ -90,7 +91,7 @@ class BaseController extends Controller
             $tf .= ' - '.$this->stitle;
         }
 
-        return $tf;
+        return $tf . ' | ' . $this->getConfig("title");
     }
 
     /**
@@ -114,7 +115,7 @@ class BaseController extends Controller
             $bread .= '</ol></nav>';
             return $bread;
         }
-        return '<a href="' . $this->request->getCurrentRequest()->getSchemeAndHttpHost() . '" class="font-weight-bold">Forum NAME</a>';
+        return '<a href="' . $this->request->getCurrentRequest()->getSchemeAndHttpHost() . '" class="font-weight-bold">' . $this->getConfig("title") . '</a>';
     }
 
     /**
@@ -158,5 +159,19 @@ class BaseController extends Controller
         $this->data['breadcrumb'] = $this->bread();
 
         return $this->render('forum/page/'.$view, $this->data);
+    }
+
+    /**
+     * @param string $key
+     *
+     * @return mixed
+     */
+    protected function GetConfig(string $key) {
+        $configVal = $this->getDoctrine()->getRepository(Config::class)->findDataByKey($key);
+
+        if($configVal) {
+            return $configVal->getData();
+        }
+
     }
 }
