@@ -13,6 +13,10 @@ body {
   background: #254760;
 }
 
+.jumbotron {
+  margin-bottom: 0;
+}
+
 .navigation-bot-header {
   padding: 1rem;
   position: relative;
