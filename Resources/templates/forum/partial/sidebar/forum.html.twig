@@ -1,10 +1,10 @@
 {% if not app.session.has('logged') %}
     <div class="sidebar-bloc">
         <div class="title bg-purple rounded-top">
-            Hello, Guest!
+            {% trans from 'layout'%}sidebar.bloc_guest.title{% endtrans %}
         </div>
         <div class="content rounded-bottom">
-            Please <a href="#">Register</a>, or <a href="#">Login</a> to see entire forum content...
+            {% trans from 'layout'%}sidebar.bloc_guest.content{% endtrans %}
         </div>
     </div>
 {% endif %}
