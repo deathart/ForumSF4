@@ -10,16 +10,15 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
  */
 class TopicController extends BaseController
 {
-
     /**
      * TopicController constructor.
      *
      * @param \Symfony\Component\HttpFoundation\Session\SessionInterface $session
-     * @param \Symfony\Component\HttpFoundation\RequestStack $request
+     * @param \Symfony\Component\HttpFoundation\RequestStack             $request
      */
     public function __construct(SessionInterface $session, RequestStack $request)
     {
-        parent::__construct ($session, $request);
+        parent::__construct($session, $request);
         $this->title = 'Topic';
     }
 
@@ -40,7 +39,7 @@ class TopicController extends BaseController
     {
         $this->breadcrumb = [
             ['url' => 'forum/communaute', 'name' => 'Communaute'],
-            ['url' => 'active', 'name' => $slug]
+            ['url' => 'active', 'name' => $slug],
         ];
 
         $this->data['slug_topic'] = $slug;

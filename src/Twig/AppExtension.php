@@ -8,13 +8,10 @@ use Twig\TwigFilter;
 use App\Entity\Config;
 
 /**
- * Class AppExtension
- *
- * @package App\Twig
+ * Class AppExtension.
  */
 class AppExtension extends AbstractExtension
 {
-
     /**
      * @var \Doctrine\ORM\EntityManagerInterface
      */
@@ -25,33 +22,36 @@ class AppExtension extends AbstractExtension
      *
      * @param \Doctrine\ORM\EntityManagerInterface $em
      */
-    public function __construct (EntityManagerInterface $em) {
+    public function __construct(EntityManagerInterface $em)
+    {
         $this->em = $em;
     }
 
     /**
      * @return array|\Twig_Filter[]
      */
-    public function getFilters()
+    public function getFilters(): array
     {
-        return array(
-            new TwigFilter('config', array($this, 'configFilter')),
-        );
+        return [
+            new TwigFilter('config', [$this, 'configFilter']),
+        ];
     }
 
     /**
      * @param string $key
      *
      * @return mixed
-     * @throws \Doctrine\ORM\NoResultException
+     *
      * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function configFilter(string $key)
     {
         $configVal = $this->em->getRepository(Config::class)->findDataByKey($key);
 
-        if($configVal) {
+        if ($configVal) {
             return $configVal->getData();
         }
+
+        return false;
     }
 }

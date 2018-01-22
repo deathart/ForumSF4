@@ -50,7 +50,7 @@ class BaseController extends Controller
      * BaseController constructor.
      *
      * @param \Symfony\Component\HttpFoundation\Session\SessionInterface $session
-     * @param \Symfony\Component\HttpFoundation\RequestStack $request
+     * @param \Symfony\Component\HttpFoundation\RequestStack             $request
      */
     public function __construct(SessionInterface $session, RequestStack $request)
     {
@@ -60,16 +60,19 @@ class BaseController extends Controller
 
     /**
      * @return $this
+     *
+     * @throws \Doctrine\ORM\NoResultException
+     * @throws \Doctrine\ORM\NonUniqueResultException
      */
-    protected function init() {
-
+    protected function init()
+    {
         $translator = $this->get('translator');
-        $translator->setLocale($this->getConfig("lang"));
+        $translator->setLocale($this->GetConfig('lang'));
 
         //Set CSS
         $this->set_css('assets/css/vendor/font-awesome.css');
-        $this->set_css( 'assets/css/forum/bootstrap.css');
-        $this->set_css( 'assets/css/forum/style.css');
+        $this->set_css('assets/css/forum/bootstrap.css');
+        $this->set_css('assets/css/forum/style.css');
         //Set JS
         $this->set_js('assets/js/vendor/jquery.min.js');
         $this->set_js('assets/js/vendor/popper.min.js');
@@ -83,6 +86,9 @@ class BaseController extends Controller
 
     /**
      * @return string
+     *
+     * @throws \Doctrine\ORM\NoResultException
+     * @throws \Doctrine\ORM\NonUniqueResultException
      */
     protected function setTitle(): string
     {
@@ -91,31 +97,36 @@ class BaseController extends Controller
             $tf .= ' - '.$this->stitle;
         }
 
-        return $tf . ' | ' . $this->getConfig("title");
+        return $tf.' | '.$this->GetConfig('title');
     }
 
     /**
      * @return string
+     *
+     * @throws \LogicException
+     * @throws \Doctrine\ORM\NoResultException
+     * @throws \Doctrine\ORM\NonUniqueResultException
      */
     protected function bread(): string
     {
-        if($this->request->getCurrentRequest()->attributes->get('_route') !== 'base') {
+        if ('base' !== $this->request->getCurrentRequest()->attributes->get('_route')) {
             $bread = '<nav aria-label="breadcrumb"><ol class="breadcrumb">';
-            $bread .= '<li class="breadcrumb-item"><a href="' . $this->request->getCurrentRequest()->getSchemeAndHttpHost() . '" class="font-weight-bold"><i class="fa fa-home" aria-hidden="true"></i></a></li>';
-            if(!empty($this->breadcrumb)) {
-                foreach($this->breadcrumb as $key => $databread) {
-                    if($databread['url'] !== 'active') {
-                        $bread .= '<li class="breadcrumb-item"><a href="' . $this->request->getCurrentRequest()->getSchemeAndHttpHost() . '/' . $databread['url'] . '" class="font-weight-bold">' . $databread['name'] . '</a></li>';
-                    }
-                    else {
-                        $bread .= '<li class="breadcrumb-item active" aria-current="page">' . $databread['name'] . '</li>';
+            $bread .= '<li class="breadcrumb-item"><a href="'.$this->request->getCurrentRequest()->getSchemeAndHttpHost().'" class="font-weight-bold"><i class="fa fa-home" aria-hidden="true"></i></a></li>';
+            if (!empty($this->breadcrumb)) {
+                foreach ($this->breadcrumb as $key => $databread) {
+                    if ('active' !== $databread['url']) {
+                        $bread .= '<li class="breadcrumb-item"><a href="'.$this->request->getCurrentRequest()->getSchemeAndHttpHost().'/'.$databread['url'].'" class="font-weight-bold">'.$databread['name'].'</a></li>';
+                    } else {
+                        $bread .= '<li class="breadcrumb-item active" aria-current="page">'.$databread['name'].'</li>';
                     }
                 }
             }
             $bread .= '</ol></nav>';
+
             return $bread;
         }
-        return '<a href="' . $this->request->getCurrentRequest()->getSchemeAndHttpHost() . '" class="font-weight-bold">' . $this->getConfig("title") . '</a>';
+
+        return '<a href="'.$this->request->getCurrentRequest()->getSchemeAndHttpHost().'" class="font-weight-bold">'.$this->GetConfig('title').'</a>';
     }
 
     /**
@@ -146,6 +157,9 @@ class BaseController extends Controller
      * @param string $view
      *
      * @return \Symfony\Component\HttpFoundation\Response
+     *
+     * @throws \Doctrine\ORM\NoResultException
+     * @throws \Doctrine\ORM\NonUniqueResultException
      */
     protected function renderer(string $view): Response
     {
@@ -164,14 +178,18 @@ class BaseController extends Controller
     /**
      * @param string $key
      *
-     * @return mixed
+     * @return bool
+     *
+     * @throws \Doctrine\ORM\NonUniqueResultException
      */
-    protected function GetConfig(string $key) {
+    protected function GetConfig(string $key)
+    {
         $configVal = $this->getDoctrine()->getRepository(Config::class)->findDataByKey($key);
 
-        if($configVal) {
+        if ($configVal) {
             return $configVal->getData();
         }
 
+        return false;
     }
 }

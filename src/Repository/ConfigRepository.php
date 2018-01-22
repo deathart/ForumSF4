@@ -4,18 +4,14 @@ namespace App\Repository;
 
 use App\Entity\Config;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\ORM\NonUniqueResultException;
 use Doctrine\ORM\NoResultException;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
- * Class ConfigRepository
- *
- * @package App\Repository
+ * Class ConfigRepository.
  */
 class ConfigRepository extends ServiceEntityRepository
 {
-
     /**
      * ConfigRepository constructor.
      *
@@ -30,19 +26,19 @@ class ConfigRepository extends ServiceEntityRepository
      * @param string $key
      *
      * @return mixed
-     * @throws \Doctrine\ORM\NoResultException
+     *
      * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function findDataByKey(string $key)
     {
-        $qb = $this->createQueryBuilder ('c')
-            ->andWhere ('c.key = :key')
-            ->setParameter ('key', $key);
+        $qb = $this->createQueryBuilder('c')
+            ->andWhere('c.key = :key')
+            ->setParameter('key', $key);
 
-        $query = $qb->getQuery ();
+        $query = $qb->getQuery();
 
         try {
-            return $query->getSingleResult ();
+            return $query->getSingleResult();
         } catch (NoResultException $e) {
             return false;
         }

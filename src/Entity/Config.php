@@ -5,7 +5,7 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Config
+ * Config.
  *
  * @ORM\Table(name="config")
  * @ORM\Entity(repositoryClass="App\Repository\ConfigRepository")
@@ -45,8 +45,8 @@ class Config
     /**
      * @return string
      */
-    public function getData() {
+    public function getData(): string
+    {
         return $this->data;
     }
-
 }

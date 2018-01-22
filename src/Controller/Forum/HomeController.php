@@ -10,16 +10,15 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
  */
 class HomeController extends BaseController
 {
-
     /**
      * HomeController constructor.
      *
      * @param \Symfony\Component\HttpFoundation\Session\SessionInterface $session
-     * @param \Symfony\Component\HttpFoundation\RequestStack $request
+     * @param \Symfony\Component\HttpFoundation\RequestStack             $request
      */
     public function __construct(SessionInterface $session, RequestStack $request)
     {
-        parent::__construct ($session, $request);
+        parent::__construct($session, $request);
         $this->title = 'Home';
     }
 
