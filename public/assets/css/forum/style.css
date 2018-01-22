@@ -6,12 +6,11 @@ html {
 body {
   margin: 56px 0 225px 0;
   font: 300 14px/1.7 Roboto, sans-serif;
-  background-color: #e9ecef;
+  background-color: #e6e6e6;
 }
 
 .navbar-dark {
-  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
-  background: linear-gradient(#254760, #217ab9);
+  background: #254760;
 }
 
 .navigation-bot-header {
@@ -20,8 +19,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
-  background: linear-gradient(#254760, #217ab9);
+  background: #254760;
   color: #eeeeee;
 }
 
@@ -53,11 +51,19 @@ body {
 
 .chatbox-bloc {
   display: none;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.chatbox-bloc:hover {
+  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
 }
 
 .chatbox-bloc > .title {
-  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
-  background: linear-gradient(#254760, #217ab9);
+  background: #254760;
   color: #eeeeee;
   padding: 15px;
 }
@@ -190,13 +196,24 @@ body {
   text-decoration: none;
 }
 
+.sidebar-bloc {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-bloc:hover {
+  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
 .sidebar-bloc:nth-child(1n+2) {
   margin-top: 5%;
 }
 
 .sidebar-bloc > .title {
-  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
-  background: linear-gradient(#254760, #217ab9);
+  background: #254760;
   color: #eeeeee;
   padding: 15px;
 }
@@ -263,13 +280,24 @@ body {
   font-weight: bold;
 }
 
+.forum-bloc {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.forum-bloc:hover {
+  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
 .forum-bloc:nth-child(1n+2) {
   margin-top: 3%;
 }
 
 .forum-bloc > .title {
-  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
-  background: linear-gradient(#254760, #217ab9);
+  background: #254760;
   color: #eeeeee;
   padding: 15px;
 }
@@ -386,9 +414,20 @@ body {
   top: 15%;
 }
 
+.topic-bloc {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.topic-bloc:hover {
+  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
 .topic-bloc > .title {
-  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
-  background: linear-gradient(#254760, #217ab9);
+  background: #254760;
   color: #eeeeee;
   padding: 15px;
 }
@@ -499,9 +538,20 @@ body {
   position: absolute;
 }
 
+.post-bloc {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.post-bloc:hover {
+  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
 .post-bloc > .title {
-  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
-  background: linear-gradient(#254760, #217ab9);
+  background: #254760;
   color: #eeeeee;
   padding: 15px;
 }
@@ -637,9 +687,20 @@ body {
   text-decoration: none;
 }
 
+.post-reply {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.post-reply:hover {
+  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
 .post-reply > .title {
-  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
-  background: linear-gradient(#254760, #217ab9);
+  background: #254760;
   color: #eeeeee;
   padding: 15px;
 }
@@ -666,13 +727,24 @@ body {
   margin-top: 15px;
 }
 
+.page-bloc {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.page-bloc:hover {
+  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
 .page-bloc:nth-child(1n+2) {
   margin-top: 3%;
 }
 
 .page-bloc > .title {
-  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
-  background: linear-gradient(#254760, #217ab9);
+  background: #254760;
   color: #eeeeee;
   padding: 15px;
 }
@@ -713,8 +785,7 @@ body {
   width: 100%;
   height: 200px;
   margin-top: 2%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
-  background: linear-gradient(#254760, #217ab9);
+  background: #254760;
 }
 
 .footer .footer-about > p {
