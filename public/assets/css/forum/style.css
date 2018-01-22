@@ -191,7 +191,7 @@ body {
 
 .sidebar-bloc > .content {
   border: 1px solid rgba(111, 66, 193, 0.5);
-  padding: 15px 20px;
+  padding: 15px;
 }
 
 .sidebar-bloc > .content a {
@@ -206,6 +206,48 @@ body {
 .sidebar-bloc > .content a:hover, .sidebar-bloc > .content a:focus {
   color: #5D5AFF;
   outline: 0;
+}
+
+.sidebar-bloc > .content > ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  min-height: 30px;
+}
+
+.sidebar-bloc > .content > ul > li {
+  display: inline-block;
+}
+
+.sidebar-bloc > .content > ul > li > img {
+  float: left;
+}
+
+.sidebar-bloc > .content > ul > li > .info {
+  float: left;
+  padding-left: 5px;
+  margin-top: -5px;
+}
+
+.sidebar-bloc > .content > ul > li > .info > a {
+  margin-top: -5px;
+}
+
+.sidebar-bloc > .content > ul > li > .info > small {
+  display: block;
+  margin-top: -5px;
+}
+
+.sidebar-bloc > .footer-bloc {
+  padding: 15px;
+  border-top: 1px dotted rgba(111, 66, 193, 0.5);
+  border-left: 1px solid rgba(111, 66, 193, 0.5);
+  border-right: 1px solid rgba(111, 66, 193, 0.5);
+  border-bottom: 1px solid rgba(111, 66, 193, 0.5);
+}
+
+.sidebar-bloc > .footer-bloc strong {
+  font-weight: bold;
 }
 
 .forum-bloc:nth-child(1n+2) {
@@ -435,7 +477,6 @@ body {
   margin-top: auto !important;
   margin-bottom: auto !important;
   position: absolute;
-  top: 25%;
 }
 
 .post-bloc > .title {

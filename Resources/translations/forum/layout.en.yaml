@@ -18,6 +18,12 @@ sidebar:
   bloc_guest:
    title: Hello, Guest!
    content: Please <a href="#">Register</a>, or <a href="#">Login</a> to see entire forum content...
+  bloc_monline:
+    title: Members online
+    footer: 'Total: <strong>%total%</strong> (Members: <strong>%members%</strong>, Guests: <strong>%guests%</strong>)'
+  bloc_latest_posts:
+    title: Latest posts
+    author: by <a href="#">%name%</a>
   info:
     title: About
   stats:

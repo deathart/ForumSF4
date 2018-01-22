@@ -18,6 +18,12 @@ sidebar:
   bloc_guest:
    title: Bonjour, invité!
    content: S'il vous plaît <a href="#">inscrivez-vous</a>, ou <a href="#">connectez-vous</a> pour voir le contenu du forum en entier...
+  bloc_monline:
+    title: Membres en ligne
+    footer: 'Total: <strong>%total%</strong> (Membres: <strong>%members%</strong>, Invités: <strong>%guests%</strong>)'
+  bloc_latest_posts:
+    title: Derniers messages
+    author: par <a href="#">%name%</a>
   info:
     title: Informations
   stats:

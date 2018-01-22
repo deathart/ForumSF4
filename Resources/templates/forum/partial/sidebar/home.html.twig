@@ -10,17 +10,75 @@
 {% endif %}
 <div class="sidebar-bloc">
     <div class="title bg-purple rounded-top">
-        Lorem ipsum dolor sit amet
+        {% trans from 'layout'%}sidebar.bloc_monline.title{% endtrans %}
     </div>
-    <div class="content rounded-bottom">
-        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper
+    <div class="content border-bottom-0">
+        <a href="#">Deathart</a>, <a href="#">Deathart</a>, <a href="#">Deathart</a>, <a href="#">Deathart</a>, <a href="#">Deathart</a>, <a href="#">Deathart</a>, <a href="#">Deathart</a>, <a href="#">Deathart</a>, <a href="#">Deathart</a>, <a href="#">Deathart</a>, <a href="#">Deathart</a>
+    </div>
+    <div class="footer-bloc rounded-bottom">
+        {{ 'sidebar.bloc_monline.footer'|trans({'%total%': '5', '%members%': '3', '%guests%': '2'}, 'layout')|raw }}
     </div>
 </div>
 <div class="sidebar-bloc">
     <div class="title bg-purple rounded-top">
-        Lorem ipsum dolor sit amet
+        {% trans from 'layout'%}sidebar.bloc_latest_posts.title{% endtrans %}
     </div>
     <div class="content rounded-bottom">
-        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper
+        <ul>
+            <li>
+                <img src="https://dummyimage.com/30/000/fff.png" alt="deathart" class="rounded d-none d-lg-block">
+                <span class="info">
+                    <a href="#" class="recent-post">Global Topic in Information C…</a>
+                    <small>
+                        {% trans with {'%name%': 'Deathart'} from 'layout'%}sidebar.bloc_latest_posts.author{% endtrans %} Thu Jun 22, 2017 9:38 am
+                    </small>
+                </span>
+            </li>
+            <li>
+                <img src="https://dummyimage.com/30/000/fff.png" alt="deathart" class="rounded d-none d-lg-block">
+                <span class="info">
+                    <a href="#" class="recent-post">Global Topic in Information C…</a>
+                    <small>
+                        {% trans with {'%name%': 'Deathart'} from 'layout'%}sidebar.bloc_latest_posts.author{% endtrans %} Thu Jun 22, 2017 9:38 am
+                    </small>
+                </span>
+            </li>
+            <li>
+                <img src="https://dummyimage.com/30/000/fff.png" alt="deathart" class="rounded d-none d-lg-block">
+                <span class="info">
+                    <a href="#" class="recent-post">Global Topic in Information C…</a>
+                    <small>
+                        {% trans with {'%name%': 'Deathart'} from 'layout'%}sidebar.bloc_latest_posts.author{% endtrans %} Thu Jun 22, 2017 9:38 am
+                    </small>
+                </span>
+            </li>
+            <li>
+                <img src="https://dummyimage.com/30/000/fff.png" alt="deathart" class="rounded d-none d-lg-block">
+                <span class="info">
+                    <a href="#" class="recent-post">Global Topic in Information C…</a>
+                    <small>
+                        {% trans with {'%name%': 'Deathart'} from 'layout'%}sidebar.bloc_latest_posts.author{% endtrans %} Thu Jun 22, 2017 9:38 am
+                    </small>
+                </span>
+            </li>
+            <li>
+                <img src="https://dummyimage.com/30/000/fff.png" alt="deathart" class="rounded d-none d-lg-block">
+                <span class="info">
+                    <a href="#" class="recent-post">Global Topic in Information C…</a>
+                    <small>
+                        {% trans with {'%name%': 'Deathart'} from 'layout'%}sidebar.bloc_latest_posts.author{% endtrans %} Thu Jun 22, 2017 9:38 am
+                    </small>
+                </span>
+            </li>
+            <li>
+                <img src="https://dummyimage.com/30/000/fff.png" alt="deathart" class="rounded d-none d-lg-block">
+                <span class="info">
+                    <a href="#" class="recent-post">Global Topic in Information C…</a>
+                    <small>
+                        {% trans with {'%name%': 'Deathart'} from 'layout'%}sidebar.bloc_latest_posts.author{% endtrans %} Thu Jun 22, 2017 9:38 am
+                    </small>
+                </span>
+            </li>
+        </ul>
     </div>
 </div>
