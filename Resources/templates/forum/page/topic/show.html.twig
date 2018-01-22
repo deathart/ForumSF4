@@ -2,7 +2,7 @@
 
 {% block body %}
     <div class="post-bloc">
-        <div class="title bg-purple rounded-top clearfix">
+        <div class="title rounded-top clearfix">
             <span class="float-left"><i class="fa fa-comments" aria-hidden="true"></i> TITRE</span>
             <span class="rat float-right">
                 {% trans from 'topicshow'%}title.rat{% endtrans %} :
@@ -215,7 +215,7 @@
         </div>
     </div>
     <div class="post-reply mt-4">
-        <div class="title bg-purple rounded-top">
+        <div class="title rounded-top">
             {% trans from 'topicshow'%}reply.title{% endtrans %}
         </div>
         <div class="content rounded-bottom">
@@ -225,15 +225,15 @@
                     <div class="col-sm-10">
                         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                             <div class="btn-group mr-2" role="group" aria-label="Primary">
-                                <button type="button" class="btn btn-purple" data-type="bold"><i class="fa fa-bold" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-purple" data-type="italic"><i class="fa fa-italic" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-purple" data-type="del"><i class="fa fa-strikethrough" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-purple" data-type="underline"><i class="fa fa-underline" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-purple" data-type="quote"><i class="fa fa-quote-right" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-theme" data-type="bold"><i class="fa fa-bold" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-theme" data-type="italic"><i class="fa fa-italic" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-theme" data-type="del"><i class="fa fa-strikethrough" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-theme" data-type="underline"><i class="fa fa-underline" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-theme" data-type="quote"><i class="fa fa-quote-right" aria-hidden="true"></i></button>
                             </div>
                             <div class="btn-group mr-2" role="group" aria-label="Font">
                                 <div class="btn-group" role="group">
-                                    <button id="btnGroupDrop1" type="button" class="btn btn-purple dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-theme dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="fa fa-header" aria-hidden="true"></i>
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
@@ -248,15 +248,15 @@
                                 <input id="mycp" data-type="color" style="display: none;" type="text"><div class="sp-replacer sp-light"><div class="sp-preview"><div class="sp-preview-inner" style="background-color: rgb(240, 0, 0);"></div></div><div class="sp-dd">▼</div></div>
                             </div>
                             <div class="btn-group mr-2" role="group" aria-label="align">
-                                <button type="button" class="btn btn-purple" data-type="align" data-align="left"><i class="fa fa-align-left" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-purple" data-type="align" data-align="center"><i class="fa fa-align-center" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-purple" data-type="align" data-align="right"><i class="fa fa-align-right" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-theme" data-type="align" data-align="left"><i class="fa fa-align-left" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-theme" data-type="align" data-align="center"><i class="fa fa-align-center" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-theme" data-type="align" data-align="right"><i class="fa fa-align-right" aria-hidden="true"></i></button>
                             </div>
                             <div class="btn-group mr-2" role="group" aria-label="Link">
-                                <button type="button" class="btn btn-purple" data-type="link"><i class="fa fa-link" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-theme" data-type="link"><i class="fa fa-link" aria-hidden="true"></i></button>
                             </div>
                             <div class="btn-group mr-2" role="group" aria-label="Code">
-                                <button id="btnGroupDrop1" type="button" class="btn btn-purple dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-theme dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fa fa-code" aria-hidden="true"></i>
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
@@ -268,7 +268,7 @@
                                 </div>
                             </div>
                             <div class="btn-group mr-2" role="group" aria-label="Alert">
-                                <button id="btnGroupDrop2" type="button" class="btn btn-purple dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <button id="btnGroupDrop2" type="button" class="btn btn-theme dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Alerte
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
@@ -279,12 +279,12 @@
                                 </div>
                             </div>
                             <div class="btn-group mr-2" role="group" aria-label="Media">
-                                <button type="button" class="btn btn-purple" data-type="media"><i class="fa fa-picture-o" aria-hidden="true"></i></button>
-                                <button type="button" class="btn btn-purple" data-type="youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-theme" data-type="media"><i class="fa fa-picture-o" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-theme" data-type="youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></button>
                             </div>
                         </div>
                         <textarea class="form-control" id="message" rows="7"></textarea>
-                        <button type="submit" class="btn btn-purple">{% trans from 'topicshow'%}reply.form.btn{% endtrans %}</button>
+                        <button type="submit" class="btn btn-theme">{% trans from 'topicshow'%}reply.form.btn{% endtrans %}</button>
                     </div>
                 </div>
             </form>

@@ -1,6 +1,6 @@
 {% if not app.session.has('logged') %}
     <div class="sidebar-bloc">
-        <div class="title bg-purple rounded-top">
+        <div class="title rounded-top">
             {% trans from 'layout'%}sidebar.bloc_guest.title{% endtrans %}
         </div>
         <div class="content rounded-bottom">
@@ -9,7 +9,7 @@
     </div>
 {% endif %}
 <div class="sidebar-bloc">
-    <div class="title bg-purple rounded-top">
+    <div class="title rounded-top">
         {% trans from 'layout'%}sidebar.info.title{% endtrans %}
     </div>
     <div class="content rounded-bottom">
@@ -17,7 +17,7 @@
     </div>
 </div>
 <div class="sidebar-bloc">
-    <div class="title bg-purple rounded-top">
+    <div class="title rounded-top">
         {% trans from 'layout'%}sidebar.stats.title{% endtrans %}
     </div>
     <div class="content rounded-bottom">

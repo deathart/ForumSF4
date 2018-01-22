@@ -6,6 +6,12 @@ html {
 body {
   margin: 56px 0 225px 0;
   font: 300 14px/1.7 Roboto, sans-serif;
+  background-color: #e9ecef;
+}
+
+.navbar-dark {
+  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
+  background: linear-gradient(#254760, #217ab9);
 }
 
 .navigation-bot-header {
@@ -14,7 +20,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #6f42c1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
+  background: linear-gradient(#254760, #217ab9);
   color: #eeeeee;
 }
 
@@ -49,6 +56,8 @@ body {
 }
 
 .chatbox-bloc > .title {
+  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
+  background: linear-gradient(#254760, #217ab9);
   color: #eeeeee;
   padding: 15px;
 }
@@ -73,7 +82,8 @@ body {
 }
 
 .chatbox-bloc > .content {
-  border: 1px solid rgba(111, 66, 193, 0.5);
+  border: 1px solid #217ab9;
+  background: #ffffff;
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -97,7 +107,7 @@ body {
 
 .chatbox-bloc > .content .chat .message > ul > li {
   padding: 5px 5px 5px 5px;
-  border-bottom: 1px dotted rgba(111, 66, 193, 0.8);
+  border-bottom: 1px dotted #254760;
   width: 100%;
 }
 
@@ -123,7 +133,7 @@ body {
 }
 
 .chatbox-bloc > .content .chat .message > ul > li > .chat-body > .header > small {
-  color: #6f42c1;
+  color: #254760;
 }
 
 .chatbox-bloc > .content .chat .message > ul > li > .chat-body > .header > small.float-left {
@@ -142,7 +152,7 @@ body {
 
 .chatbox-bloc > .content .chat > form {
   height: 40px;
-  border-top: 1px solid rgba(111, 66, 193, 0.5);
+  border-top: 1px solid #217ab9;
 }
 
 .chatbox-bloc > .content .chat > form > input {
@@ -154,7 +164,7 @@ body {
 }
 
 .chatbox-bloc > .content .users {
-  border-left: 1px solid rgba(111, 66, 193, 0.5);
+  border-left: 1px solid #217ab9;
   height: 250px;
   overflow: hidden;
 }
@@ -168,7 +178,7 @@ body {
 }
 
 .chatbox-bloc > .content .users > ul > li:nth-child(1n+2) {
-  border-top: 1px solid rgba(111, 66, 193, 0.5);
+  border-top: 1px solid #217ab9;
 }
 
 .chatbox-bloc > .content .users > ul > li > a {
@@ -185,12 +195,15 @@ body {
 }
 
 .sidebar-bloc > .title {
+  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
+  background: linear-gradient(#254760, #217ab9);
   color: #eeeeee;
   padding: 15px;
 }
 
 .sidebar-bloc > .content {
-  border: 1px solid rgba(111, 66, 193, 0.5);
+  border: 1px solid #217ab9;
+  background: #ffffff;
   padding: 15px;
 }
 
@@ -198,13 +211,13 @@ body {
   text-decoration: none;
   -webkit-transition: all .15s ease-out;
   transition: all .15s ease-out;
-  color: #444444;
+  color: #254760;
   line-height: 1.2;
   font-weight: 600;
 }
 
 .sidebar-bloc > .content a:hover, .sidebar-bloc > .content a:focus {
-  color: #5D5AFF;
+  color: #217ab9;
   outline: 0;
 }
 
@@ -240,10 +253,10 @@ body {
 
 .sidebar-bloc > .footer-bloc {
   padding: 15px;
-  border-top: 1px dotted rgba(111, 66, 193, 0.5);
-  border-left: 1px solid rgba(111, 66, 193, 0.5);
-  border-right: 1px solid rgba(111, 66, 193, 0.5);
-  border-bottom: 1px solid rgba(111, 66, 193, 0.5);
+  border-top: 1px dotted #217ab9;
+  border-left: 1px solid #217ab9;
+  border-right: 1px solid #217ab9;
+  border-bottom: 1px solid #217ab9;
 }
 
 .sidebar-bloc > .footer-bloc strong {
@@ -255,6 +268,8 @@ body {
 }
 
 .forum-bloc > .title {
+  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
+  background: linear-gradient(#254760, #217ab9);
   color: #eeeeee;
   padding: 15px;
 }
@@ -264,20 +279,22 @@ body {
 }
 
 .forum-bloc > .content {
-  border: 1px solid rgba(111, 66, 193, 0.5);
+  border: 1px solid #254760;
+  background: #ffffff;
 }
 
 .forum-bloc > .content a {
-  color: #6f42c1;
+  color: #254760;
   font-weight: bold;
 }
 
 .forum-bloc > .content a:hover {
-  color: rgba(111, 66, 193, 0.5);
+  color: #217ab9;
   text-decoration: none;
 }
 
 .forum-bloc > .content > ul {
+  background: #ffffff;
   padding-left: 0;
   list-style: none;
   height: 80px;
@@ -288,7 +305,7 @@ body {
 }
 
 .forum-bloc > .content > ul:nth-child(1n+2) {
-  border-top: 1px solid rgba(111, 66, 193, 0.5);
+  border-top: 1px solid #254760;
 }
 
 .forum-bloc > .content > ul > li {
@@ -370,6 +387,8 @@ body {
 }
 
 .topic-bloc > .title {
+  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
+  background: linear-gradient(#254760, #217ab9);
   color: #eeeeee;
   padding: 15px;
 }
@@ -379,16 +398,17 @@ body {
 }
 
 .topic-bloc > .content {
-  border: 1px solid rgba(111, 66, 193, 0.5);
+  border: 1px solid #217ab9;
+  background: #ffffff;
 }
 
 .topic-bloc > .content a {
-  color: #6f42c1;
+  color: #254760;
   font-weight: bold;
 }
 
 .topic-bloc > .content a:hover {
-  color: rgba(111, 66, 193, 0.5);
+  color: #217ab9;
   text-decoration: none;
 }
 
@@ -403,7 +423,7 @@ body {
 }
 
 .topic-bloc > .content > ul:nth-child(1n+2) {
-  border-top: 1px solid rgba(111, 66, 193, 0.5);
+  border-top: 1px solid #254760;
 }
 
 .topic-bloc > .content > ul > li {
@@ -480,6 +500,8 @@ body {
 }
 
 .post-bloc > .title {
+  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
+  background: linear-gradient(#254760, #217ab9);
   color: #eeeeee;
   padding: 15px;
 }
@@ -489,7 +511,8 @@ body {
 }
 
 .post-bloc > .content {
-  border: 1px solid rgba(111, 66, 193, 0.5);
+  border: 1px solid #217ab9;
+  background: #ffffff;
 }
 
 .post-bloc > .content > .posts {
@@ -497,24 +520,24 @@ body {
 }
 
 .post-bloc > .content > .posts:nth-child(1n+2) {
-  border-top: 1px solid rgba(111, 66, 193, 0.5);
+  border-top: 1px solid #217ab9;
 }
 
 .post-bloc > .content > .posts > .user-info {
-  border-right: 1px dashed rgba(111, 66, 193, 0.5);
+  border-right: 1px dashed #217ab9;
   min-height: 350px;
   padding: 5px 10px;
 }
 
 .post-bloc > .content > .posts > .user-info > .username {
   text-align: center;
-  color: #6f42c1;
+  color: #254760;
   display: block;
   font-weight: bold;
 }
 
 .post-bloc > .content > .posts > .user-info > .username:hover {
-  color: rgba(111, 66, 193, 0.5);
+  color: #217ab9;
   text-decoration: none;
 }
 
@@ -547,7 +570,7 @@ body {
 }
 
 .post-bloc > .content > .posts > .user-info > .info {
-  border-top: 1px dashed rgba(111, 66, 193, 0.5);
+  border-top: 1px dashed #217ab9;
   padding-top: 10px;
 }
 
@@ -561,7 +584,7 @@ body {
 }
 
 .post-bloc > .content > .posts > .user-info > .stats {
-  border-top: 1px dashed rgba(111, 66, 193, 0.5);
+  border-top: 1px dashed #217ab9;
   padding-top: 10px;
 }
 
@@ -591,36 +614,39 @@ body {
 
 .post-bloc > .content > .posts > .message > .post_head > .post_count > a {
   font-weight: bold;
-  color: #6f42c1;
+  color: #254760;
 }
 
 .post-bloc > .content > .posts > .message > .post_head > .post_count > a:hover {
-  color: rgba(111, 66, 193, 0.5);
+  color: #217ab9;
   text-decoration: none;
 }
 
 .post-bloc > .content > .posts > .action {
   padding: 5px 10px;
-  border-top: 1px dashed rgba(111, 66, 193, 0.5);
+  border-top: 1px dashed #217ab9;
   text-align: right;
 }
 
 .post-bloc > .content > .posts > .action > a {
-  color: #6f42c1;
+  color: #254760;
 }
 
 .post-bloc > .content > .posts > .action > a:hover {
-  color: rgba(111, 66, 193, 0.5);
+  color: #217ab9;
   text-decoration: none;
 }
 
 .post-reply > .title {
+  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
+  background: linear-gradient(#254760, #217ab9);
   color: #eeeeee;
   padding: 15px;
 }
 
 .post-reply > .content {
-  border: 1px solid rgba(111, 66, 193, 0.5);
+  border: 1px solid #254760;
+  background: #ffffff;
 }
 
 .post-reply > .content > form {
@@ -645,6 +671,8 @@ body {
 }
 
 .page-bloc > .title {
+  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
+  background: linear-gradient(#254760, #217ab9);
   color: #eeeeee;
   padding: 15px;
 }
@@ -654,18 +682,19 @@ body {
 }
 
 .page-bloc > .content {
-  border: 1px solid rgba(111, 66, 193, 0.5);
+  border: 1px solid #217ab9;
+  background: #ffffff;
 }
 
 .page-bloc > .content.faq > a {
   padding: 5px;
-  color: #6f42c1;
+  color: #254760;
   font-weight: bold;
   display: block;
 }
 
 .page-bloc > .content.faq > a:hover {
-  color: rgba(111, 66, 193, 0.5);
+  color: #217ab9;
   text-decoration: none;
 }
 
@@ -674,7 +703,7 @@ body {
 }
 
 .page-bloc > .content.faq > .collapse > .card {
-  border: 1px solid rgba(111, 66, 193, 0.5);
+  border: 1px solid #217ab9;
   border-radius: 0.25rem;
 }
 
@@ -684,6 +713,8 @@ body {
   width: 100%;
   height: 200px;
   margin-top: 2%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#254760), to(#217ab9));
+  background: linear-gradient(#254760, #217ab9);
 }
 
 .footer .footer-about > p {
@@ -752,7 +783,7 @@ body {
   overflow: hidden;
   text-align: center;
   z-index: 99999999;
-  background-color: rgba(111, 66, 193, 0.5);
+  background-color: #217ab9;
   color: #eeeeee;
   width: 50px;
   height: 48px;
@@ -766,7 +797,7 @@ body {
 }
 
 .scroll-top-wrapper:hover {
-  background-color: #6f42c1;
+  background-color: #254760;
 }
 
 .scroll-top-wrapper.show {
