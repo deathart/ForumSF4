@@ -61,8 +61,14 @@ App = (function() {
 
     };
     that.scroll_top = function() {
-        $(document).on('scroll', function() {
-            if ($(window).scrollTop() > 100) {
+
+        $(window).on('scroll', function() {
+            if ($(this).scrollTop() > 100) {
+                if ($(this).scrollTop() > $(document).height() - $(this).height() - 100) {
+                    $('.scroll-top-wrapper').css("bottom", "230px");
+                } else {
+                    $('.scroll-top-wrapper').css("bottom", "30px");
+                }
                 $('.scroll-top-wrapper').addClass('show');
                 $("header").addClass("fixed");
                 $("body").css("margin-top", "25px");
@@ -73,17 +79,13 @@ App = (function() {
             }
         });
 
-        $('.scroll-top-wrapper').on('click', scrollToTop);
+        $(".scroll-top-wrapper").click(function() {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 600);
+            return false;
+        });
 
-        function scrollToTop() {
-            verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
-            element = $('body');
-            offset = element.offset();
-            offsetTop = offset.top;
-            $('html, body').animate({
-                scrollTop: offsetTop
-            }, 500, 'linear');
-        }
     };
 
 
