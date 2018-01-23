@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400");
 html {
   position: relative;
   min-height: 100%;
@@ -5,7 +6,7 @@ html {
 
 body {
   margin: 56px 0 225px 0;
-  font: 300 14px/1.7 Roboto, sans-serif;
+  font: 300 14px/1.7 'Roboto', sans-serif;
   background-color: #e6e6e6;
 }
 
@@ -33,6 +34,7 @@ body {
 
 .navigation-bot-header a:hover, .navigation-bot-header a:focus {
   color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
 }
 
 .navigation-bot-header .social > a:nth-child(1n+2) {
@@ -67,8 +69,10 @@ body {
 }
 
 .chatbox-bloc > .title {
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
   background: #254760;
-  color: #eeeeee;
+  color: #ffffff;
   padding: 15px;
 }
 
@@ -92,7 +96,9 @@ body {
 }
 
 .chatbox-bloc > .content {
-  border: 1px solid #217ab9;
+  border: 1px solid #254760;
+  border-bottom-right-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
   background: #ffffff;
   padding-right: 15px;
   padding-left: 15px;
@@ -203,6 +209,7 @@ body {
 .sidebar-bloc {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem !important;
 }
 
 .sidebar-bloc:hover {
@@ -217,15 +224,26 @@ body {
 }
 
 .sidebar-bloc > .title {
+  font-family: 'Roboto', sans-serif, Times, serif;
+  border-top-right-radius: 0.25rem !important;
+  border-top-left-radius: 0.25rem !important;
   background: #254760;
-  color: #eeeeee;
+  color: #ffffff;
   padding: 15px;
 }
 
 .sidebar-bloc > .content {
-  border: 1px solid #217ab9;
+  border: 1px solid #254760;
+  border-bottom-right-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
   background: #ffffff;
   padding: 15px;
+}
+
+.sidebar-bloc > .content.no-border {
+  border-bottom: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
 }
 
 .sidebar-bloc > .content a {
@@ -274,10 +292,11 @@ body {
 
 .sidebar-bloc > .footer-bloc {
   padding: 15px;
-  border-top: 1px dotted #217ab9;
-  border-left: 1px solid #217ab9;
-  border-right: 1px solid #217ab9;
-  border-bottom: 1px solid #217ab9;
+  border: 1px solid #254760;
+  background: #254760;
+  border-bottom-right-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
+  color: #ffffff;
 }
 
 .sidebar-bloc > .footer-bloc strong {
@@ -301,8 +320,10 @@ body {
 }
 
 .forum-bloc > .title {
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
   background: #254760;
-  color: #eeeeee;
+  color: #ffffff;
   padding: 15px;
 }
 
@@ -312,6 +333,8 @@ body {
 
 .forum-bloc > .content {
   border: 1px solid #254760;
+  border-bottom-right-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
   background: #ffffff;
 }
 
@@ -326,7 +349,6 @@ body {
 }
 
 .forum-bloc > .content > ul {
-  background: #ffffff;
   padding-left: 0;
   list-style: none;
   height: 80px;
@@ -389,13 +411,18 @@ body {
 
 .forum-bloc > .content > ul > li.stats > p {
   display: inline-block;
-  margin: 0 30px 0 0;
   font-size: 14px;
   line-height: 18px;
 }
 
+.forum-bloc > .content > ul > li.stats > p:nth-child(1n+2) {
+  margin-left: 10px;
+}
+
 .forum-bloc > .content > ul > li.stats > p > strong {
   display: block;
+  color: #254760;
+  font-weight: bold;
 }
 
 .forum-bloc > .content > ul > li.last-post {
@@ -432,7 +459,9 @@ body {
 
 .topic-bloc > .title {
   background: #254760;
-  color: #eeeeee;
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
+  color: #ffffff;
   padding: 15px;
 }
 
@@ -441,7 +470,9 @@ body {
 }
 
 .topic-bloc > .content {
-  border: 1px solid #217ab9;
+  border: 1px solid #254760;
+  border-bottom-right-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
   background: #ffffff;
 }
 
@@ -555,8 +586,10 @@ body {
 }
 
 .post-bloc > .title {
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
   background: #254760;
-  color: #eeeeee;
+  color: #ffffff;
   padding: 15px;
 }
 
@@ -565,6 +598,8 @@ body {
 }
 
 .post-bloc > .content {
+  border-bottom-right-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
   border: 1px solid #217ab9;
   background: #ffffff;
 }
@@ -704,12 +739,16 @@ body {
 }
 
 .post-reply > .title {
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
   background: #254760;
-  color: #eeeeee;
+  color: #ffffff;
   padding: 15px;
 }
 
 .post-reply > .content {
+  border-bottom-right-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
   border: 1px solid #254760;
   background: #ffffff;
 }
@@ -748,8 +787,10 @@ body {
 }
 
 .page-bloc > .title {
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
   background: #254760;
-  color: #eeeeee;
+  color: #ffffff;
   padding: 15px;
 }
 
@@ -758,7 +799,9 @@ body {
 }
 
 .page-bloc > .content {
-  border: 1px solid #217ab9;
+  border: 1px solid #254760;
+  border-bottom-right-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
   background: #ffffff;
 }
 
@@ -817,9 +860,8 @@ body {
 }
 
 .footer .footer-about > .social > ul > li > a:hover, .footer .footer-about > .social > ul > li > a:focus {
-  opacity: 0.8;
-  filter: alpha(opacity=80);
   color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
 }
 
 .footer .footer-useful-links > ul {
@@ -846,9 +888,8 @@ body {
 }
 
 .footer .footer-useful-links > ul > li > a:hover, .footer .footer-useful-links > ul > li > a:focus {
-  opacity: 0.8;
-  filter: alpha(opacity=80);
   color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
 }
 
 .scroll-top-wrapper {
@@ -858,8 +899,8 @@ body {
   overflow: hidden;
   text-align: center;
   z-index: 99999999;
-  background-color: #217ab9;
-  color: #eeeeee;
+  background-color: #254760;
+  color: #ffffff;
   width: 50px;
   height: 48px;
   line-height: 48px;
@@ -872,7 +913,7 @@ body {
 }
 
 .scroll-top-wrapper:hover {
-  background-color: #254760;
+  background-color: #1a3344;
 }
 
 .scroll-top-wrapper.show {

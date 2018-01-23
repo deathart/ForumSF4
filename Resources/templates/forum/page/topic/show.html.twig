@@ -2,7 +2,7 @@
 
 {% block body %}
     <div class="post-bloc">
-        <div class="title rounded-top clearfix">
+        <div class="title clearfix">
             <span class="float-left"><i class="fa fa-comments" aria-hidden="true"></i> TITRE</span>
             <span class="rat float-right">
                 {% trans from 'topicshow'%}title.rat{% endtrans %} :
@@ -13,7 +13,7 @@
                 <i class="fa fa-star-o" aria-hidden="true"></i>
             </span>
         </div>
-        <div class="content rounded-bottom">
+        <div class="content">
             <div class="row posts">
                 <div class="col-md-2 user-info">
                     <a href="#" class="username">Deathart</a>
@@ -215,10 +215,10 @@
         </div>
     </div>
     <div class="post-reply mt-4">
-        <div class="title rounded-top">
+        <div class="title">
             {% trans from 'topicshow'%}reply.title{% endtrans %}
         </div>
-        <div class="content rounded-bottom">
+        <div class="content">
             <form>
                 <div class="form-group row">
                     <label for="message" class="col-sm-2 col-form-label">{% trans from 'topicshow'%}reply.form.label{% endtrans %}</label>

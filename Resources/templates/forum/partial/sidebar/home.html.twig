@@ -1,29 +1,29 @@
 {% if not app.session.has('logged') %}
-    <div class="sidebar-bloc">
-        <div class="title rounded-top">
+    <div class="sidebar-bloc rounded">
+        <div class="title">
             {% trans from 'layout'%}sidebar.bloc_guest.title{% endtrans %}
         </div>
-        <div class="content rounded-bottom">
+        <div class="content">
             {% trans from 'layout'%}sidebar.bloc_guest.content{% endtrans %}
         </div>
     </div>
 {% endif %}
 <div class="sidebar-bloc">
-    <div class="title rounded-top">
+    <div class="title">
         {% trans from 'layout'%}sidebar.bloc_monline.title{% endtrans %}
     </div>
-    <div class="content border-bottom-0">
+    <div class="content no-border">
         <a href="#">Deathart</a>, <a href="#">Deathart</a>, <a href="#">Deathart</a>, <a href="#">Deathart</a>, <a href="#">Deathart</a>, <a href="#">Deathart</a>, <a href="#">Deathart</a>, <a href="#">Deathart</a>, <a href="#">Deathart</a>, <a href="#">Deathart</a>, <a href="#">Deathart</a>
     </div>
-    <div class="footer-bloc rounded-bottom">
+    <div class="footer-bloc">
         {{ 'sidebar.bloc_monline.footer'|trans({'%total%': '5', '%members%': '3', '%guests%': '2'}, 'layout')|raw }}
     </div>
 </div>
 <div class="sidebar-bloc">
-    <div class="title rounded-top">
+    <div class="title">
         {% trans from 'layout'%}sidebar.bloc_latest_posts.title{% endtrans %}
     </div>
-    <div class="content rounded-bottom">
+    <div class="content">
         <ul>
             <li>
                 <img src="https://dummyimage.com/30/000/fff.png" alt="deathart" class="rounded d-none d-lg-block">
