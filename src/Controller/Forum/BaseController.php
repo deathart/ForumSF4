@@ -187,7 +187,7 @@ class BaseController extends Controller
         $configVal = $this->getDoctrine()->getRepository(Config::class)->findDataByKey($key);
 
         if ($configVal) {
-            return $configVal->getData();
+            return $configVal->getValue();
         }
 
         return false;

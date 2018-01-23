@@ -23,17 +23,17 @@ class ConfigRepository extends ServiceEntityRepository
     }
 
     /**
-     * @param string $key
+     * @param string $name
      *
      * @return mixed
      *
      * @throws \Doctrine\ORM\NonUniqueResultException
      */
-    public function findDataByKey(string $key)
+    public function findDataByKey(string $name)
     {
         $qb = $this->createQueryBuilder('c')
-            ->andWhere('c.key = :key')
-            ->setParameter('key', $key);
+            ->andWhere('c.name = :name')
+            ->setParameter('name', $name);
 
         $query = $qb->getQuery();
 

@@ -24,16 +24,16 @@ class Config
     /**
      * @var string
      *
-     * @ORM\Column(name="key", type="string", length=250, nullable=false)
+     * @ORM\Column(name="name", type="string", length=250, nullable=false)
      */
-    private $key;
+    private $name;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="data", type="text", nullable=false)
+     * @ORM\Column(name="value", type="text", nullable=false)
      */
-    private $data;
+    private $value;
 
     /**
      * @var string
@@ -45,8 +45,48 @@ class Config
     /**
      * @return string
      */
-    public function getData(): string
+    public function getName(): string
     {
-        return $this->data;
+        return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getValue(): string
+    {
+        return $this->value;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType(): string
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName(string $name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @param string $value
+     */
+    public function setValue(string $value)
+    {
+        $this->value = $value;
+    }
+
+    /**
+     * @param string $type
+     */
+    public function setType(string $type)
+    {
+        $this->type = $type;
     }
 }
