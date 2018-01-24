@@ -140,12 +140,17 @@ body {
 }
 
 .chatbox-bloc > .content .chat .message > ul > li > .chat-body > .header > a {
-  color: #444444;
-  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: all .15s ease-out;
+  transition: all .15s ease-out;
+  color: #254760;
+  line-height: 1.2;
+  font-weight: 600;
 }
 
-.chatbox-bloc > .content .chat .message > ul > li > .chat-body > .header > a:hover {
-  text-decoration: none;
+.chatbox-bloc > .content .chat .message > ul > li > .chat-body > .header > a:hover, .chatbox-bloc > .content .chat .message > ul > li > .chat-body > .header > a:focus {
+  color: #217ab9;
+  outline: 0;
 }
 
 .chatbox-bloc > .content .chat .message > ul > li > .chat-body > .header > small {
@@ -198,12 +203,17 @@ body {
 }
 
 .chatbox-bloc > .content .users > ul > li > a {
-  color: #444444;
-  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: all .15s ease-out;
+  transition: all .15s ease-out;
+  color: #254760;
+  line-height: 1.2;
+  font-weight: 600;
 }
 
-.chatbox-bloc > .content .users > ul > li > a:hover {
-  text-decoration: none;
+.chatbox-bloc > .content .users > ul > li > a:hover, .chatbox-bloc > .content .users > ul > li > a:focus {
+  color: #217ab9;
+  outline: 0;
 }
 
 .sidebar-bloc {
@@ -348,13 +358,17 @@ body {
 }
 
 .forum-bloc > .content a {
+  text-decoration: none;
+  -webkit-transition: all .15s ease-out;
+  transition: all .15s ease-out;
   color: #254760;
-  font-weight: bold;
+  line-height: 1.2;
+  font-weight: 600;
 }
 
-.forum-bloc > .content a:hover {
+.forum-bloc > .content a:hover, .forum-bloc > .content a:focus {
   color: #217ab9;
-  text-decoration: none;
+  outline: 0;
 }
 
 .forum-bloc > .content > ul {
@@ -486,13 +500,17 @@ body {
 }
 
 .topic-bloc > .content a {
+  text-decoration: none;
+  -webkit-transition: all .15s ease-out;
+  transition: all .15s ease-out;
   color: #254760;
-  font-weight: bold;
+  line-height: 1.2;
+  font-weight: 600;
 }
 
-.topic-bloc > .content a:hover {
+.topic-bloc > .content a:hover, .topic-bloc > .content a:focus {
   color: #217ab9;
-  text-decoration: none;
+  outline: 0;
 }
 
 .topic-bloc > .content > ul {
@@ -629,14 +647,18 @@ body {
 
 .post-bloc > .content > .posts > .user-info > .username {
   text-align: center;
-  color: #254760;
   display: block;
-  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: all .15s ease-out;
+  transition: all .15s ease-out;
+  color: #254760;
+  line-height: 1.2;
+  font-weight: 600;
 }
 
-.post-bloc > .content > .posts > .user-info > .username:hover {
+.post-bloc > .content > .posts > .user-info > .username:hover, .post-bloc > .content > .posts > .user-info > .username:focus {
   color: #217ab9;
-  text-decoration: none;
+  outline: 0;
 }
 
 .post-bloc > .content > .posts > .user-info > .etat {
@@ -711,13 +733,31 @@ body {
 }
 
 .post-bloc > .content > .posts > .message > .post_head > .post_count > a {
-  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: all .15s ease-out;
+  transition: all .15s ease-out;
   color: #254760;
+  line-height: 1.2;
+  font-weight: 600;
 }
 
-.post-bloc > .content > .posts > .message > .post_head > .post_count > a:hover {
+.post-bloc > .content > .posts > .message > .post_head > .post_count > a:hover, .post-bloc > .content > .posts > .message > .post_head > .post_count > a:focus {
   color: #217ab9;
+  outline: 0;
+}
+
+.post-bloc > .content > .posts > .message > .post_cont a {
   text-decoration: none;
+  -webkit-transition: all .15s ease-out;
+  transition: all .15s ease-out;
+  color: #254760;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.post-bloc > .content > .posts > .message > .post_cont a:hover, .post-bloc > .content > .posts > .message > .post_cont a:focus {
+  color: #217ab9;
+  outline: 0;
 }
 
 .post-bloc > .content > .posts > .action {
@@ -727,12 +767,17 @@ body {
 }
 
 .post-bloc > .content > .posts > .action > a {
+  text-decoration: none;
+  -webkit-transition: all .15s ease-out;
+  transition: all .15s ease-out;
   color: #254760;
+  line-height: 1.2;
+  font-weight: 600;
 }
 
-.post-bloc > .content > .posts > .action > a:hover {
+.post-bloc > .content > .posts > .action > a:hover, .post-bloc > .content > .posts > .action > a:focus {
   color: #217ab9;
-  text-decoration: none;
+  outline: 0;
 }
 
 .post-reply {
