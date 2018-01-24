@@ -113,7 +113,7 @@ class BaseController extends Controller
             $bread = '<nav aria-label="breadcrumb"><ol class="breadcrumb">';
             $bread .= '<li class="breadcrumb-item"><a href="'.$this->request->getCurrentRequest()->getSchemeAndHttpHost().'" class="font-weight-bold"><i class="fa fa-home" aria-hidden="true"></i></a></li>';
             if (!empty($this->breadcrumb)) {
-                foreach ($this->breadcrumb as $key => $databread) {
+                foreach ($this->breadcrumb as $databread) {
                     if ('active' !== $databread['url']) {
                         $bread .= '<li class="breadcrumb-item"><a href="'.$this->request->getCurrentRequest()->getSchemeAndHttpHost().'/'.$databread['url'].'" class="font-weight-bold">'.$databread['name'].'</a></li>';
                     } else {
