@@ -42,9 +42,12 @@ class ForumController extends BaseController
 
         $getCatChild = $this->getDoctrine()->getRepository(Category::class)->findByParent($getInfoCat->getId());
 
-        $this->breadcrumb = [
-            ['url' => 'active', 'name' => $getInfoCat->getName()],
-        ];
+        if (0 != $getInfoCat->getParent()) {
+            $getCatParent = $this->getDoctrine()->getRepository(Category::class)->findOneBy(['id' => $getInfoCat->getParent()]);
+            $this->breadcrumb[] = ['url' => 'forum/'.$getCatParent->getSlug(), 'name' => $getCatParent->getName()];
+        }
+
+        $this->breadcrumb[] = ['url' => 'active', 'name' => $getInfoCat->getName()];
 
         $this->data['slug_forum'] = $slug;
 
