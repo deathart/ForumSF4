@@ -2,6 +2,7 @@
 
 namespace App\Controller\Forum;
 
+use App\Entity\Category;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
@@ -27,6 +28,8 @@ class HomeController extends BaseController
      */
     public function index()
     {
+        $this->data['all_cat'] = $this->getDoctrine()->getRepository(Category::class)->findAll();
+
         return $this->renderer('home.html.twig');
     }
 }

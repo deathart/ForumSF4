@@ -2,6 +2,7 @@
 
 namespace App\Controller\Forum;
 
+use App\Entity\Category;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
@@ -37,11 +38,26 @@ class ForumController extends BaseController
      */
     public function show(string $slug)
     {
+        $getInfoCat = $this->getDoctrine()->getRepository(Category::class)->findOneBy(['slug' => $slug]);
+
+        $getCatChild = $this->getDoctrine()->getRepository(Category::class)->findByParent($getInfoCat->getId());
+
         $this->breadcrumb = [
-            //['url' => 'Forum/Communaute', 'name' => 'Communaute'],
-            ['url' => 'active', 'name' => $slug],
+            ['url' => 'active', 'name' => $getInfoCat->getName()],
         ];
+
         $this->data['slug_forum'] = $slug;
+
+        $this->data['cat_info'] = [
+            'id' => $getInfoCat->getId(),
+            'name' => $getInfoCat->getName(),
+            'desc' => $getInfoCat->getDesc(),
+            'slug' => $getInfoCat->getSlug(),
+            'position' => $getInfoCat->getPosition(),
+            'parent' => $getInfoCat->getParent(),
+        ];
+
+        $this->data['cat_child'] = $getCatChild;
 
         $this->stitle = $slug;
 

@@ -327,6 +327,15 @@ body {
   padding: 15px;
 }
 
+.forum-bloc > .title > a {
+  color: #ffffff;
+}
+
+.forum-bloc > .title > a:hover {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
 .forum-bloc > .title > small {
   display: block;
 }

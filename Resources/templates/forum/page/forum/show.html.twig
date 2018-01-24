@@ -1,9 +1,10 @@
 {% extends "forum/template.html.twig" %}
 
 {% block body %}
+    {% if cat_child %}
     <div class="forum-bloc">
         <div class="title">
-            Subforums
+            <a href="{{ url('forum_show', {'slug': cat_child.slug}) }}">{{ cat_child.name }}</a>
         </div>
         <div class="content">
             <ul>
@@ -74,6 +75,7 @@
             </ul>
         </div>
     </div>
+    {% endif %}
     <div class="topic-bloc mt-4">
         <div class="title">
             Topics
