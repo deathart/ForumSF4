@@ -28,7 +28,7 @@ class HomeController extends BaseController
      */
     public function index()
     {
-        $this->data['all_cat'] = $this->getDoctrine()->getRepository(Category::class)->findAll();
+        $this->data['all_cat'] = $this->getDoctrine()->getRepository(Category::class)->findAllWithoutParent();
 
         return $this->renderer('home.html.twig');
     }
