@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{{ titlePage }}</title>
+        <title>{{ titlePage }} | {{ foruminfo['title'] }}</title>
         {% for data in css %}
             <link rel="stylesheet" type="text/css" href="{{ absolute_url(asset(data.file)) }}" />
         {% endfor %}
@@ -63,8 +63,8 @@
         </nav>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-4">{{ 'title'|config }}</h1>
-                <p class="lead">{{ 'desc'|config }}</p>
+                <h1 class="display-4">{{ foruminfo['title'] }}</h1>
+                <p class="lead">{{ foruminfo['description'] }}</p>
             </div>
         </div>
         <div class="navigation-bot-header d-none d-md-block">

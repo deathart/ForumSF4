@@ -97,7 +97,7 @@ class BaseController extends Controller
             $tf .= ' - '.$this->stitle;
         }
 
-        return $tf.' | '.$this->GetConfig('title');
+        return $tf;
     }
 
     /**
@@ -126,7 +126,7 @@ class BaseController extends Controller
             return $bread;
         }
 
-        return '<a href="'.$this->request->getCurrentRequest()->getSchemeAndHttpHost().'" class="font-weight-bold">'.$this->GetConfig('title').'</a>';
+        return '<a href="'.$this->request->getCurrentRequest()->getSchemeAndHttpHost().'" class="font-weight-bold">'.$this->data['foruminfo']['title'].'</a>';
     }
 
     /**
@@ -164,6 +164,11 @@ class BaseController extends Controller
     protected function renderer(string $view): Response
     {
         $this->init();
+
+        $this->data['foruminfo'] = [
+            'title' => $this->GetConfig('title'),
+            'description' => $this->GetConfig('desc'),
+        ];
 
         $this->data['titlePage'] = $this->setTitle();
 
