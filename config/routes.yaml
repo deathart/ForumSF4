@@ -2,6 +2,14 @@ base:
   path: /
   controller: App\Controller\Forum\HomeController::index
 
+cat:
+  path: /category/
+  controller: App\Controller\Forum\ForumController::index
+
+cat_show:
+  path: /category/{slug}
+  controller: App\Controller\Forum\CatController::show
+
 forum:
   path: /forum/
   controller: App\Controller\Forum\ForumController::index

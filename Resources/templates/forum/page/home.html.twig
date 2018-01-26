@@ -4,7 +4,7 @@
     {% for cat_data in all_cat %}
     <div class="forum-bloc">
         <div class="title">
-            <a href="{{ url('forum_show', {'slug': cat_data.slug}) }}">{{ cat_data.name }}</a>
+            <a href="{{ url('cat_show', {'slug': cat_data.slug}) }}">{{ cat_data.name }}</a>
             <small>{{ cat_data.desc }}</small>
         </div>
         <div class="content">
