@@ -7,6 +7,8 @@ I created this forum system with the help of Symfony4, thank you for being lenie
   - `composer install`
   - `php bin/console doctrine:migrations:migrate`
   - `php bin/console doctrine:fixtures:load`
+  - `yarn install`
+  - `yarn run encore production`
 
 # Themes and languages
 - Themes : To modify or add a new theme, this can be found in the folder: `Ressources/templates` (Provisional).
