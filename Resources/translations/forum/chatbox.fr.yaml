@@ -1,6 +1,7 @@
 title: Chatbox
 newwindow: Ouvrir dans une nouvel fenêtre
 expand: Agrandir/rétrécir
+collapse: Agrandir/Réduire
 content:
   form:
     input: Votre message...

@@ -127,6 +127,10 @@ body {
   width: 100%;
 }
 
+.chatbox-bloc > .content .chat .message > ul > li:last-child {
+  border-bottom: none;
+}
+
 .chatbox-bloc > .content .chat .message > ul > li.float-left > .chat-body {
   margin-left: 45px;
 }
@@ -178,10 +182,24 @@ body {
 
 .chatbox-bloc > .content .chat > form > input {
   width: 90%;
+  border-radius: 0;
+  border: 0;
+}
+
+.chatbox-bloc > .content .chat > form > input.form-control {
+  border-radius: 0;
+}
+
+.chatbox-bloc > .content .chat > form > input.form-control:focus {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .chatbox-bloc > .content .chat > form > button {
   width: 10%;
+  border-radius: 0;
+  line-height: 1.6;
 }
 
 .chatbox-bloc > .content .users {
@@ -326,7 +344,7 @@ body {
 }
 
 .forum-bloc:nth-child(1n+2) {
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 .forum-bloc > .title {

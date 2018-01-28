@@ -29,7 +29,7 @@ App = (function() {
         that.DeleteAllCookies();
         that.scroll_top();
 
-        if (that.GetSegmentUrl(1) != "topic") {
+        if (that.GetSegmentUrl(1) !== "topic") {
             that.ChatBox();
         }
 
@@ -38,28 +38,56 @@ App = (function() {
     that.ChatBox = function() {
         var divmessages = $('.scroll-chatbox-messages');
         var divusers = $('.scroll-chatbox-users');
+        var divbloc = $(".chatbox-bloc");
         var expandbtn = $('.expand-chat');
+        var collapsebtn = $('.collapse-chat');
 
         //Initialize scrollbar
         divmessages.scrollTop(divmessages[0].scrollHeight);
         divmessages.scrollbar();
         divusers.scrollbar();
 
+        //Collapse chatbox
+        if (!Cookies.get('chatbox_collapse')) {
+            Cookies.set('chatbox_collapse', 'minus');
+            collapsebtn.addClass("fa-minus");
+        } else {
+            if (Cookies.get('chatbox_collapse') === "minus") {
+                collapsebtn.addClass("fa-minus");
+                divbloc.children('.content').addClass("show");
+            } else {
+                collapsebtn.addClass("fa-plus");
+                divbloc.children('.content').removeClass("show");
+            }
+        }
+
+        collapsebtn.click(function() {
+            if (collapsebtn.hasClass("fa-minus")) {
+                collapsebtn.removeClass("fa-minus").addClass("fa-plus");
+                Cookies.set('chatbox_collapse', 'plus');
+                divbloc.children('.content').collapse('toggle');
+            } else {
+                collapsebtn.removeClass("fa-plus").addClass("fa-minus");
+                Cookies.set('chatbox_collapse', 'minus');
+                divbloc.children('.content').collapse('toggle');
+            }
+        });
+
         //Expand chatbox
         if (!Cookies.get('chatbox_expanded')) {
             Cookies.set("chatbox_expanded", "container-fluid")
         }
 
-        $(".chatbox-bloc").parent().addClass(Cookies.get('chatbox_expanded'));
+        divbloc.parent().addClass(Cookies.get('chatbox_expanded'));
 
-        $(".chatbox-bloc").slideToggle();
+        divbloc.slideToggle();
 
         expandbtn.click(function() {
-            if ($(".chatbox-bloc").parent().hasClass("container")) {
-                $(".chatbox-bloc").parent().removeClass("container").addClass("container-fluid");
+            if (divbloc.parent().hasClass("container")) {
+                divbloc.parent().removeClass("container").addClass("container-fluid");
                 Cookies.set("chatbox_expanded", "container-fluid")
             } else {
-                $(".chatbox-bloc").parent().removeClass("container-fluid").addClass("container");
+                divbloc.parent().removeClass("container-fluid").addClass("container");
                 Cookies.set("chatbox_expanded", "container")
             }
         });
@@ -67,24 +95,26 @@ App = (function() {
     };
     that.scroll_top = function() {
 
+        var scrollwrapper = $('.scroll-top-wrapper');
+
         $(window).on('scroll', function() {
             if ($(this).scrollTop() > 100) {
                 if ($(this).scrollTop() > $(document).height() - $(this).height() - 100) {
-                    $('.scroll-top-wrapper').css("bottom", "230px");
+                    scrollwrapper.css("bottom", "230px");
                 } else {
-                    $('.scroll-top-wrapper').css("bottom", "30px");
+                    scrollwrapper.css("bottom", "30px");
                 }
-                $('.scroll-top-wrapper').addClass('show');
+                scrollwrapper.addClass('show');
                 $("header").addClass("fixed");
                 $("body").css("margin-top", "25px");
             } else {
-                $('.scroll-top-wrapper').removeClass('show');
+                scrollwrapper.removeClass('show');
                 $("header").removeClass("fixed");
                 $("body").css("margin-top", "56px");
             }
         });
 
-        $(".scroll-top-wrapper").click(function() {
+        scrollwrapper.click(function() {
             $("html, body").animate({
                 scrollTop: 0
             }, 600);
@@ -97,11 +127,11 @@ App = (function() {
         $(".delallcookies").click(function() {
             Object.keys(Cookies.get()).forEach(function(cookieName) {
                 Cookies.remove(cookieName);
-                that.Notifications('success', 'Remove cookies', 'All cookies have been successfully deleted page reload in 3 seconds.')
-                setTimeout(function() {
-                    location.reload();
-                }, 3000);
             });
+            that.Notifications('success', 'Remove cookies', 'All cookies have been successfully deleted page reload in 3 seconds.');
+            setTimeout(function() {
+                location.reload();
+            }, 3000);
         });
     };
 
