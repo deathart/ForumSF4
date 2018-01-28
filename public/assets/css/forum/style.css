@@ -7,7 +7,7 @@ html {
 body {
   margin: 56px 0 225px 0;
   font: 300 14px/1.7 'Roboto', sans-serif;
-  background-color: #e6e6e6;
+  background: url("../../images/background.jpg") no-repeat fixed center;
 }
 
 .navbar-dark {
@@ -16,6 +16,15 @@ body {
 
 .jumbotron {
   margin-bottom: 0;
+  background: url("../../images/headerbg_1.jpg");
+}
+
+.jumbotron > .container > h1 {
+  color: #ffffff;
+}
+
+.jumbotron > .container > .lead {
+  color: #ffffff;
 }
 
 .navigation-bot-header {
