@@ -19,15 +19,20 @@ App = (function() {
     };
 
     that.init = function() {
+
         $(function() {
             $('[data-toggle="tooltip"]').tooltip({
                 container: "body"
             })
         });
+
+        that.DeleteAllCookies();
         that.scroll_top();
+
         if (that.GetSegmentUrl(1) != "topic") {
             that.ChatBox();
         }
+
     };
 
     that.ChatBox = function() {
@@ -42,7 +47,7 @@ App = (function() {
 
         //Expand chatbox
         if (!Cookies.get('chatbox_expanded')) {
-            Cookies.set("chatbox_expanded", "container")
+            Cookies.set("chatbox_expanded", "container-fluid")
         }
 
         $(".chatbox-bloc").parent().addClass(Cookies.get('chatbox_expanded'));
@@ -88,6 +93,13 @@ App = (function() {
 
     };
 
+    that.DeleteAllCookies = function() {
+        $(".delallcookies").click(function() {
+            Object.keys(Cookies.get()).forEach(function(cookieName) {
+                Cookies.remove(cookieName);
+            });
+        });
+    };
 
     return that;
 

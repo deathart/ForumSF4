@@ -946,6 +946,23 @@ body {
   text-decoration: none;
 }
 
+.footer .footer-useful-links > ul > li > span {
+  border-bottom: 1px dotted #fff;
+  display: block;
+  margin: 2px 0;
+  padding-bottom: 5px;
+  text-transform: capitalize;
+  -webkit-transition: opacity .25s ease;
+  transition: opacity .25s ease;
+  color: #eeeeee;
+  cursor: pointer;
+}
+
+.footer .footer-useful-links > ul > li > span:hover, .footer .footer-useful-links > ul > li > span:focus {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
 .scroll-top-wrapper {
   position: fixed;
   opacity: 0;
