@@ -71,7 +71,7 @@ class BaseController extends Controller
 
         //Set CSS
         $this->set_css('build/css/vendor/font-awesome.css');
-        $this->set_css('build/css/forum/bootstrap.css');
+        $this->set_css('build/css/vendor/bootstrap.css');
         $this->set_css('build/css/forum/style.css');
         //Set JS
         $this->set_js('build/manifest.js');

@@ -1,0 +1,8 @@
+$theme: rgb(37, 71, 96) !default;
+$theme-blue: $theme !default;
+$theme-colors: () !default;
+$theme-colors: map-merge((
+        "theme": $theme
+), $theme-colors);
+
+@import "~bootstrap/scss/bootstrap";
