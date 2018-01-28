@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400');
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 56px 0 225px 0;
+    font: 300 14px/1.7 'Roboto', sans-serif;
+    background: url('../../images/background.jpg') no-repeat fixed center;
+}
+
+@import "partial/header";
+@import "partial/chatbox";
+@import "partial/sidebar";
+@import "partial/forum";
+@import "partial/topic";
+@import "partial/page";
+@import "partial/footer";
+
+//PLUGINS
+@import "partial/scrollbar";
+@import "partial/toast";

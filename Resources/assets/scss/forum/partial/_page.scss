@@ -1,0 +1,27 @@
+.page-bloc {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    &:hover {
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+        transition: all .3s linear;
+    }
+    &:nth-child(1n+2) {
+        margin-top: 3%;
+    }
+    > .title {
+        border-top-left-radius: 0.25rem !important;
+        border-top-right-radius: 0.25rem !important;
+        background: rgb(37, 71, 96);
+        color: #ffffff;
+        padding: 15px;
+        > small {
+            display: block;
+        }
+    }
+    > .content {
+        border: 1px solid rgb(37, 71, 96);
+        border-bottom-right-radius: 0.25rem !important;
+        border-bottom-left-radius: 0.25rem !important;
+        background: #ffffff;
+        @import 'page/faq';
+    }
+}

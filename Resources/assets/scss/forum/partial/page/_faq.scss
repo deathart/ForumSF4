@@ -1,0 +1,19 @@
+&.faq {
+    > a {
+        padding: 5px;
+        color: rgb(37, 71, 96);
+        font-weight: bold;
+        display: block;
+        &:hover {
+            color: rgb(33, 122, 185);
+            text-decoration: none;
+        }
+    }
+    >.collapse {
+        padding: 5px 15px;
+        >.card {
+            border: 1px solid rgb(33, 122, 185);
+            border-radius: 0.25rem;
+        }
+    }
+}

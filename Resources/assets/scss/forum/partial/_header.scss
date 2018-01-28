@@ -1,0 +1,51 @@
+.navbar-dark {
+    background: rgb(37, 71, 96);
+}
+.jumbotron {
+    margin-bottom: 0;
+    background: url('../../images/headerbg_1.jpg');
+    >.container {
+        >h1 {
+            color: #ffffff;
+        }
+        >.lead {
+            color: #ffffff;
+        }
+    }
+}
+.navigation-bot-header {
+    padding: 1rem;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: rgb(37, 71, 96);
+    color: #eeeeee;
+    a {
+        color: #eeeeee;
+        &:hover, &:focus {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+        }
+    }
+    .social {
+        >a {
+            &:nth-child(1n+2) {
+                padding-left: 10px;
+            }
+        }
+    }
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0 1rem;
+        margin-bottom: 0;
+        >.breadcrumb-item {
+            &::before {
+                color: #eeeeee;
+            }
+            &.active {
+                color: #eeeeee;
+            }
+        }
+    }
+}

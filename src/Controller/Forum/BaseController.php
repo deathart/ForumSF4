@@ -70,17 +70,14 @@ class BaseController extends Controller
         $translator->setLocale($this->GetConfig('lang'));
 
         //Set CSS
-        $this->set_css('assets/css/vendor/font-awesome.css');
-        $this->set_css('assets/css/forum/bootstrap.css');
-        $this->set_css('assets/css/forum/style.css');
+        $this->set_css('build/css/vendor/font-awesome.css');
+        $this->set_css('build/css/forum/bootstrap.css');
+        $this->set_css('build/css/forum/style.css');
         //Set JS
-        $this->set_js('assets/js/vendor/jquery.min.js');
-        $this->set_js('assets/js/vendor/popper.min.js');
-        $this->set_js('assets/js/vendor/bootstrap.min.js');
-        $this->set_js('assets/js/vendor/cookie.min.js');
-        $this->set_js('assets/js/vendor/scroll.min.js');
-        $this->set_js('assets/js/vendor/jquery.toast.min.js');
-        $this->set_js('assets/js/forum/app.js');
+        $this->set_js('build/manifest.js');
+        $this->set_js('build/js/vendor.js');
+        $this->set_js('build/js/vendor/scroll.js');
+        $this->set_js('build/js/forum/app.js');
 
         return $this;
     }

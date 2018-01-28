@@ -1,0 +1,80 @@
+.sidebar-bloc {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 0.25rem !important;
+    &:hover {
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+        transition: all .3s linear;
+    }
+    &:nth-child(1n+2) {
+        margin-top: 5%;
+    }
+    >.title {
+        font-family: 'Roboto', sans-serif, Times, serif;
+        border-top-right-radius: 0.25rem !important;
+        border-top-left-radius: 0.25rem !important;
+        background: rgb(37, 71, 96);
+        color: #ffffff;
+        padding: 15px;
+    }
+    >.content {
+        border: 1px solid rgb(37, 71, 96);
+        border-bottom-right-radius: 0.25rem !important;
+        border-bottom-left-radius: 0.25rem !important;
+        background: #ffffff;
+        padding: 15px;
+        &.no-border {
+            border-bottom: 0 !important;
+            border-bottom-right-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+        }
+        a {
+            text-decoration: none;
+            -webkit-transition: all .15s ease-out;
+            -moz-transition: all .15s ease-out;
+            -o-transition: all .15s ease-out;
+            transition: all .15s ease-out;
+            color: rgb(37, 71, 96);
+            line-height: 1.2;
+            font-weight: 600;
+            &:hover, &:focus {
+                color: rgb(33, 122, 185);
+                outline: 0;
+            }
+        }
+        >ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            min-height: 30px;
+            >li {
+                display: inline-block;
+                >img {
+                    float: left;
+                }
+                >.info {
+                    float: left;
+                    padding-left: 5px;
+                    margin-top: -5px;
+                    >a {
+                        margin-top: -5px;
+                    }
+                    >small {
+                        display: block;
+                        margin-top: -5px;
+                    }
+                }
+            }
+        }
+    }
+    >.footer-bloc {
+        padding: 15px;
+        border: 1px solid rgb(37, 71, 96);
+        background: rgb(37, 71, 96);
+        border-bottom-right-radius: 0.25rem !important;
+        border-bottom-left-radius: 0.25rem !important;
+        color: #ffffff;
+        strong {
+            font-weight: bold;
+        }
+    }
+}

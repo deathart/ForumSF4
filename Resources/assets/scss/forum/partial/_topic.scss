@@ -1,0 +1,197 @@
+.post-bloc {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    &:hover {
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+        transition: all .3s linear;
+    }
+    >.title {
+        border-top-left-radius: 0.25rem !important;
+        border-top-right-radius: 0.25rem !important;
+        background: rgb(37, 71, 96);
+        color: #ffffff;
+        padding: 15px;
+        >.rat {
+            cursor: pointer;
+        }
+    }
+    >.content {
+        border-bottom-right-radius: 0.25rem !important;
+        border-bottom-left-radius: 0.25rem !important;
+        border: 1px solid rgb(33, 122, 185);
+        background: #ffffff;
+        >.posts {
+            margin: 0;
+            &:nth-child(1n+2) {
+                border-top: 1px solid rgb(33, 122, 185);
+            }
+            > .user-info {
+                border-right: 1px dashed rgb(33, 122, 185);
+                min-height: 350px;
+                padding: 5px 10px;
+                >.username {
+                    text-align: center;
+                    display: block;
+                    text-decoration: none;
+                    -webkit-transition: all .15s ease-out;
+                    -moz-transition: all .15s ease-out;
+                    -o-transition: all .15s ease-out;
+                    transition: all .15s ease-out;
+                    color: rgb(37, 71, 96);
+                    line-height: 1.2;
+                    font-weight: 600;
+                    &:hover, &:focus {
+                        color: rgb(33, 122, 185);
+                        outline: 0;
+                    }
+                }
+                >.etat {
+                    text-align: center;
+                    display: block;
+                }
+                >.avatar {
+                    text-align: center;
+                    display: block;
+                    margin: 15px 0;
+                    >img {
+                        width: 85px;
+                        height: 85px;
+                    }
+                }
+                >.rang {
+                    text-align: center;
+                    >.name {
+                        display: block;
+                    }
+                    >.rating {
+                        display: block;
+                    }
+                }
+                >.info {
+                    border-top: 1px dashed rgb(33, 122, 185);
+                    padding-top: 10px;
+                    >li {
+                        >.name {
+                            text-align: left;
+                        }
+                        >.value {
+                            float: right;
+                            text-align: right;
+                        }
+                    }
+                }
+                >.stats {
+                    border-top: 1px dashed rgb(33, 122, 185);
+                    padding-top: 10px;
+                    >li {
+                        >.name {
+                            text-align: left;
+                        }
+                        >.value {
+                            float: right;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+            > .message {
+                min-height: 350px;
+                padding: 5px 10px;
+                >.post_head {
+                    font-size: 11px;
+                    padding-bottom: 4px;
+                    margin-bottom: 15px;
+                    >.post_count {
+                        float: right;
+                        >a {
+                            text-decoration: none;
+                            -webkit-transition: all .15s ease-out;
+                            -moz-transition: all .15s ease-out;
+                            -o-transition: all .15s ease-out;
+                            transition: all .15s ease-out;
+                            color: rgb(37, 71, 96);
+                            line-height: 1.2;
+                            font-weight: 600;
+                            &:hover, &:focus {
+                                color: rgb(33, 122, 185);
+                                outline: 0;
+                            }
+                        }
+                    }
+                }
+                >.post_cont {
+                    a {
+                        text-decoration: none;
+                        -webkit-transition: all .15s ease-out;
+                        -moz-transition: all .15s ease-out;
+                        -ms-transition: all .15s ease-out;
+                        -o-transition: all .15s ease-out;
+                        transition: all .15s ease-out;
+                        color: rgb(37, 71, 96);
+                        line-height: 1.2;
+                        font-weight: 600;
+                        &:hover, &:focus {
+                            color: rgb(33, 122, 185);
+                            outline: 0;
+                        }
+                    }
+                }
+            }
+            > .action {
+                padding: 5px 10px;
+                border-top: 1px dashed rgb(33, 122, 185);
+                text-align: right;
+                >a {
+                    text-decoration: none;
+                    -webkit-transition: all .15s ease-out;
+                    -moz-transition: all .15s ease-out;
+                    -o-transition: all .15s ease-out;
+                    transition: all .15s ease-out;
+                    color: rgb(37, 71, 96);
+                    line-height: 1.2;
+                    font-weight: 600;
+                    &:hover, &:focus {
+                        color: rgb(33, 122, 185);
+                        outline: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+.post-reply {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    &:hover {
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+        transition: all .3s linear;
+    }
+    >.title {
+        border-top-left-radius: 0.25rem !important;
+        border-top-right-radius: 0.25rem !important;
+        background: rgb(37, 71, 96);
+        color: #ffffff;
+        padding: 15px;
+    }
+    >.content {
+        border-bottom-right-radius: 0.25rem !important;
+        border-bottom-left-radius: 0.25rem !important;
+        border: 1px solid rgb(37, 71, 96);
+        background: #ffffff;
+        >form {
+            padding: 15px;
+            >.form-group {
+                >.col-form-label {
+                    text-align: center;
+                }
+                >.col-sm-10 {
+                    > textarea {
+                        margin-top: 15px;
+                    }
+                    > button {
+                        float: right;
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

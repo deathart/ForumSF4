@@ -1,0 +1,155 @@
+.chatbox-bloc {
+    display: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    &:hover {
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+        transition: all .3s linear;
+    }
+    > .title {
+        border-top-left-radius: 0.25rem !important;
+        border-top-right-radius: 0.25rem !important;
+        background: rgb(37, 71, 96);
+        color: #ffffff;
+        padding: 15px;
+        >a {
+            color: #eeeeee;
+            &:hover {
+                color: rgba(255, 255, 255, 0.5);
+                text-decoration: none;
+            }
+        }
+        >span {
+            margin-right: 5px;
+            cursor: pointer;
+            &:hover {
+                color: rgba(255, 255, 255, 0.5);
+                text-decoration: none;
+            }
+        }
+    }
+    > .content {
+        border: 1px solid rgb(37, 71, 96);
+        border-bottom-right-radius: 0.25rem !important;
+        border-bottom-left-radius: 0.25rem !important;
+        background: #ffffff;
+        padding-right: 15px;
+        padding-left: 15px;
+        .chat {
+            height: 250px;
+            padding: 0;
+            .message {
+                height: 210px;
+                overflow: hidden;
+                margin-bottom: 0;
+                >ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    >li {
+                        padding: 5px 5px 5px 5px;
+                        border-bottom: 1px dotted rgb(37, 71, 96);
+                        width: 100%;
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                        &.float-left  {
+                            >.chat-body {
+                                margin-left: 45px;
+                            }
+                        }
+                        &.float-right {
+                            >.chat-body {
+                                margin-right: 45px;
+                                > p {
+                                    text-align: right;
+                                }
+                            }
+                        }
+                        >.chat-body {
+                            >.header {
+                                >a {
+                                    text-decoration: none;
+                                    -webkit-transition: all .15s ease-out;
+                                    -moz-transition: all .15s ease-out;
+                                    -o-transition: all .15s ease-out;
+                                    transition: all .15s ease-out;
+                                    color: rgb(37, 71, 96);
+                                    line-height: 1.2;
+                                    font-weight: 600;
+                                    &:hover, &:focus {
+                                        color: rgb(33, 122, 185);
+                                        outline: 0;
+                                    }
+                                }
+                                >small {
+                                    color: rgb(37, 71, 96);
+                                    &.float-left {
+                                        padding-left: 2px;
+                                    }
+                                    &.float-right {
+                                        padding-right: 2px;
+                                    }
+                                }
+                            }
+                            >p {
+                                margin: 0;
+                                color: #777777;
+                                font-size: 80%;
+                            }
+                        }
+                    }
+                }
+            }
+            >form {
+                height: 40px;
+                border-top: 1px solid rgb(33, 122, 185);
+                >input {
+                    width: 90%;
+                    border-radius: 0;
+                    border: 0;
+                    &.form-control {
+                        border-radius: 0;
+                        &:focus {
+                            border: none;
+                            box-shadow: none;
+                        }
+                    }
+                }
+                >button {
+                    width: 10%;
+                    border-radius: 0;
+                    line-height: 1.6;
+                }
+            }
+        }
+        .users {
+            border-left: 1px solid rgb(33, 122, 185);
+            height: 250px;
+            overflow: hidden;
+            >ul {
+                margin-bottom: 0;
+                > li {
+                    padding: 0 3px 2px 3px;
+                    &:nth-child(1n+2) {
+                        border-top: 1px solid rgb(33, 122, 185);
+                    }
+                    >a {
+                        text-decoration: none;
+                        -webkit-transition: all .15s ease-out;
+                        -moz-transition: all .15s ease-out;
+                        -ms-transition: all .15s ease-out;
+                        -o-transition: all .15s ease-out;
+                        transition: all .15s ease-out;
+                        color: rgb(37, 71, 96);
+                        line-height: 1.2;
+                        font-weight: 600;
+                        &:hover, &:focus {
+                            color: rgb(33, 122, 185);
+                            outline: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
