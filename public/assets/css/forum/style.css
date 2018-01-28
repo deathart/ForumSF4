@@ -414,6 +414,12 @@ body {
   position: relative;
 }
 
+@media (max-width: 576px) {
+  .forum-bloc > .content > ul > li.icon {
+    display: none;
+  }
+}
+
 .forum-bloc > .content > ul > li.icon > i {
   font-size: 35px;
   cursor: pointer;
@@ -428,6 +434,12 @@ body {
   position: relative;
 }
 
+@media (max-width: 576px) {
+  .forum-bloc > .content > ul > li.title {
+    width: 90%;
+  }
+}
+
 .forum-bloc > .content > ul > li.title > a {
   display: inline-block;
   padding-right: .5em;
@@ -437,9 +449,21 @@ body {
   top: 20%;
 }
 
+@media (max-width: 576px) {
+  .forum-bloc > .content > ul > li.title > a {
+    top: 0;
+  }
+}
+
 .forum-bloc > .content > ul > li.title > p {
   position: absolute;
   top: 40%;
+}
+
+@media (max-width: 576px) {
+  .forum-bloc > .content > ul > li.title > p {
+    top: 20%;
+  }
 }
 
 .forum-bloc > .content > ul > li.stats {
@@ -448,6 +472,12 @@ body {
   margin-top: 20px;
   font-size: 0;
   text-align: center;
+}
+
+@media (max-width: 576px) {
+  .forum-bloc > .content > ul > li.stats {
+    display: none;
+  }
 }
 
 .forum-bloc > .content > ul > li.stats > p {
@@ -470,6 +500,12 @@ body {
   height: 75px;
   width: 29%;
   position: relative;
+}
+
+@media (max-width: 576px) {
+  .forum-bloc > .content > ul > li.last-post {
+    display: none;
+  }
 }
 
 .forum-bloc > .content > ul > li.last-post > img {
@@ -999,6 +1035,12 @@ body {
   border-radius: 10px;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 576px) {
+  .scroll-top-wrapper {
+    display: none;
+  }
 }
 
 .scroll-top-wrapper:hover {
