@@ -97,7 +97,27 @@ App = (function() {
         $(".delallcookies").click(function() {
             Object.keys(Cookies.get()).forEach(function(cookieName) {
                 Cookies.remove(cookieName);
+                that.Notifications('success', 'Remove cookies', 'All cookies have been successfully deleted page reload in 3 seconds.')
+                setTimeout(function() {
+                    location.reload();
+                }, 3000);
             });
+        });
+    };
+
+    that.Notifications = function(type, title, content, position) {
+        return $.toast({
+            text: content,
+            heading: title,
+            icon: type,
+            showHideTransition: 'fade',
+            allowToastClose: true,
+            hideAfter: 5000,
+            stack: 5,
+            position: position || 'bottom-center',
+            textAlign: 'center',
+            loader: true,
+            loaderBg: '#9EC600'
         });
     };
 

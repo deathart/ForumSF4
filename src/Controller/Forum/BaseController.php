@@ -79,6 +79,7 @@ class BaseController extends Controller
         $this->set_js('assets/js/vendor/bootstrap.min.js');
         $this->set_js('assets/js/vendor/cookie.min.js');
         $this->set_js('assets/js/vendor/scroll.min.js');
+        $this->set_js('assets/js/vendor/jquery.toast.min.js');
         $this->set_js('assets/js/forum/app.js');
 
         return $this;
