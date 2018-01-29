@@ -25,10 +25,13 @@ class HomeController extends BaseController
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
+     *
+     * @throws \Doctrine\ORM\NoResultException
+     * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function index()
     {
-        $this->data['all_cat'] = $this->getDoctrine()->getRepository(Category::class)->findAllWithoutParent();
+        $this->data['category'] = $this->getDoctrine()->getManager()->getRepository(Category::class)->findAllWithoutParent();
 
         return $this->renderer('home.html.twig');
     }

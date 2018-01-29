@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -33,7 +35,7 @@ class Category
     /**
      * @var string
      *
-     * @ORM\Column(name="slug", type="string", length=250, nullable=false)
+     * @ORM\Column(name="slug", type="string", length=250, nullable=false, unique=true)
      */
     private $slug;
 
@@ -42,7 +44,7 @@ class Category
      *
      * @ORM\Column(name="position", type="integer", nullable=false)
      */
-    private $postition;
+    private $position;
 
     /**
      * @var string
@@ -50,6 +52,30 @@ class Category
      * @ORM\Column(name="parent", type="integer", nullable=false)
      */
     private $parent;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Forum", mappedBy="category", cascade={"persist", "remove"})
+     * @ORM\OrderBy({"position" = "asc"})
+     */
+    protected $forum;
+
+    /**
+     * Category constructor.
+     */
+    public function __construct()
+    {
+        $this->forum = new ArrayCollection();
+    }
+
+    /**
+     * Get forums.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getForum(): Collection
+    {
+        return $this->forum;
+    }
 
     /**
      * @return mixed
@@ -88,7 +114,7 @@ class Category
      */
     public function getPosition(): int
     {
-        return $this->postition;
+        return $this->position;
     }
 
     /**

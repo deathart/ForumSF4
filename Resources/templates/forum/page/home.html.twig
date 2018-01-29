@@ -1,124 +1,38 @@
 {% extends "forum/template.html.twig" %}
 
 {% block body %}
-    {% for cat_data in all_cat %}
-    <div class="forum-bloc">
-        <div class="title">
-            <a href="{{ url('cat_show', {'slug': cat_data.slug}) }}">{{ cat_data.name }}</a>
-            <small>{{ cat_data.desc }}</small>
+    {% for cat_data in category %}
+        <div class="forum-bloc">
+            <div class="title">
+                <a href="{{ url('cat_show', {'slug':cat_data.slug}) }}">{{ cat_data.name }}</a>
+                <small>{{ cat_data.desc }}</small>
+            </div>
+            <div class="content">
+                {% for forum in cat_data.forum %}
+                    <ul>
+                        <li class="icon">
+                            <i class="fa fa-comments-o"></i>
+                        </li>
+                        <li class="title">
+                            <a href="{{ url('forum_show', {'slug':forum.slug}) }}">{{ forum.name }}</a>
+                            <p>{{ forum.desc }}</p>
+                        </li>
+                        <li class="stats">
+                            <p><strong>3</strong> {% trans from 'home'%}forum.count.topics{% endtrans %}</p>
+                            <p><strong>23</strong> {% trans from 'home'%}forum.count.posts{% endtrans %}</p>
+                        </li>
+                        <li class="last-post">
+                            <img src="https://dummyimage.com/75x75/000/fff.png" alt="deathart" class="rounded d-none d-lg-block">
+                            <span class="info">
+                        <a href="#" class="recent-post">Global Topic in Information C…</a><br  />
+                        <span class="recent-post-time">
+                            {% trans with {'%name%': 'Deathart'} from 'home'%}lastpost.author{% endtrans %} Thu Jun 22, 2017 9:38 am
+                        </span>
+                    </span>
+                        </li>
+                    </ul>
+                {% endfor %}
+            </div>
         </div>
-        <div class="content">
-            <ul>
-                <li class="icon">
-                    <i class="fa fa-comments-o"></i>
-                </li>
-                <li class="title">
-                    <a href="#">Lorem ipsum</a>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                </li>
-                <li class="stats">
-                    <p><strong>3</strong> {% trans from 'home'%}forum.count.topics{% endtrans %}</p>
-                    <p><strong>23</strong> {% trans from 'home'%}forum.count.posts{% endtrans %}</p>
-                </li>
-                <li class="last-post">
-                    <img src="https://dummyimage.com/75x75/000/fff.png" alt="deathart" class="rounded d-none d-lg-block">
-                    <span class="info">
-                        <a href="#" class="recent-post">Global Topic in Information C…</a><br  />
-                        <span class="recent-post-time">
-                            {% trans with {'%name%': 'Deathart'} from 'home'%}lastpost.author{% endtrans %} Thu Jun 22, 2017 9:38 am
-                        </span>
-                    </span>
-                </li>
-            </ul>
-            <ul>
-                <li class="icon">
-                    <i class="fa fa-comments-o"></i>
-                </li>
-                <li class="title">
-                    <a href="#">Lorem ipsum</a>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                </li>
-                <li class="stats">
-                    <p><strong>3</strong> {% trans from 'home'%}forum.count.topics{% endtrans %}</p>
-                    <p><strong>23</strong> {% trans from 'home'%}forum.count.posts{% endtrans %}</p>
-                </li>
-                <li class="last-post">
-                    <img src="https://dummyimage.com/75x75/000/fff.png" alt="deathart" class="rounded d-none d-lg-block">
-                    <span class="info">
-                        <a href="#" class="recent-post">Global Topic in Information C…</a><br  />
-                        <span class="recent-post-time">
-                            {% trans with {'%name%': 'Deathart'} from 'home'%}lastpost.author{% endtrans %} Thu Jun 22, 2017 9:38 am
-                        </span>
-                    </span>
-                </li>
-            </ul>
-            <ul>
-                <li class="icon">
-                    <i class="fa fa-comments-o"></i>
-                </li>
-                <li class="title">
-                    <a href="#">Lorem ipsum</a>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                </li>
-                <li class="stats">
-                    <p><strong>3</strong> {% trans from 'home'%}forum.count.topics{% endtrans %}</p>
-                    <p><strong>23</strong> {% trans from 'home'%}forum.count.posts{% endtrans %}</p>
-                </li>
-                <li class="last-post">
-                    <img src="https://dummyimage.com/75x75/000/fff.png" alt="deathart" class="rounded d-none d-lg-block">
-                    <span class="info">
-                        <a href="#" class="recent-post">Global Topic in Information C…</a><br  />
-                        <span class="recent-post-time">
-                            {% trans with {'%name%': 'Deathart'} from 'home'%}lastpost.author{% endtrans %} Thu Jun 22, 2017 9:38 am
-                        </span>
-                    </span>
-                </li>
-            </ul>
-            <ul>
-                <li class="icon">
-                    <i class="fa fa-comments-o"></i>
-                </li>
-                <li class="title">
-                    <a href="#">Lorem ipsum</a>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                </li>
-                <li class="stats">
-                    <p><strong>3</strong> {% trans from 'home'%}forum.count.topics{% endtrans %}</p>
-                    <p><strong>23</strong> {% trans from 'home'%}forum.count.posts{% endtrans %}</p>
-                </li>
-                <li class="last-post">
-                    <img src="https://dummyimage.com/75x75/000/fff.png" alt="deathart" class="rounded d-none d-lg-block">
-                    <span class="info">
-                        <a href="#" class="recent-post">Global Topic in Information C…</a><br  />
-                        <span class="recent-post-time">
-                            {% trans with {'%name%': 'Deathart'} from 'home'%}lastpost.author{% endtrans %} Thu Jun 22, 2017 9:38 am
-                        </span>
-                    </span>
-                </li>
-            </ul>
-            <ul>
-                <li class="icon">
-                    <i class="fa fa-comments-o"></i>
-                </li>
-                <li class="title">
-                    <a href="#">Lorem ipsum</a>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                </li>
-                <li class="stats">
-                    <p><strong>3</strong> {% trans from 'home'%}forum.count.topics{% endtrans %}</p>
-                    <p><strong>23</strong> {% trans from 'home'%}forum.count.posts{% endtrans %}</p>
-                </li>
-                <li class="last-post">
-                    <img src="https://dummyimage.com/75x75/000/fff.png" alt="deathart" class="rounded d-none d-lg-block">
-                    <span class="info">
-                        <a href="#" class="recent-post">Global Topic in Information C…</a><br  />
-                        <span class="recent-post-time">
-                            {% trans with {'%name%': 'Deathart'} from 'home'%}lastpost.author{% endtrans %} Thu Jun 22, 2017 9:38 am
-                        </span>
-                    </span>
-                </li>
-            </ul>
-        </div>
-    </div>
     {% endfor %}
 {% endblock %}
