@@ -12,4 +12,19 @@ class ForumRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Forum::class);
     }
+
+    /**
+     * @return array
+     */
+    public function findAllWithoutParent(int $cat)
+    {
+        $qb = $this->createQueryBuilder('f');
+
+        $qb->select('f')
+            ->where('f.category = '.$cat)
+            ->andWhere('f.parent=0')
+            ->orderBy('f.position', 'ASC');
+
+        return $qb->getQuery()->getArrayResult();
+    }
 }

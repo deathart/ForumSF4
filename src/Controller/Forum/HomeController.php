@@ -3,6 +3,7 @@
 namespace App\Controller\Forum;
 
 use App\Entity\Category;
+use App\Entity\Forum;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
@@ -31,7 +32,13 @@ class HomeController extends BaseController
      */
     public function index()
     {
-        $this->data['category'] = $this->getDoctrine()->getManager()->getRepository(Category::class)->findAllWithoutParent();
+        $cat = $this->getDoctrine()->getManager()->getRepository(Category::class)->findAllWithoutParent();
+        $this->data['category'] = [];
+
+        foreach ($cat as $data_cat) {
+            $data_cat['forum'] = $this->getDoctrine()->getManager()->getRepository(Forum::class)->findAllWithoutParent($data_cat['id']);
+            $this->data['category'][] = $data_cat;
+        }
 
         return $this->renderer('home.html.twig');
     }

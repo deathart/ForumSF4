@@ -26,14 +26,15 @@ class CategoryRepository extends ServiceEntityRepository
     /**
      * @return array
      */
-    public function findAllWithoutParent(): array
+    public function findAllWithoutParent()
     {
-        return $this->createQueryBuilder('c')
-            ->select('c')
-            ->where('c.parent = 0')
-            ->orderBy('c.position', 'ASC')
-            ->getQuery()
-            ->getResult();
+        $qb = $this->createQueryBuilder('c');
+
+        $qb->select('c')
+            ->where('c.parent=0')
+            ->orderBy('c.position', 'ASC');
+
+        return $qb->getQuery()->getArrayResult();
     }
 
     /**

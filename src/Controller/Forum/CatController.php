@@ -3,6 +3,7 @@
 namespace App\Controller\Forum;
 
 use App\Entity\Category;
+use App\Entity\Forum;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
@@ -59,7 +60,9 @@ class CatController extends BaseController
 
         $this->data['cat_child'] = $getCatChild;
 
-        $this->stitle = $slug;
+        $this->data['getForum'] = $this->getDoctrine()->getManager()->getRepository(Forum::class)->findAllWithoutParent($getInfoCat->getId());
+
+        $this->stitle = $getInfoCat->getName();
 
         return $this->renderer('cat/show.html.twig');
     }

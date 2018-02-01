@@ -81,72 +81,30 @@
             <small>{{ cat_info.desc }}</small>
         </div>
         <div class="content">
-            <ul>
-                <li class="icon">
-                    <i class="fa fa-comments-o"></i>
-                </li>
-                <li class="title">
-                    <a href="#">Lorem ipsum</a>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                </li>
-                <li class="stats d-none d-lg-block">
-                    <p><strong>3</strong> {% trans from 'forumshow'%}count.topics{% endtrans %}</p>
-                    <p><strong>23</strong> {% trans from 'forumshow'%}count.posts{% endtrans %}</p>
-                </li>
-                <li class="last-post">
-                    <img src="https://dummyimage.com/75x75/000/fff.png" alt="deathart" class="rounded d-none d-lg-inline">
-                    <span class="info">
-                        <a href="#" class="recent-post">Global Topic in Information C…</a><br  />
-                        <span class="recent-post-time">
-                            {% trans with {'%name%': 'Deathart'} from 'home'%}lastpost.author{% endtrans %} Thu Jun 22, 2017 9:38 am
+            {% for forum in getForum if forum.parent == "0" %}
+                <ul>
+                    <li class="icon">
+                        <i class="fa fa-comments-o"></i>
+                    </li>
+                    <li class="title">
+                        <a href="{{ url('forum_show', {'slug':forum.slug}) }}">{{ forum.name }}</a>
+                        <p>{{ forum.desc }}</p>
+                    </li>
+                    <li class="stats">
+                        <p><strong>3</strong> {% trans from 'home'%}forum.count.topics{% endtrans %}</p>
+                        <p><strong>23</strong> {% trans from 'home'%}forum.count.posts{% endtrans %}</p>
+                    </li>
+                    <li class="last-post">
+                        <img src="https://dummyimage.com/75x75/000/fff.png" alt="deathart" class="rounded d-none d-lg-block">
+                        <span class="info">
+                            <a href="#" class="recent-post">Global Topic in Information C…</a><br  />
+                            <span class="recent-post-time">
+                                {% trans with {'%name%': 'Deathart'} from 'home'%}lastpost.author{% endtrans %} Thu Jun 22, 2017 9:38 am
+                            </span>
                         </span>
-                    </span>
-                </li>
-            </ul>
-            <ul>
-                <li class="icon">
-                    <i class="fa fa-comments-o"></i>
-                </li>
-                <li class="title">
-                    <a href="#">Lorem ipsum</a>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                </li>
-                <li class="stats d-none d-lg-block">
-                    <p><strong>3</strong> {% trans from 'forumshow'%}count.topics{% endtrans %}</p>
-                    <p><strong>23</strong> {% trans from 'forumshow'%}count.posts{% endtrans %}</p>
-                </li>
-                <li class="last-post">
-                    <img src="https://dummyimage.com/75x75/000/fff.png" alt="deathart" class="rounded d-none d-lg-inline">
-                    <span class="info">
-                        <a href="#" class="recent-post">Global Topic in Information C…</a><br  />
-                        <span class="recent-post-time">
-                            {% trans with {'%name%': 'Deathart'} from 'home'%}lastpost.author{% endtrans %} Thu Jun 22, 2017 9:38 am
-                        </span>
-                    </span>
-                </li>
-            </ul>
-            <ul>
-                <li class="icon">
-                    <i class="fa fa-comments-o"></i>
-                </li>
-                <li class="title">
-                    <a href="#">Lorem ipsum</a>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                </li>
-                <li class="stats d-none d-lg-block">
-                    <p><strong>3</strong> {% trans from 'forumshow'%}count.topics{% endtrans %}</p>
-                    <p><strong>23</strong> {% trans from 'forumshow'%}count.posts{% endtrans %}</p>
-                </li>
-                <li class="last-post">
-                    <img src="https://dummyimage.com/75x75/000/fff.png" alt="deathart" class="rounded d-none d-lg-inline">
-                    <span class="info">
-                        <a href="#" class="recent-post">Global Topic in Information C…</a><br  />
-                        <span class="recent-post-time">
-                            {% trans with {'%name%': 'Deathart'} from 'home'%}lastpost.author{% endtrans %} Thu Jun 22, 2017 9:38 am
-                        </span>
-                    </span>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

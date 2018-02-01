@@ -38,22 +38,21 @@ class Forum
     private $slug;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="forum")
-     * @ORM\JoinColumn(name="category_id", referencedColumnName="id", nullable=false)
+     * @ORM\Column(name="category", type="integer", nullable=false)
      */
     private $category;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="position", type="integer", nullable=false)
+     * @ORM\Column(name="position", type="integer", nullable=false, options={"default":"0" })
      */
     private $position;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="parent", type="integer", nullable=true)
+     * @ORM\Column(name="parent", type="integer", nullable=false, options={"default":"0" })
      */
     private $parent;
 
