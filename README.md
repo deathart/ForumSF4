@@ -5,7 +5,7 @@ I created this forum system with the help of Symfony4, thank you for being lenie
 - First of all, configure the file .env to the root of the folder.
 - Then execute the following commands :
   - `composer install`
-  - `php bin/console doctrine:migrations:migrate`
+  - `php bin/console doctrine:schema:update --force`
   - `php bin/console doctrine:fixtures:load`
   - `yarn install`
   - `yarn run encore production`
