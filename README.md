@@ -9,6 +9,7 @@ I created this forum system with the help of Symfony4, thank you for being lenie
   - `php bin/console doctrine:fixtures:load`
   - `yarn install`
   - `yarn run encore production`
+  - `composer dump-autoload --optimize --no-dev --classmap-authoritative`
 
 # Themes and languages
 - Themes : To modify or add a new theme, this can be found in the folder: `Ressources/templates` (Provisional).
