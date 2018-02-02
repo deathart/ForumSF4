@@ -30,7 +30,7 @@ Encore
     .autoProvidejQuery()
     .enableSourceMaps(!Encore.isProduction())
 
-    .enableVersioning()
+    .enableVersioning(Encore.isProduction())
 ;
 
 module.exports = Encore.getWebpackConfig();
