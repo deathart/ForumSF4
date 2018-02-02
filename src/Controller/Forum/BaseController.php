@@ -59,51 +59,9 @@ class BaseController extends Controller
     }
 
     /**
-     * @return $this
-     *
-     * @throws \Doctrine\ORM\NoResultException
-     * @throws \Doctrine\ORM\NonUniqueResultException
-     */
-    protected function init()
-    {
-        $translator = $this->get('translator');
-        $translator->setLocale($this->GetConfig('lang'));
-
-        //Set CSS
-        $this->set_css('build/css/vendor/font-awesome.css');
-        $this->set_css('build/css/vendor/bootstrap.css');
-        $this->set_css('build/css/forum/style.css');
-        //Set JS
-        $this->set_js('build/manifest.js');
-        $this->set_js('build/js/vendor.js');
-        $this->set_js('build/js/vendor/scroll.js');
-        $this->set_js('build/js/forum/app.js');
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     *
-     * @throws \Doctrine\ORM\NoResultException
-     * @throws \Doctrine\ORM\NonUniqueResultException
-     */
-    protected function setTitle(): string
-    {
-        $tf = $this->title;
-        if (!empty($this->stitle)) {
-            $tf .= ' - '.$this->stitle;
-        }
-
-        return $tf;
-    }
-
-    /**
      * @return string
      *
      * @throws \LogicException
-     * @throws \Doctrine\ORM\NoResultException
-     * @throws \Doctrine\ORM\NonUniqueResultException
      */
     protected function bread(): string
     {
@@ -161,14 +119,20 @@ class BaseController extends Controller
      */
     protected function renderer(string $view): Response
     {
-        $this->init();
+        $translator = $this->get('translator');
+        $translator->setLocale($this->GetConfig('lang'));
+
+        $tf = $this->title;
+        if (!empty($this->stitle)) {
+            $tf .= ' - '.$this->stitle;
+        }
 
         $this->data['foruminfo'] = [
             'title' => $this->GetConfig('title'),
             'description' => $this->GetConfig('desc'),
         ];
 
-        $this->data['titlePage'] = $this->setTitle();
+        $this->data['titlePage'] = $tf;
 
         $this->data['css'] = $this->css;
         $this->data['js'] = $this->js;

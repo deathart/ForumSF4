@@ -4,6 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <title>{{ titlePage }} | {{ foruminfo['title'] }}</title>
+        <link rel="stylesheet" type="text/css" href="{{ asset('build/css/vendor/font-awesome.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('build/css/vendor/bootstrap.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('build/css/forum/style.css') }}" />
         {% for data in css %}
             <link rel="stylesheet" type="text/css" href="{{ absolute_url(asset(data.file)) }}" />
         {% endfor %}
@@ -157,6 +160,10 @@
                 <i class="fa fa-2x fa-arrow-circle-up"></i>
             </span>
         </div>
+        <script type="text/javascript" src="{{ asset('manifest.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('build/js/vendor.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('build/js/vendor/scroll.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('build/js/forum/app.js') }}"></script>
         {% for data in js %}
             <script type="text/javascript" src="{{ absolute_url(asset(data.file)) }}"></script>
         {% endfor %}
