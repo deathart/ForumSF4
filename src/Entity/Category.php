@@ -47,71 +47,80 @@ class Category
     /**
      * @return mixed
      */
-    public function getId () {
+    public function getId()
+    {
         return $this->id;
     }
 
     /**
      * @param mixed $id
      */
-    public function setId ($id): void {
+    public function setId($id): void
+    {
         $this->id = $id;
     }
 
     /**
      * @return string
      */
-    public function getName (): string {
+    public function getName(): string
+    {
         return $this->name;
     }
 
     /**
      * @param string $name
      */
-    public function setName (string $name): void {
+    public function setName(string $name): void
+    {
         $this->name = $name;
     }
 
     /**
      * @return string
      */
-    public function getDesc (): string {
+    public function getDesc(): string
+    {
         return $this->desc;
     }
 
     /**
      * @param string $desc
      */
-    public function setDesc (string $desc): void {
+    public function setDesc(string $desc): void
+    {
         $this->desc = $desc;
     }
 
     /**
      * @return string
      */
-    public function getSlug (): string {
+    public function getSlug(): string
+    {
         return $this->slug;
     }
 
     /**
      * @param string $slug
      */
-    public function setSlug (string $slug): void {
+    public function setSlug(string $slug): void
+    {
         $this->slug = $slug;
     }
 
     /**
      * @return string
      */
-    public function getPosition (): string {
+    public function getPosition(): string
+    {
         return $this->position;
     }
 
     /**
      * @param string $position
      */
-    public function setPosition (string $position): void {
+    public function setPosition(string $position): void
+    {
         $this->position = $position;
     }
-
 }

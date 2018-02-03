@@ -4,6 +4,8 @@ namespace App\Repository;
 
 use App\Entity\Forum;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\NoResultException;
+use Doctrine\ORM\Query;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 class ForumRepository extends ServiceEntityRepository
@@ -26,5 +28,20 @@ class ForumRepository extends ServiceEntityRepository
             ->orderBy('f.position', 'ASC');
 
         return $qb->getQuery()->getArrayResult();
+    }
+
+    public function findByParent(int $parent)
+    {
+        $qb = $this->createQueryBuilder('f')
+            ->andWhere('f.parent = :parent')
+            ->setParameter('parent', $parent);
+
+        $query = $qb->getQuery();
+
+        try {
+            return $query->getResult(Query::HYDRATE_ARRAY);
+        } catch (NoResultException $e) {
+            return false;
+        }
     }
 }

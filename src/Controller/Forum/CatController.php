@@ -47,7 +47,7 @@ class CatController extends BaseController
             'name' => $getInfoCat->getName(),
             'desc' => $getInfoCat->getDesc(),
             'slug' => $getInfoCat->getSlug(),
-            'position' => $getInfoCat->getPosition()
+            'position' => $getInfoCat->getPosition(),
         ];
 
         $this->data['getForum'] = $this->getDoctrine()->getManager()->getRepository(Forum::class)->findAllWithoutParent($getInfoCat->getId());
