@@ -1,7 +1,7 @@
-var App;
+let App;
 App = (function () {
 
-    var that = {};
+    const that = {};
 
     /**
      * @return {string}
@@ -14,7 +14,7 @@ App = (function () {
      * @return {string}
      */
     that.GetSegmentUrl = function (segment) {
-        var pathArray = window.location.pathname.split('/');
+        const pathArray = window.location.pathname.split('/');
         return pathArray[segment];
     };
 
@@ -36,11 +36,11 @@ App = (function () {
     };
 
     that.ChatBox = function () {
-        var divmessages = $('.scroll-chatbox-messages');
-        var divusers = $('.scroll-chatbox-users');
-        var divbloc = $(".chatbox-bloc");
-        var expandbtn = $('.expand-chat');
-        var collapsebtn = $('.collapse-chat');
+        const divmessages = $('.scroll-chatbox-messages');
+        const divusers = $('.scroll-chatbox-users');
+        const divbloc = $(".chatbox-bloc");
+        const expandbtn = $('.expand-chat');
+        const collapsebtn = $('.collapse-chat');
 
         //Initialize scrollbar
         divmessages.scrollTop(divmessages[0].scrollHeight);
@@ -99,7 +99,7 @@ App = (function () {
     };
     that.scroll_top = function () {
 
-        var scrollwrapper = $('.scroll-top-wrapper');
+        const scrollwrapper = $('.scroll-top-wrapper');
 
         $(window).on('scroll', function () {
             if ($(this).scrollTop() > 100) {
