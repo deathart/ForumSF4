@@ -54,9 +54,9 @@ class ForumController extends BaseController
 
         $this->breadcrumb[] = ['url' => 'category/'.$getInfoCat->getSlug(), 'name' => $getInfoCat->getName()];
 
-        if (0 !== $getInfoForum->getParent()) {
+        if ('0' !== $getInfoForum->getParent()) {
             $getForumParent = $this->getDoctrine()->getRepository(Forum::class)->findOneBy(['id' => $getInfoForum->getParent()]);
-            $this->breadcrumb[] = ['url' => 'forum/'.$getForumParent['slug'], 'name' => $getForumParent['name']];
+            $this->breadcrumb[] = ['url' => 'forum/'.$getForumParent->getSlug(), 'name' => $getForumParent->getName()];
         }
 
         $this->breadcrumb[] = ['url' => 'active', 'name' => $getInfoForum->getName()];
