@@ -2,8 +2,6 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -47,75 +45,73 @@ class Category
     private $position;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="parent", type="integer", nullable=false, options={"default":"0" })
-     */
-    private $parent;
-
-    /**
-     * Category constructor.
-     */
-    public function __construct()
-    {
-        $this->forum = new ArrayCollection();
-    }
-
-    /**
-     * Get forums.
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getForum(): Collection
-    {
-        return $this->forum;
-    }
-
-    /**
      * @return mixed
      */
-    public function getId(): int
-    {
+    public function getId () {
         return $this->id;
     }
 
     /**
+     * @param mixed $id
+     */
+    public function setId ($id): void {
+        $this->id = $id;
+    }
+
+    /**
      * @return string
      */
-    public function getName(): string
-    {
+    public function getName (): string {
         return $this->name;
     }
 
     /**
+     * @param string $name
+     */
+    public function setName (string $name): void {
+        $this->name = $name;
+    }
+
+    /**
      * @return string
      */
-    public function getDesc(): string
-    {
+    public function getDesc (): string {
         return $this->desc;
     }
 
     /**
+     * @param string $desc
+     */
+    public function setDesc (string $desc): void {
+        $this->desc = $desc;
+    }
+
+    /**
      * @return string
      */
-    public function getSlug(): string
-    {
+    public function getSlug (): string {
         return $this->slug;
     }
 
     /**
-     * @return int
+     * @param string $slug
      */
-    public function getPosition(): int
-    {
+    public function setSlug (string $slug): void {
+        $this->slug = $slug;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPosition (): string {
         return $this->position;
     }
 
     /**
-     * @return int
+     * @param string $position
      */
-    public function getParent(): int
-    {
-        return $this->parent;
+    public function setPosition (string $position): void {
+        $this->position = $position;
     }
+
 }

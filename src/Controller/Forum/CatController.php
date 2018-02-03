@@ -38,13 +38,6 @@ class CatController extends BaseController
     {
         $getInfoCat = $this->getDoctrine()->getRepository(Category::class)->findOneBy(['slug' => $slug]);
 
-        $getCatChild = $this->getDoctrine()->getRepository(Category::class)->findByParent($getInfoCat->getId());
-
-        if (0 != $getInfoCat->getParent()) {
-            $getCatParent = $this->getDoctrine()->getRepository(Category::class)->findOneBy(['id' => $getInfoCat->getParent()]);
-            $this->breadcrumb[] = ['url' => 'forum/'.$getCatParent->getSlug(), 'name' => $getCatParent->getName()];
-        }
-
         $this->breadcrumb[] = ['url' => 'active', 'name' => $getInfoCat->getName()];
 
         $this->data['slug_forum'] = $slug;
@@ -54,11 +47,8 @@ class CatController extends BaseController
             'name' => $getInfoCat->getName(),
             'desc' => $getInfoCat->getDesc(),
             'slug' => $getInfoCat->getSlug(),
-            'position' => $getInfoCat->getPosition(),
-            'parent' => $getInfoCat->getParent(),
+            'position' => $getInfoCat->getPosition()
         ];
-
-        $this->data['cat_child'] = $getCatChild;
 
         $this->data['getForum'] = $this->getDoctrine()->getManager()->getRepository(Forum::class)->findAllWithoutParent($getInfoCat->getId());
 

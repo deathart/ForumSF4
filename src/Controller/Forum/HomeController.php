@@ -32,7 +32,7 @@ class HomeController extends BaseController
      */
     public function index()
     {
-        $cat = $this->getDoctrine()->getManager()->getRepository(Category::class)->findAllWithoutParent();
+        $cat = $this->getDoctrine()->getManager()->getRepository(Category::class)->findAllByOrder();
         $this->data['category'] = [];
 
         foreach ($cat as $data_cat) {
