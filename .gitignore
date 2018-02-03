@@ -1,9 +1,3 @@
-# Cache and logs (Symfony2)
-/app/cache/*
-/app/logs/*
-!app/cache/.gitkeep
-!app/logs/.gitkeep
-
 # Email spool folder
 /app/spool/*
 
@@ -50,6 +44,7 @@
 ###> friendsofphp/php-cs-fixer ###
 .php_cs
 .php_cs.cache
+.php_cs.dist
 ###< friendsofphp/php-cs-fixer ###
 
 # IDE
