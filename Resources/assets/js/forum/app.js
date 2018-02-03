@@ -109,11 +109,11 @@ App = (function () {
                 else {
                     scrollwrapper.css("bottom", "30px");
                 }
-                scrollwrapper.addClass('show');
+                scrollwrapper.show();
                 $("header").addClass("fixed");
                 $("body").css("margin-top", "25px");
             } else {
-                scrollwrapper.removeClass('show');
+                scrollwrapper.hide();
                 $("header").removeClass("fixed");
                 $("body").css("margin-top", "56px");
             }
