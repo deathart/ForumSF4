@@ -6,6 +6,7 @@ use App\Entity\Category;
 use App\Entity\Forum;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 /**
@@ -35,18 +36,25 @@ class ForumController extends BaseController
 
     /**
      * @param string $slug
+     *
+     * @return \Symfony\Component\HttpFoundation\Response
+     *
+     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+     * @throws \LogicException
      */
-    public function show(string $slug)
+    public function show(string $slug): Response
     {
         $getInfoForum = $this->getDoctrine()->getRepository(Forum::class)->findOneBy(['slug' => $slug]);
 
-        $getForumChild = $this->getDoctrine()->getRepository(Forum::class)->findByParent($getInfoForum->getId());
+        if (null === $getInfoForum) {
+            throw $this->createNotFoundException('Forum[slug='.$slug.'] Not Found');
+        }
 
         $getInfoCat = $this->getDoctrine()->getRepository(Category::class)->findOneBy(['id' => $getInfoForum->getCategory()]);
 
         $this->breadcrumb[] = ['url' => 'category/'.$getInfoCat->getSlug(), 'name' => $getInfoCat->getName()];
 
-        if (0 != $getInfoForum->getParent()) {
+        if (0 !== $getInfoForum->getParent()) {
             $getForumParent = $this->getDoctrine()->getRepository(Forum::class)->findOneBy(['id' => $getInfoForum->getParent()]);
             $this->breadcrumb[] = ['url' => 'forum/'.$getForumParent->getSlug(), 'name' => $getForumParent->getName()];
         }
@@ -55,15 +63,9 @@ class ForumController extends BaseController
 
         $this->data['slug_forum'] = $slug;
 
-        $this->data['cat_info'] = [
-            'id' => $getInfoForum->getId(),
-            'name' => $getInfoForum->getName(),
-            'desc' => $getInfoForum->getDesc(),
-            'slug' => $getInfoForum->getSlug(),
-            'position' => $getInfoForum->getPosition(),
-        ];
+        $this->data['cat_info'] = ['id' => $getInfoForum->getId(), 'name' => $getInfoForum->getName(), 'desc' => $getInfoForum->getDesc(), 'slug' => $getInfoForum->getSlug()];
 
-        $this->data['forum_child'] = $getForumChild;
+        $this->data['forum_child'] = $this->getDoctrine()->getRepository(Forum::class)->findWithParent($getInfoForum->getId());
 
         $this->stitle = $slug;
 

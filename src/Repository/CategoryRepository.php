@@ -24,11 +24,10 @@ class CategoryRepository extends ServiceEntityRepository
     /**
      * @return array
      */
-    public function findAllByOrder()
+    public function findAllByOrder(): array
     {
-        $qb = $this->createQueryBuilder('c');
-
-        $qb->select('c')
+        $qb = $this->createQueryBuilder('c')
+            ->select('c')
             ->orderBy('c.position', 'ASC');
 
         return $qb->getQuery()->getArrayResult();

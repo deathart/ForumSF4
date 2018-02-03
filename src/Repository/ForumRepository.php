@@ -4,44 +4,51 @@ namespace App\Repository;
 
 use App\Entity\Forum;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\ORM\NoResultException;
-use Doctrine\ORM\Query;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
+/**
+ * Class ForumRepository.
+ */
 class ForumRepository extends ServiceEntityRepository
 {
+    /**
+     * ForumRepository constructor.
+     *
+     * @param \Symfony\Bridge\Doctrine\RegistryInterface $registry
+     */
     public function __construct(RegistryInterface $registry)
     {
         parent::__construct($registry, Forum::class);
     }
 
     /**
+     * @param int $cat
+     *
      * @return array
      */
-    public function findAllWithoutParent(int $cat)
+    public function findAllWithoutParent(int $cat): array
     {
-        $qb = $this->createQueryBuilder('f');
-
-        $qb->select('f')
-            ->where('f.category = '.$cat)
+        $qb = $this->createQueryBuilder('f')
+            ->select('f')
+            ->where('f.category = :category')
             ->andWhere('f.parent=0')
-            ->orderBy('f.position', 'ASC');
+            ->orderBy('f.position', 'ASC')
+            ->setParameter('category', $cat);
 
         return $qb->getQuery()->getArrayResult();
     }
 
-    public function findByParent(int $parent)
+    /**
+     * @param int $parent
+     *
+     * @return array
+     */
+    public function findWithParent(int $parent): array
     {
         $qb = $this->createQueryBuilder('f')
             ->andWhere('f.parent = :parent')
             ->setParameter('parent', $parent);
 
-        $query = $qb->getQuery();
-
-        try {
-            return $query->getResult(Query::HYDRATE_ARRAY);
-        } catch (NoResultException $e) {
-            return false;
-        }
+        return $qb->getQuery()->getArrayResult();
     }
 }

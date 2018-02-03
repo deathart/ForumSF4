@@ -114,8 +114,7 @@ class BaseController extends Controller
      *
      * @return \Symfony\Component\HttpFoundation\Response
      *
-     * @throws \Doctrine\ORM\NoResultException
-     * @throws \Doctrine\ORM\NonUniqueResultException
+     * @throws \LogicException
      */
     protected function renderer(string $view): Response
     {
@@ -147,7 +146,7 @@ class BaseController extends Controller
      *
      * @return bool
      *
-     * @throws \Doctrine\ORM\NonUniqueResultException
+     * @throws \LogicException
      */
     protected function GetConfig(string $key)
     {

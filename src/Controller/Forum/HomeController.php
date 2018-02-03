@@ -5,6 +5,7 @@ namespace App\Controller\Forum;
 use App\Entity\Category;
 use App\Entity\Forum;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 /**
@@ -27,10 +28,9 @@ class HomeController extends BaseController
     /**
      * @return \Symfony\Component\HttpFoundation\Response
      *
-     * @throws \Doctrine\ORM\NoResultException
-     * @throws \Doctrine\ORM\NonUniqueResultException
+     * @throws \LogicException
      */
-    public function index()
+    public function index(): Response
     {
         $cat = $this->getDoctrine()->getManager()->getRepository(Category::class)->findAllByOrder();
         $this->data['category'] = [];
