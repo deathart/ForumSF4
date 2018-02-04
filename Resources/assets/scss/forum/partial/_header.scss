@@ -1,6 +1,11 @@
 .navbar-dark {
     background: rgb(37, 71, 96);
 }
+.nav-item {
+    >span {
+        cursor: pointer;
+    }
+}
 .jumbotron {
     margin-bottom: 0;
     background: url('../../images/headerbg_1.jpg');

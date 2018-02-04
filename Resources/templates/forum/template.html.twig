@@ -41,7 +41,7 @@
                             </div>
                         </li>
                     </ul>
-                    <ul class="navbar-nav my-2 my-lg-0">
+                    <ul class="navbar-nav my-2 my-lg-0 navbar-login" data-is-authenticated="{{ app.session.has('logged') ? 'true' : 'false' }}">
                         {% if app.session.has('logged') %}
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{USERNAME}</a>
@@ -55,7 +55,7 @@
                             </li>
                         {% else %}
                             <li class="nav-item">
-                                <a class="nav-link" href="#">{% trans from 'layout'%}header.navbar.login{% endtrans %}</a>
+                                <span class="nav-link modal-login-btn">{% trans from 'layout'%}header.navbar.login{% endtrans %}</span>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">{% trans from 'layout'%}header.navbar.register{% endtrans %}</a>
@@ -155,6 +155,49 @@
                 </div>
             </div>
         </footer>
+        <div class="modal fade modal-login" tabindex="-1" role="dialog" aria-labelledby="ModalLogin" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">{% trans from 'layout'%}header.navbar.login{% endtrans %}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="login-form">
+                            <div class="form-group row d-flex justify-content-center">
+                                <label for="inputUsername" class="sr-only">{% trans from 'layout'%}modal.login.username{% endtrans %}</label>
+                                <div class="input-group mb-2 col-sm-6">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">{% trans from 'layout'%}modal.login.username{% endtrans %}</div>
+                                    </div>
+                                    <input type="text" class="form-control" id="inlineUsername" placeholder="{% trans from 'layout'%}modal.login.username{% endtrans %}" required />
+                                </div>
+                            </div>
+                            <div class="form-group row d-flex justify-content-center">
+                                <label for="inputPassword" class="sr-only">{% trans from 'layout'%}modal.login.password{% endtrans %}</label>
+                                <div class="input-group mb-2 col-sm-6">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">{% trans from 'layout'%}modal.login.password{% endtrans %}</div>
+                                    </div>
+                                    <input type="password" class="form-control" id="inputPassword" placeholder="{% trans from 'layout'%}modal.login.password{% endtrans %}" required />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12 d-flex justify-content-center">
+                                    <a href="#" class="btn btn-warning">{% trans from 'layout'%}modal.login.forgotpassword{% endtrans %}</a>
+                                    <button type="submit" class="btn btn-primary ml-1">{% trans from 'layout'%}modal.login.submit{% endtrans %}</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">{% trans from 'layout'%}other.close{% endtrans %}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="scroll-top-wrapper">
             <i class="fas fa-arrow-circle-up fa-2x"></i>
         </div>

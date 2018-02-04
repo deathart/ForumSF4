@@ -33,6 +33,7 @@ App = (function () {
             that.ChatBox();
         }
 
+        that.Auth();
     };
 
     that.ChatBox = function () {
@@ -138,6 +139,21 @@ App = (function () {
                 location.reload();
             }, 3000);
         });
+    };
+
+    that.Auth = function() {
+
+        var is_authenticated = $(".navbar-login").data('is-authenticated');
+
+        if(is_authenticated) {
+            //IF LOGIN
+        }
+        else {
+            $(".modal-login-btn").click(function() {
+                $(".modal-login").modal('show');
+            });
+        }
+
     };
 
     that.Notifications = function(type, title, content, position) {

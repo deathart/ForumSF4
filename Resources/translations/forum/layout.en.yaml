@@ -17,7 +17,7 @@ header:
 sidebar:
   bloc_guest:
    title: Hello, Guest!
-   content: Please <a href="#">Register</a>, or <a href="#">Login</a> to see entire forum content...
+   content: Please <a href="#">Register</a>, or <span class="modal-login-btn link">Login</span> to see entire forum content...
   bloc_monline:
     title: Members online
     footer: 'Total: <strong>%total%</strong> (Members: <strong>%members%</strong>, Guests: <strong>%guests%</strong>)'
@@ -30,3 +30,10 @@ sidebar:
     title: Statitistics
 other:
   by: by
+  close: Close
+modal:
+  login:
+    username: Username
+    password: Password
+    forgotpassword: Forgot your password ?
+    submit: Login

@@ -41,6 +41,21 @@
                 outline: 0;
             }
         }
+        .link {
+            text-decoration: none;
+            -webkit-transition: all .15s ease-out;
+            -moz-transition: all .15s ease-out;
+            -o-transition: all .15s ease-out;
+            transition: all .15s ease-out;
+            color: rgb(37, 71, 96);
+            line-height: 1.2;
+            font-weight: 600;
+            cursor: pointer;
+            &:hover, &:focus {
+                color: rgb(33, 122, 185);
+                outline: 0;
+            }
+        }
         >ul {
             list-style: none;
             padding-left: 0;
