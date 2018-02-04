@@ -44,7 +44,6 @@ App = (function () {
         const collapsebtn = $('.collapse-chat');
 
         //Initialize scrollbar
-        divmessages.scrollTop(divmessages[0].scrollHeight);
         divmessages.scrollbar();
         divusers.scrollbar();
 
@@ -97,6 +96,8 @@ App = (function () {
             }
         });
 
+        divmessages.scrollTop(divmessages[0].scrollHeight);
+
     };
     that.scroll_top = function () {
 
@@ -143,7 +144,7 @@ App = (function () {
 
     that.Auth = function() {
 
-        var is_authenticated = $(".navbar-login").data('is-authenticated');
+        const is_authenticated = $(".navbar-login").data('is-authenticated');
 
         if(is_authenticated) {
             //IF LOGIN
