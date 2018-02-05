@@ -2,11 +2,11 @@
 
 namespace App\Controller\Forum;
 
+use App\Entity\Config;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-use App\Entity\Config;
 
 /**
  * Class BaseController.

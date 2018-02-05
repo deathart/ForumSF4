@@ -2,10 +2,10 @@
 
 namespace App\Twig;
 
+use App\Entity\Config;
 use Doctrine\ORM\EntityManagerInterface;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
-use App\Entity\Config;
 
 /**
  * Class AppExtension.
