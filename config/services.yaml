@@ -30,3 +30,7 @@ services:
     App\Repository\:
         resource: '../src/Repository'
         tags: ['doctrine.repository_service']
+
+    App\DataFixtures\:
+        resource: '../src/DataFixtures'
+        tags: ['doctrine.fixture.orm']
