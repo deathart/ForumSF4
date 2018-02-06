@@ -37,3 +37,5 @@ modal:
     password: Mot de passe
     forgotpassword: Mot de passe oublié ?
     submit: Connexion
+footer:
+  copy: 'Copyright © 2018, All Rights Reserved. Version : <a href="https://github.com/deathart/Forum-sf4" target="_blank">ALPHA</a>'
