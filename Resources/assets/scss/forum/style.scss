@@ -8,7 +8,7 @@ html {
 body {
     margin: 56px 0 225px 0;
     font: 300 14px/1.7 'Roboto', sans-serif;
-    background: url('../../images/background.jpg') no-repeat fixed center;
+    background: url('../images/background.jpg') no-repeat fixed center;
 }
 
 @import "partial/header";
@@ -20,5 +20,6 @@ body {
 @import "partial/footer";
 
 //PLUGINS
+@import "partial/modal";
 @import "partial/scrollbar";
 @import "partial/toast";

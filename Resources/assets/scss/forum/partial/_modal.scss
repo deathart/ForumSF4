@@ -1,0 +1,18 @@
+.modal-content {
+    background: none;
+    >.modal-header {
+        background: rgb(37, 71, 96);
+        >h5 {
+            color: #ffffff;
+        }
+        >button {
+            color: #ffffff;
+        }
+    }
+    >.modal-body {
+        background: #ffffff;
+    }
+    >.modal-footer {
+        background: rgb(37, 71, 96);
+    }
+}
