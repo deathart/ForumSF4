@@ -14,7 +14,7 @@
                 </li>
                 <li class="title">
                     <a href="{{ url('forum_show', {'slug':forum.slug}) }}">{{ forum.name }}</a>
-                    <p>{{ forum.desc }}</p>
+                    <p>{{ forum.description }}</p>
                 </li>
                 <li class="stats d-none d-lg-block">
                     <p><strong>3</strong> <i class="far fa-comment-alt" data-toggle="tooltip" data-placement="top" title="{% trans from 'home'%}forum.count.topics{% endtrans %}"></i></p>

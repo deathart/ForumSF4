@@ -49,7 +49,7 @@ class CatController extends BaseController
         $this->data['cat_info'] = [
             'id' => $getInfoCat->getId(),
             'name' => $getInfoCat->getName(),
-            'desc' => $getInfoCat->getDesc(),
+            'description' => $getInfoCat->getDescription(),
             'slug' => $getInfoCat->getSlug(),
             'position' => $getInfoCat->getPosition(),
         ];

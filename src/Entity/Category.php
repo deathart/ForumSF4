@@ -26,9 +26,9 @@ class Category
     /**
      * @var string
      *
-     * @ORM\Column(name="desc", type="text", nullable=false)
+     * @ORM\Column(name="description", type="text", nullable=false)
      */
-    private $desc;
+    private $description;
 
     /**
      * @var string
@@ -40,7 +40,7 @@ class Category
     /**
      * @var string
      *
-     * @ORM\Column(name="position", type="integer", nullable=false, options={"default":"0" })
+     * @ORM\Column(name="position", type="integer", nullable=false, options={"default":"0"})
      */
     private $position;
 
@@ -79,17 +79,17 @@ class Category
     /**
      * @return string
      */
-    public function getDesc(): string
+    public function getDescription(): string
     {
-        return $this->desc;
+        return $this->description;
     }
 
     /**
-     * @param string $desc
+     * @param string $description
      */
-    public function setDesc(string $desc): void
+    public function setDescription(string $description): void
     {
-        $this->desc = $desc;
+        $this->description = $description;
     }
 
     /**

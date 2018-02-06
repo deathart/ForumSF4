@@ -3,7 +3,7 @@
     <div class="forum-bloc">
         <div class="title">
             {{ cat_info.name }}
-            <small>{{ cat_info.desc }}</small>
+            <small>{{ cat_info.description }}</small>
         </div>
         <div class="content">
             {% for forum in getForum if forum.parent == "0" %}
@@ -13,7 +13,7 @@
                     </li>
                     <li class="title">
                         <a href="{{ url('forum_show', {'slug':forum.slug}) }}">{{ forum.name }}</a>
-                        <p>{{ forum.desc }}</p>
+                        <p>{{ forum.description }}</p>
                     </li>
                     <li class="stats">
                         <p><strong>3</strong> <i class="far fa-comment-alt" data-toggle="tooltip" data-placement="top" title="{% trans from 'home'%}forum.count.topics{% endtrans %}"></i></p>

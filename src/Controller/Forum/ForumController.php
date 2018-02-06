@@ -63,7 +63,7 @@ class ForumController extends BaseController
 
         $this->data['slug_forum'] = $slug;
 
-        $this->data['cat_info'] = ['id' => $getInfoForum->getId(), 'name' => $getInfoForum->getName(), 'desc' => $getInfoForum->getDesc(), 'slug' => $getInfoForum->getSlug()];
+        $this->data['cat_info'] = ['id' => $getInfoForum->getId(), 'name' => $getInfoForum->getName(), 'desc' => $getInfoForum->getDescription(), 'slug' => $getInfoForum->getSlug()];
 
         $this->data['forum_child'] = $this->getDoctrine()->getRepository(Forum::class)->findWithParent($getInfoForum->getId());
 
