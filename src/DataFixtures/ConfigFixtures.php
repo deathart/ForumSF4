@@ -10,25 +10,20 @@ class ConfigFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-        $config_title = new Config();
-        $config_title->setName('title');
-        $config_title->setValue('Forum Name');
-        $this->addReference('config_title', $config_title);
+        $configs = [
+            ['name' => 'title', 'value' => 'Forum Name', 'type' => 'simple'],
+            ['name' => 'desc', 'value' => 'No other bulletin board software offers a greater complement of features, while maintaining efficiency and ease of use.', 'type' => 'text'],
+            ['name' => 'lang', 'value' => 'en', 'type' => 'simple'],
+        ];
 
-        $config_desc = new Config();
-        $config_desc->setName('desc');
-        $config_desc->setValue('No other bulletin board software offers a greater complement of features, while maintaining efficiency and ease of use.');
-        $config_desc->setType('text');
-        $this->addReference('config_desc', $config_desc);
+        foreach ($configs as $data) {
+            $config = new Config();
+            $config->setName($data['name']);
+            $config->setValue($data['value']);
+            $config->setType($data['type']);
+            $manager->persist($config);
+        }
 
-        $config_lang = new Config();
-        $config_lang->setName('lang');
-        $config_lang->setValue('en');
-        $this->addReference('config_lang', $config_lang);
-
-        $manager->persist($config_title);
-        $manager->persist($config_desc);
-        $manager->persist($config_lang);
         $manager->flush();
     }
 }
