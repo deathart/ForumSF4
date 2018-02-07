@@ -2,27 +2,13 @@
 
 namespace App\Controller\Forum;
 
-use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 /**
  * Class FaqController.
  */
 class FaqController extends BaseController
 {
-    /**
-     * FaqController constructor.
-     *
-     * @param \Symfony\Component\HttpFoundation\Session\SessionInterface $session
-     * @param \Symfony\Component\HttpFoundation\RequestStack             $request
-     */
-    public function __construct(SessionInterface $session, RequestStack $request)
-    {
-        parent::__construct($session, $request);
-        $this->title = 'Topic';
-    }
-
     /**
      * @return \Symfony\Component\HttpFoundation\Response
      *
@@ -31,6 +17,7 @@ class FaqController extends BaseController
      */
     public function index(): Response
     {
+        $this->title = 'Faq';
         $this->breadcrumb = [
             ['url' => 'active', 'name' => 'faq'],
         ];
