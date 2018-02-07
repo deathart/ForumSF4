@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="qFRmGHE" resname="title.rat">
+        <source>title.rat</source>
+        <target>Noter le topic</target>
+      </trans-unit>
+      <trans-unit id="cY1pJ9Y" resname="user.birthday">
+        <source>user.birthday</source>
+        <target>Anniversaire</target>
+      </trans-unit>
+      <trans-unit id="AmWuEM5" resname="user.genre">
+        <source>user.genre</source>
+        <target>Genre</target>
+      </trans-unit>
+      <trans-unit id="isqBffB" resname="user.location">
+        <source>user.location</source>
+        <target>Location</target>
+      </trans-unit>
+      <trans-unit id="orH5ad9" resname="user.topics">
+        <source>user.topics</source>
+        <target>Topics</target>
+      </trans-unit>
+      <trans-unit id="4J7JkIK" resname="user.posts">
+        <source>user.posts</source>
+        <target>Posts</target>
+      </trans-unit>
+      <trans-unit id="psKQLDi" resname="action.report">
+        <source>action.report</source>
+        <target>Report</target>
+      </trans-unit>
+      <trans-unit id="SAf2bbA" resname="action.quote">
+        <source>action.quote</source>
+        <target>Quote</target>
+      </trans-unit>
+      <trans-unit id="3qaTVlJ" resname="reply.title">
+        <source>reply.title</source>
+        <target>Réponse</target>
+      </trans-unit>
+      <trans-unit id="RmjSSem" resname="reply.form.label">
+        <source>reply.form.label</source>
+        <target>Message</target>
+      </trans-unit>
+      <trans-unit id="kAJjGIq" resname="reply.form.btn">
+        <source>reply.form.btn</source>
+        <target>Envoyer</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

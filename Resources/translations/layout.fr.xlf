@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="98wRRKk" resname="header.navbar.home">
+        <source>header.navbar.home</source>
+        <target>Accueil</target>
+      </trans-unit>
+      <trans-unit id="rkoLNxW" resname="header.navbar.faq">
+        <source>header.navbar.faq</source>
+        <target>FAQ</target>
+      </trans-unit>
+      <trans-unit id="qsDmpOO" resname="header.navbar.search">
+        <source>header.navbar.search</source>
+        <target>Recherche</target>
+      </trans-unit>
+      <trans-unit id="OtYe_YY" resname="header.navbar.others">
+        <source>header.navbar.others</source>
+        <target>Autres</target>
+      </trans-unit>
+      <trans-unit id="LyumcLc" resname="header.navbar.members">
+        <source>header.navbar.members</source>
+        <target>Membres</target>
+      </trans-unit>
+      <trans-unit id="V2aztLL" resname="header.navbar.staff">
+        <source>header.navbar.staff</source>
+        <target>Staff</target>
+      </trans-unit>
+      <trans-unit id="o68sptq" resname="header.navbar.unansweredtopics">
+        <source>header.navbar.unansweredtopics</source>
+        <target>Sujets sans réponse</target>
+      </trans-unit>
+      <trans-unit id="ix5uUdz" resname="header.navbar.activetopics">
+        <source>header.navbar.activetopics</source>
+        <target>Sujets actifs</target>
+      </trans-unit>
+      <trans-unit id="LawWFyX" resname="header.navbar.myaccount">
+        <source>header.navbar.myaccount</source>
+        <target>Mon compte</target>
+      </trans-unit>
+      <trans-unit id="LVEVHD3" resname="header.navbar.logout">
+        <source>header.navbar.logout</source>
+        <target>Déconnexion</target>
+      </trans-unit>
+      <trans-unit id="C2nQ_j_" resname="header.navbar.newmp">
+        <source>header.navbar.newmp</source>
+        <target>Nouveaux MP</target>
+      </trans-unit>
+      <trans-unit id="EAJqY3_" resname="header.navbar.writemp">
+        <source>header.navbar.writemp</source>
+        <target>Ecrire un MP</target>
+      </trans-unit>
+      <trans-unit id="4sUsSwk" resname="header.navbar.login">
+        <source>header.navbar.login</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id="Mpf4aA6" resname="header.navbar.register">
+        <source>header.navbar.register</source>
+        <target>Inscription</target>
+      </trans-unit>
+      <trans-unit id="yL0ifP2" resname="sidebar.bloc_guest.title">
+        <source>sidebar.bloc_guest.title</source>
+        <target>Bonjour, invité!</target>
+      </trans-unit>
+      <trans-unit id="oJIqJz0" resname="sidebar.bloc_guest.content">
+        <source>sidebar.bloc_guest.content</source>
+        <target><![CDATA[S'il vous plaît <a href="#">inscrivez-vous</a>, ou <span class="modal-login-btn link">connectez-vous</span> pour voir le contenu du forum en entier...]]></target>
+      </trans-unit>
+      <trans-unit id="dlhNYPt" resname="sidebar.bloc_monline.title">
+        <source>sidebar.bloc_monline.title</source>
+        <target>Membres en ligne</target>
+      </trans-unit>
+      <trans-unit id="Pqhq3sJ" resname="sidebar.bloc_monline.footer">
+        <source>sidebar.bloc_monline.footer</source>
+        <target><![CDATA[Total: <strong>%total%</strong> (Membres: <strong>%members%</strong>, Invités: <strong>%guests%</strong>)]]></target>
+      </trans-unit>
+      <trans-unit id="OdofdKi" resname="sidebar.bloc_latest_posts.title">
+        <source>sidebar.bloc_latest_posts.title</source>
+        <target>Derniers messages</target>
+      </trans-unit>
+      <trans-unit id="AxP41a2" resname="sidebar.bloc_latest_posts.author">
+        <source>sidebar.bloc_latest_posts.author</source>
+        <target><![CDATA[par <a href="#">%name%</a>]]></target>
+      </trans-unit>
+      <trans-unit id="SqYTgkW" resname="sidebar.info.title">
+        <source>sidebar.info.title</source>
+        <target>Informations</target>
+      </trans-unit>
+      <trans-unit id="EPC8JkL" resname="sidebar.stats.title">
+        <source>sidebar.stats.title</source>
+        <target>Statistiques</target>
+      </trans-unit>
+      <trans-unit id="wZkgT00" resname="other.by">
+        <source>other.by</source>
+        <target>par</target>
+      </trans-unit>
+      <trans-unit id="R9YCZql" resname="other.close">
+        <source>other.close</source>
+        <target>Fermer</target>
+      </trans-unit>
+      <trans-unit id="t4V804c" resname="modal.login.username">
+        <source>modal.login.username</source>
+        <target>Pseudo</target>
+      </trans-unit>
+      <trans-unit id="bNCruZk" resname="modal.login.password">
+        <source>modal.login.password</source>
+        <target>Mot de passe</target>
+      </trans-unit>
+      <trans-unit id="BSB7oEg" resname="modal.login.forgotpassword">
+        <source>modal.login.forgotpassword</source>
+        <target>Mot de passe oublié ?</target>
+      </trans-unit>
+      <trans-unit id="CffE90o" resname="modal.login.submit">
+        <source>modal.login.submit</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id="r57j2C4" resname="footer.copy">
+        <source>footer.copy</source>
+        <target><![CDATA[Copyright © 2018, All Rights Reserved. Version : <a href="https://github.com/deathart/Forum-sf4" target="_blank">ALPHA</a>]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

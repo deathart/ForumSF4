@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="PUC96NT" resname="subforum">
+        <source>subforum</source>
+        <target>Sous forum</target>
+      </trans-unit>
+      <trans-unit id="Wmth.vA" resname="count.topics">
+        <source>count.topics</source>
+        <target>Topics</target>
+      </trans-unit>
+      <trans-unit id="oe61lQR" resname="count.posts">
+        <source>count.posts</source>
+        <target>Posts</target>
+      </trans-unit>
+      <trans-unit id="kFmMSw2" resname="lastreply.author">
+        <source>lastreply.author</source>
+        <target><![CDATA[Dernière réponse par <a href="#">%name%</a>]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="qvIyBkY" resname="title">
+        <source>title</source>
+        <target>Chatbox</target>
+      </trans-unit>
+      <trans-unit id="74OmIY0" resname="newwindow">
+        <source>newwindow</source>
+        <target>Open in a new window</target>
+      </trans-unit>
+      <trans-unit id="143pJah" resname="expand">
+        <source>expand</source>
+        <target>Enlarge/shrink</target>
+      </trans-unit>
+      <trans-unit id="k7xdAtw" resname="collapse">
+        <source>collapse</source>
+        <target>Enlarge/Reduce</target>
+      </trans-unit>
+      <trans-unit id="6aLfn92" resname="content.form.input">
+        <source>content.form.input</source>
+        <target>Your message...</target>
+      </trans-unit>
+      <trans-unit id="fUnFRZD" resname="content.form.btn">
+        <source>content.form.btn</source>
+        <target>Send</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

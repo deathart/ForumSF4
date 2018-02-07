@@ -1,8 +1,0 @@
-title: Chatbox
-newwindow: Open in a new window
-expand: Enlarge/shrink
-collapse: Enlarge/Reduce
-content:
-  form:
-    input: Your message...
-    btn: Send
