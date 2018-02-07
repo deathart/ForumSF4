@@ -5,27 +5,13 @@ namespace App\Controller\Forum;
 use App\Entity\Category;
 use App\Entity\Forum;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 /**
  * Class ForumController.
  */
 class ForumController extends BaseController
 {
-    /**
-     * ForumController constructor.
-     *
-     * @param \Symfony\Component\HttpFoundation\Session\SessionInterface $session
-     * @param \Symfony\Component\HttpFoundation\RequestStack             $request
-     */
-    public function __construct(SessionInterface $session, RequestStack $request)
-    {
-        parent::__construct($session, $request);
-        $this->title = 'Forum';
-    }
-
     /**
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
@@ -41,6 +27,7 @@ class ForumController extends BaseController
      *
      * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
      * @throws \LogicException
+     * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function show(string $slug): Response
     {
@@ -67,7 +54,7 @@ class ForumController extends BaseController
 
         $this->data['forum_child'] = $this->getDoctrine()->getRepository(Forum::class)->findWithParent($getInfoForum->getId());
 
-        $this->stitle = $slug;
+        $this->title = $getInfoForum->getName();
 
         return $this->renderer('forum/show.html.twig');
     }

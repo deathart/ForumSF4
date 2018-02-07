@@ -29,6 +29,7 @@ class HomeController extends BaseController
      * @return \Symfony\Component\HttpFoundation\Response
      *
      * @throws \LogicException
+     * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function index(): Response
     {

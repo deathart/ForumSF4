@@ -30,10 +30,6 @@ class BaseController extends Controller
      */
     protected $title;
     /**
-     * @var string
-     */
-    protected $stitle;
-    /**
      * @var array
      */
     protected $breadcrumb;
@@ -115,23 +111,19 @@ class BaseController extends Controller
      * @return \Symfony\Component\HttpFoundation\Response
      *
      * @throws \LogicException
+     * @throws \Doctrine\ORM\NonUniqueResultException
      */
     protected function renderer(string $view): Response
     {
         $translator = $this->get('translator');
         $translator->setLocale($this->GetConfig('lang'));
 
-        $tf = $this->title;
-        if (!empty($this->stitle)) {
-            $tf .= ' - '.$this->stitle;
-        }
-
         $this->data['foruminfo'] = [
             'title' => $this->GetConfig('title'),
             'description' => $this->GetConfig('desc'),
         ];
 
-        $this->data['titlePage'] = $tf;
+        $this->data['titlePage'] = $this->title;
 
         $this->data['css'] = $this->css;
         $this->data['js'] = $this->js;
@@ -144,11 +136,12 @@ class BaseController extends Controller
     /**
      * @param string $key
      *
-     * @return bool
+     * @return string
      *
      * @throws \LogicException
+     * @throws \Doctrine\ORM\NonUniqueResultException
      */
-    protected function GetConfig(string $key)
+    protected function GetConfig(string $key): string
     {
         $configVal = $this->getDoctrine()->getRepository(Config::class)->findDataByKey($key);
 

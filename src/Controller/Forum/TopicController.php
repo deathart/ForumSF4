@@ -3,27 +3,13 @@
 namespace App\Controller\Forum;
 
 use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 /**
  * Class TopicController.
  */
 class TopicController extends BaseController
 {
-    /**
-     * TopicController constructor.
-     *
-     * @param \Symfony\Component\HttpFoundation\Session\SessionInterface $session
-     * @param \Symfony\Component\HttpFoundation\RequestStack             $request
-     */
-    public function __construct(SessionInterface $session, RequestStack $request)
-    {
-        parent::__construct($session, $request);
-        $this->title = 'Topic';
-    }
-
     /**
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
@@ -38,6 +24,7 @@ class TopicController extends BaseController
      * @return \Symfony\Component\HttpFoundation\Response
      *
      * @throws \LogicException
+     * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function show(string $slug): Response
     {
@@ -48,7 +35,7 @@ class TopicController extends BaseController
 
         $this->data['slug_topic'] = $slug;
 
-        $this->stitle = $slug;
+        $this->title = $slug;
 
         return $this->renderer('topic/show.html.twig');
     }

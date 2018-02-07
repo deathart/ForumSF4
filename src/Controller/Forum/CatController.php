@@ -5,24 +5,10 @@ namespace App\Controller\Forum;
 use App\Entity\Category;
 use App\Entity\Forum;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class CatController extends BaseController
 {
-    /**
-     * ForumController constructor.
-     *
-     * @param \Symfony\Component\HttpFoundation\Session\SessionInterface $session
-     * @param \Symfony\Component\HttpFoundation\RequestStack             $request
-     */
-    public function __construct(SessionInterface $session, RequestStack $request)
-    {
-        parent::__construct($session, $request);
-        $this->title = 'Category';
-    }
-
     /**
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
@@ -37,6 +23,7 @@ class CatController extends BaseController
      * @return \Symfony\Component\HttpFoundation\Response
      *
      * @throws \LogicException
+     * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function show(string $slug): Response
     {
@@ -56,7 +43,7 @@ class CatController extends BaseController
 
         $this->data['getForum'] = $this->getDoctrine()->getManager()->getRepository(Forum::class)->findAllWithoutParent($getInfoCat->getId());
 
-        $this->stitle = $getInfoCat->getName();
+        $this->title = $getInfoCat->getName();
 
         return $this->renderer('cat/show.html.twig');
     }
