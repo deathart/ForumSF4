@@ -1,6 +1,6 @@
 # Contributing to Forum-sf4
 
-First and foremost, thank you! We appreciate that you want to contribute to BlogCI4, your time is valuable, and your contributions mean a lot to us.
+First and foremost, thank you! We appreciate that you want to contribute to Forum-sf4, your time is valuable, and your contributions mean a lot to us.
 
 ## Important!
 
@@ -23,14 +23,14 @@ Creating an issue is the simplest form of contributing to a project. But there a
 
 If you'd like to learn more about contributing in general, the [Guide to Idiomatic Contributing](https://github.com/jonschlinkert/idiomatic-contributing) has a lot of useful information.
 
-**Showing support for BlogCI4**
+**Showing support for Forum-sf4**
 
 Please keep in mind that open source software is built by people like you, who spend their free time creating things the rest the community can use.
 
-Don't have time to contribute? No worries, here are some other ways to show your support for BlogCI4:
+Don't have time to contribute? No worries, here are some other ways to show your support for Forum-sf4:
 
-- star the [project](https://github.com/deathart/BlogCI4#readme)
-- tweet your support for BlogCI4
+- star the [project](https://github.com/deathart/Forum-sf4#readme)
+- tweet your support for Forum-sf4
 
 ## Issues
 
@@ -49,13 +49,13 @@ Try to follow these guidelines
 
 Please be as descriptive as possible when creating an issue. Give us the information we need to successfully answer your question or address your issue by answering the following in your issue:
 
-- **version**: please note the version of BlogCI4 are you using
+- **version**: please note the version of Forum-sf4 are you using
 - **extensions, plugins, helpers, etc** (if applicable): please list any extensions you're using
 - **error messages**: please paste any error messages into the issue, or a [gist](https://gist.github.com/)
 
 ### Closing issues
 
-The original poster or the maintainer's of BlogCI4 may close an issue at any time. Typically, but not exclusively, issues are closed when:
+The original poster or the maintainer's of Forum-sf4 may close an issue at any time. Typically, but not exclusively, issues are closed when:
 
 - The issue is resolved
 - The project's maintainers have determined the issue is out of scope

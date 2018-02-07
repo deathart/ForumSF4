@@ -12,7 +12,9 @@ I created this forum system with the help of Symfony4, thank you for being lenie
   - `composer dump-autoload --optimize --no-dev --classmap-authoritative`(optional)
 
 # Themes and languages
-- Themes : To modify or add a new theme, this can be found in the folder: `Ressources/templates` (Provisional).
+- Themes : (Provisional).
+  - For templates files : `Ressources/templates`
+  - For assets (JS/CSS/IMG/FONTS) : `Ressources/assets`
 - Language : To modify or add a new language, this can be found in the folder: `Ressources/translations` (Provisional).
 
 # Server Requirements
