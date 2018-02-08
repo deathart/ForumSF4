@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 class FaqController extends BaseController
 {
     /**
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
      *
      * @throws \LogicException
      * @throws \Doctrine\ORM\NonUniqueResultException
