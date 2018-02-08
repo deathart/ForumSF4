@@ -4,21 +4,11 @@ App = (function () {
     const that = {};
 
     /**
-     * @return {string}
+     * Init
      */
-    that.GetBaseUrl = function () {
-        return window.location.protocol + "//" + window.location.host + "/";
-    };
-
-    /**
-     * @return {string}
-     */
-    that.GetSegmentUrl = function (segment) {
-        const pathArray = window.location.pathname.split('/');
-        return pathArray[segment];
-    };
-
     that.init = function () {
+
+        const is_authenticated = $(".navbar-login").data('is-authenticated');
 
         $(function () {
             $('[data-toggle="tooltip"]').tooltip({
@@ -26,79 +16,91 @@ App = (function () {
             })
         });
 
+        if(!is_authenticated) {
+            $(".modal-login-btn").click(function() {
+                $(".modal-login").modal('show');
+            });
+        }
+
         that.DeleteAllCookies();
         that.scroll_top();
+        that.ChatBox();
 
-        if (that.GetSegmentUrl(1) !== "topic") {
-            that.ChatBox();
-        }
-
-        that.Auth();
     };
 
+    /**
+     * Chatbox management
+     */
     that.ChatBox = function () {
-        const divmessages = $('.scroll-chatbox-messages');
-        const divusers = $('.scroll-chatbox-users');
         const divbloc = $(".chatbox-bloc");
-        const expandbtn = $('.expand-chat');
-        const collapsebtn = $('.collapse-chat');
 
-        //Initialize scrollbar
-        divmessages.scrollbar();
-        divusers.scrollbar();
+        if (divbloc.length) {
+            const divmessages = $('.scroll-chatbox-messages');
+            const divusers = $('.scroll-chatbox-users');
+            const expandbtn = $('.expand-chat');
+            const collapsebtn = $('.collapse-chat');
 
-        //Collapse chatbox
-        if(!Cookies.get('chatbox_collapse')) {
-            Cookies.set('chatbox_collapse', 'minus');
-            collapsebtn.addClass("fa-minus");
-        }
-        else {
-            if(Cookies.get('chatbox_collapse') === "minus") {
-                collapsebtn.addClass("fa-minus");
-                divbloc.children('.content').addClass("show");
-            }
-            else {
-                collapsebtn.addClass("fa-plus");
-                divbloc.children('.content').removeClass("show");
-            }
-        }
+            //Initialize scrollbar
+            divmessages.scrollbar();
+            divusers.scrollbar();
 
-        collapsebtn.click(function() {
-            if(collapsebtn.hasClass("fa-minus")) {
-                collapsebtn.removeClass("fa-minus").addClass("fa-plus");
-                Cookies.set('chatbox_collapse', 'plus');
-                divbloc.children('.content').collapse('toggle');
-            }
-            else {
-                collapsebtn.removeClass("fa-plus").addClass("fa-minus");
+            //Collapse chatbox
+            if (!Cookies.get('chatbox_collapse')) {
                 Cookies.set('chatbox_collapse', 'minus');
-                divbloc.children('.content').collapse('toggle');
+                collapsebtn.addClass("fa-minus");
             }
-        });
+            else {
+                if (Cookies.get('chatbox_collapse') === "minus") {
+                    collapsebtn.addClass("fa-minus");
+                    divbloc.children('.content').addClass("show");
+                }
+                else {
+                    collapsebtn.addClass("fa-plus");
+                    divbloc.children('.content').removeClass("show");
+                }
+            }
 
-        //Expand chatbox
-        if (!Cookies.get('chatbox_expanded')) {
-            Cookies.set("chatbox_expanded", "container-fluid")
-        }
+            collapsebtn.click(function () {
+                if (collapsebtn.hasClass("fa-minus")) {
+                    collapsebtn.removeClass("fa-minus").addClass("fa-plus");
+                    Cookies.set('chatbox_collapse', 'plus');
+                    divbloc.children('.content').collapse('toggle');
+                }
+                else {
+                    collapsebtn.removeClass("fa-plus").addClass("fa-minus");
+                    Cookies.set('chatbox_collapse', 'minus');
+                    divbloc.children('.content').collapse('toggle');
+                }
+            });
 
-        divbloc.parent().addClass(Cookies.get('chatbox_expanded'));
-
-        divbloc.slideToggle();
-
-        expandbtn.click(function () {
-            if (divbloc.parent().hasClass("container")) {
-                divbloc.parent().removeClass("container").addClass("container-fluid");
+            //Expand chatbox
+            if (!Cookies.get('chatbox_expanded')) {
                 Cookies.set("chatbox_expanded", "container-fluid")
             }
-            else {
-                divbloc.parent().removeClass("container-fluid").addClass("container");
-                Cookies.set("chatbox_expanded", "container")
-            }
-        });
 
-        divmessages.scrollTop(divmessages[0].scrollHeight);
+            divbloc.parent().addClass(Cookies.get('chatbox_expanded'));
+
+            divbloc.slideToggle();
+
+            expandbtn.click(function () {
+                if (divbloc.parent().hasClass("container")) {
+                    divbloc.parent().removeClass("container").addClass("container-fluid");
+                    Cookies.set("chatbox_expanded", "container-fluid")
+                }
+                else {
+                    divbloc.parent().removeClass("container-fluid").addClass("container");
+                    Cookies.set("chatbox_expanded", "container")
+                }
+            });
+
+            divmessages.scrollTop(divmessages[0].scrollHeight);
+        }
 
     };
+
+    /**
+     * Up button at the top of the page
+     */
     that.scroll_top = function () {
 
         const scrollwrapper = $('.scroll-top-wrapper');
@@ -130,6 +132,9 @@ App = (function () {
 
     };
 
+    /**
+     * Allows you to delete all cookies from the site
+     */
     that.DeleteAllCookies = function() {
         $(".delallcookies").click(function() {
             Object.keys(Cookies.get()).forEach(function(cookieName) {
@@ -142,21 +147,15 @@ App = (function () {
         });
     };
 
-    that.Auth = function() {
-
-        const is_authenticated = $(".navbar-login").data('is-authenticated');
-
-        if(is_authenticated) {
-            //IF LOGIN
-        }
-        else {
-            $(".modal-login-btn").click(function() {
-                $(".modal-login").modal('show');
-            });
-        }
-
-    };
-
+    /**
+     * Allows you to add a notification on the site
+     *
+     * @param type
+     * @param title
+     * @param content
+     * @param position
+     * @returns {{reset, update, close}|{reset, update}}
+     */
     that.Notifications = function(type, title, content, position) {
         return $.toast({
             text: content,
@@ -171,6 +170,23 @@ App = (function () {
             loader: true,
             loaderBg: '#9EC600'
         });
+    };
+
+    /**
+     * Get base url
+     * @return {string}
+     */
+    that.GetBaseUrl = function () {
+        return window.location.protocol + "//" + window.location.host + "/";
+    };
+
+    /**
+     * Returns the value of a specific segment of the URI path.
+     * @return {string}
+     */
+    that.GetSegmentUrl = function (segment) {
+        const pathArray = window.location.pathname.split('/');
+        return pathArray[segment];
     };
 
     return that;
