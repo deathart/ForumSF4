@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="iSItoNa" resname="register.title">
+        <source>register.title</source>
+        <target>Registration</target>
+      </trans-unit>
+      <trans-unit id="M8x1pm7" resname="register.charter">
+        <source>register.charter</source>
+        <target>Rules</target>
+      </trans-unit>
+      <trans-unit id="xukghBf" resname="register.next">
+        <source>register.next</source>
+        <target>Next</target>
+      </trans-unit>
+      <trans-unit id="66e7ja7" resname="register.form.username">
+        <source>register.form.username</source>
+        <target>Username</target>
+      </trans-unit>
+      <trans-unit id="_ohDINe" resname="register.form.password">
+        <source>register.form.password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="MmTVHHg" resname="register.form.passwordr">
+        <source>register.form.passwordr</source>
+        <target>Password (Repeat)</target>
+      </trans-unit>
+      <trans-unit id="4WjmM9t" resname="register.form.email">
+        <source>register.form.email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="4txKxUK" resname="register.form.emailr">
+        <source>register.form.emailr</source>
+        <target>Email (Repeat)</target>
+      </trans-unit>
+      <trans-unit id="Z9CW_J8" resname="register.form.captcha">
+        <source>register.form.captcha</source>
+        <target>Captcha</target>
+      </trans-unit>
+      <trans-unit id="catVt2g" resname="register.form.submit">
+        <source>register.form.submit</source>
+        <target>Registration</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

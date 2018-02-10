@@ -29,3 +29,7 @@ topic_show:
 faq:
     path: /faq/
     controller: App\Controller\Forum\FaqController::index
+
+register:
+    path: /auth/register
+    controller: App\Controller\Forum\AuthController::register

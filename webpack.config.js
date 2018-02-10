@@ -8,6 +8,7 @@ Encore
     //JS
     .addEntry('js/vendor/scroll', './Resources/assets/js/vendor/scroll.min.js')
     .addEntry('js/forum/app', './Resources/assets/js/forum/app.js')
+    .addEntry('js/forum/auth', './Resources/assets/js/forum/auth.js')
     //CSS
     .addStyleEntry('css/forum/style', './Resources/assets/scss/forum/style.scss')
     .addStyleEntry('css/vendor/bootstrap', './Resources/assets/scss/bootstrap.scss')

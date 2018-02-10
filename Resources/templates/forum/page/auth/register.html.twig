@@ -1,0 +1,56 @@
+{% extends "forum/template.html.twig" %}
+
+{% block body %}
+    <div class="page-bloc">
+        <div class="title clearfix">
+            {% trans from 'auth'%}register.title{% endtrans %}
+        </div>
+        <div class="content register">
+            <div class="charter">
+                {% trans from 'auth'%}register.charter{% endtrans %}
+                <div class="text-center">
+                    <span class="next-go-form btn btn-info">{% trans from 'auth'%}register.next{% endtrans %}</span>
+                </div>
+            </div>
+            <div class="form-register-bloc">
+                <form>
+                    <div class="form-group">
+                        <label for="inputUsername">{% trans from 'auth'%}register.form.username{% endtrans %}</label>
+                        <input type="text" class="form-control" id="inputUsername" placeholder="{% trans from 'auth'%}register.form.username{% endtrans %}">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword">{% trans from 'auth'%}register.form.password{% endtrans %}</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="{% trans from 'auth'%}register.form.password{% endtrans %}">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPasswordr">{% trans from 'auth'%}register.form.passwordr{% endtrans %}</label>
+                            <input type="password" class="form-control" id="inputPasswordr" placeholder="{% trans from 'auth'%}register.form.passwordr{% endtrans %}">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail">{% trans from 'auth'%}register.form.email{% endtrans %}</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="{% trans from 'auth'%}register.form.email{% endtrans %}">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmailr">{% trans from 'auth'%}register.form.emailr{% endtrans %}</label>
+                            <input type="email" class="form-control" id="inputEmailr" placeholder="{% trans from 'auth'%}register.form.emailr{% endtrans %}">
+                        </div>
+                    </div>
+                    <div class="form-row justify-content-md-center">
+                        <div class="form-group col-md-1 text-right">
+                            <label for="inputCatpcha">{% trans from 'auth'%}register.form.captcha{% endtrans %}</label>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <input type="text" class="form-control" id="inputCaptcha" placeholder="{% trans from 'auth'%}register.form.captcha{% endtrans %}">
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-info">{% trans from 'auth'%}register.form.submit{% endtrans %}</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

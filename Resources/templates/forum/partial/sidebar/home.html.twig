@@ -4,7 +4,7 @@
             {% trans from 'layout'%}sidebar.bloc_guest.title{% endtrans %}
         </div>
         <div class="content">
-            {% trans from 'layout'%}sidebar.bloc_guest.content{% endtrans %}
+            {% trans with {'%url%': url('register')} from 'layout'%}sidebar.bloc_guest.content{% endtrans %}
         </div>
     </div>
 {% endif %}

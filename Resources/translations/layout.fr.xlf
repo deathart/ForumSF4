@@ -67,7 +67,7 @@
       </trans-unit>
       <trans-unit id="oJIqJz0" resname="sidebar.bloc_guest.content">
         <source>sidebar.bloc_guest.content</source>
-        <target><![CDATA[S'il vous plaît <a href="#">inscrivez-vous</a>, ou <span class="modal-login-btn link">connectez-vous</span> pour voir le contenu du forum en entier...]]></target>
+        <target><![CDATA[S'il vous plaît <a href="%url%">inscrivez-vous</a>, ou <span class="modal-login-btn link">connectez-vous</span> pour voir le contenu du forum en entier...]]></target>
       </trans-unit>
       <trans-unit id="dlhNYPt" resname="sidebar.bloc_monline.title">
         <source>sidebar.bloc_monline.title</source>
