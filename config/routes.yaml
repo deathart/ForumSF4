@@ -1,31 +1,31 @@
 base:
-  path: /
-  controller: App\Controller\Forum\HomeController::index
+    path: /
+    controller: App\Controller\Forum\HomeController::index
 
 cat:
-  path: /category/
-  controller: App\Controller\Forum\ForumController::index
+    path: /category/
+    controller: App\Controller\Forum\ForumController::index
 
 cat_show:
-  path: /category/{slug}
-  controller: App\Controller\Forum\CatController::show
+    path: /category/{slug}
+    controller: App\Controller\Forum\CatController::show
 
 forum:
-  path: /forum/
-  controller: App\Controller\Forum\ForumController::index
+    path: /forum/
+    controller: App\Controller\Forum\ForumController::index
 
 forum_show:
-  path: /forum/{slug}
-  controller: App\Controller\Forum\ForumController::show
+    path: /forum/{slug}
+    controller: App\Controller\Forum\ForumController::show
 
 topic:
-  path: /topic/
-  controller: App\Controller\Forum\TopicController::index
+    path: /topic/
+    controller: App\Controller\Forum\TopicController::index
 
 topic_show:
-  path: /topic/{slug}
-  controller: App\Controller\Forum\TopicController::show
+    path: /topic/{slug}
+    controller: App\Controller\Forum\TopicController::show
 
 faq:
-  path: faq
-  controller: App\Controller\Forum\FaqController::index
+    path: /faq/
+    controller: App\Controller\Forum\FaqController::index
