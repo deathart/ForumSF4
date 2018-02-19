@@ -12,7 +12,7 @@ Encore
     //CSS
     .addStyleEntry('css/forum/style', './Resources/assets/scss/forum/style.scss')
     .addStyleEntry('css/vendor/bootstrap', './Resources/assets/scss/bootstrap.scss')
-    .addStyleEntry('css/vendor/font-awesome', './Resources/assets/scss/font-awesome/fontawesome.scss')
+    .addStyleEntry('css/vendor/font-awesome', './Resources/assets/scss/font-awesome/font-awesome.scss')
 
     .addPlugin(new webpack.ProvidePlugin({ Cookies: 'js-cookie/src/js.cookie.js' }))
 
