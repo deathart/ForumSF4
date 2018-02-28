@@ -83,9 +83,6 @@
             "ref": "bb31a3bbec00a8fc8aa1c9fbf9b0ef9fc492f93d"
         }
     },
-    "gecko-packages/gecko-php-unit": {
-        "version": "v3.0"
-    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
