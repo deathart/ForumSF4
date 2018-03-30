@@ -1,0 +1,36 @@
+version: '3'
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "8000:80"
+    volumes:
+      - ./:/var/www/
+      - ./docker/nginx.conf:/etc/nginx/conf.d/site.conf
+    restart: always
+    depends_on:
+      - php
+      - mysqldb
+  php:
+    build: ./docker/php/
+    restart: always
+    volumes:
+      - ./:/var/www/
+  mysqldb:
+    image: mysql:latest
+    container_name: ${DATABASE_HOST}
+    restart: always
+    env_file:
+      - ".env"
+    environment:
+      - MYSQL_DATABASE=${DATABASE_NAME}
+      - MYSQL_ROOT_PASSWORD=${DOCKER_MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=${DATABASE_USER}
+      - MYSQL_PASSWORD=${DATABASE_PWD}
+      - MYSQL_ROOT_HOST=%
+    ports:
+      - "${DATABASE_PORT}:3306"
+    volumes:
+      - "./data/db/mysql:/var/lib/mysql"
+
+#https://github.com/nanoninja/docker-nginx-php-mysql/blob/master/docker-compose.yml

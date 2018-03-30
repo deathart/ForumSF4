@@ -50,6 +50,9 @@
 # IDE
 /.idea/
 
+# Docker
+/data/
+
 ###> symfony/webpack-encore-pack ###
 /node_modules/
 /public/build/
