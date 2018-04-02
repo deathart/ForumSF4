@@ -28,12 +28,6 @@ RUN ln -snf /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && echo ${TIMEZONE} >
 RUN printf '[PHP]\ndate.timezone = "%s"\n', ${TIMEZONE} > /usr/local/etc/php/conf.d/tzone.ini
 RUN "date"
 
-RUN mkdir -p /usr/src/php/ext
-RUN curl -L -o /tmp/apcu-5.1.8.tgz https://pecl.php.net/get/apcu-5.1.8.tgz
-RUN tar xfz /tmp/apcu-5.1.8.tgz
-RUN rm -r /tmp/apcu-5.1.8.tgz
-RUN mv apcu-5.1.8  /usr/src/php/ext/apcu
-
 # Run docker-php-ext-install for available extensions
 RUN docker-php-ext-configure intl \
     && docker-php-ext-install pdo pdo_mysql opcache intl
@@ -51,7 +45,13 @@ RUN docker-php-ext-enable xdebug \
 
 RUN echo "realpath_cache_size = 4096k; realpath_cache_ttl = 7200;" > /usr/local/etc/php/conf.d/php.ini
 
-RUN echo "apc.enable_cli = On" >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini
+RUN pecl install apcu-5.1.11 \
+    && docker-php-ext-enable apcu \
+    && echo "apc.enable_cli = On" >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini \
+    && echo "apc.enabled = 1" >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini \
+    && echo "apc.shm_size = 32M" >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini \
+    && echo "apc.ttl = 7200" >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini \
+    && echo "apc.serializer = php" >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini
 
 RUN usermod -u 1000 www-data
 
