@@ -1,6 +1,6 @@
 FROM php:7.1-fpm
 
-LABEL maintainer "Daniel Ribeiro <drgomesp@gmail.com>"
+ARG TIMEZONE
 
 RUN apt-get update \
 	&& apt-get install -y \
@@ -24,15 +24,15 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN composer --version
 
 # Set your timezone here
-#RUN rm /etc/localtime
-#RUN ln -s /usr/share/zoneinfo/Asia/Dubai /etc/localtime
-#RUN "date"
+RUN ln -snf /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && echo ${TIMEZONE} > /etc/timezone
+RUN printf '[PHP]\ndate.timezone = "%s"\n', ${TIMEZONE} > /usr/local/etc/php/conf.d/tzone.ini
+RUN "date"
 
-# Install memcached extension
-#RUN git clone https://github.com/php-memcached-dev/php-memcached /usr/src/php/ext/memcached \
-#    && cd /usr/src/php/ext/memcached && git checkout -b php7 origin/php7 \
-#    && docker-php-ext-configure memcached \
-#    && docker-php-ext-install memcached
+RUN mkdir -p /usr/src/php/ext
+RUN curl -L -o /tmp/apcu-5.1.8.tgz https://pecl.php.net/get/apcu-5.1.8.tgz
+RUN tar xfz /tmp/apcu-5.1.8.tgz
+RUN rm -r /tmp/apcu-5.1.8.tgz
+RUN mv apcu-5.1.8  /usr/src/php/ext/apcu
 
 # Run docker-php-ext-install for available extensions
 RUN docker-php-ext-configure intl \
@@ -49,6 +49,12 @@ RUN docker-php-ext-enable xdebug \
     && echo "xdebug.idekey = \"PHPSTORM\"" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
     && echo "xdebug.remote_port = 9001" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
+RUN echo "realpath_cache_size = 4096k; realpath_cache_ttl = 7200;" > /usr/local/etc/php/conf.d/php.ini
+
+RUN echo "apc.enable_cli = On" >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini
+
 RUN usermod -u 1000 www-data
 
 CMD php-fpm -F
+
+WORKDIR /var/www/
