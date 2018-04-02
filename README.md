@@ -12,6 +12,10 @@ I created this forum system with the help of Symfony4, thank you for being lenie
   - `composer dump-autoload --optimize --no-dev --classmap-authoritative`(optional)
   - `php bin/console server:run`
   - Go to [http://127.0.0.1:8000](http://127.0.0.1:8000)
+- If you use docker :
+  - `docker-compose build`
+  - `docker-compose up -d`
+  - Go to [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 # Themes and languages
 - Themes : (Provisional).
