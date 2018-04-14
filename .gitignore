@@ -53,6 +53,9 @@
 # Docker
 /data/
 
+# .env
+.env
+
 ###> symfony/webpack-encore-pack ###
 /node_modules/
 /public/build/
