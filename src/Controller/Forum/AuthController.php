@@ -11,6 +11,11 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
  */
 class AuthController extends BaseController
 {
+    /**
+     * AuthController constructor.
+     * @param SessionInterface $session
+     * @param RequestStack $request
+     */
     public function __construct(SessionInterface $session, RequestStack $request)
     {
         parent::__construct($session, $request);
