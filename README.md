@@ -21,7 +21,7 @@ I created this forum system with the help of Symfony4, thank you for being lenie
 - Themes : (Provisional).
   - For templates files : `Ressources/templates`
   - For assets (JS/CSS/IMG/FONTS) : `Ressources/assets`
-- Language : To modify or add a new language, this can be found in the folder: `Ressources/translations` (Provisional).
+- Language : To modify or add a new language, go to [http://127.0.0.1:8000/admin/_trans](http://127.0.0.1:8000/admin/_trans)
 
 # Server Requirements
 [PHP](http://php.net) version 7.1.3 or newer is required, with the [intl](http://php.net/manual/fr/book.intl.php) & [iconv](http://php.net/manual/fr/book.iconv.php) extension's installed. [Why 7.1](https://gophp71.org/)?
