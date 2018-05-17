@@ -51,7 +51,7 @@
 /.idea/
 
 # Docker
-/data/
+/shared/
 
 # .env
 .env
