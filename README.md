@@ -4,17 +4,28 @@ I created this forum system with the help of Symfony4, thank you for being lenie
 # Installation (An automatic installation will come later on)
 - First of all, configure the file .env to the root of the folder.
 - Then execute the following commands :
-  - `composer install`
-  - `php bin/console doctrine:schema:update --force`
-  - `php bin/console doctrine:fixtures:load`
-  - `yarn install`
-  - `yarn run encore production`
-  - `composer dump-autoload --optimize --no-dev --classmap-authoritative`(optional)
-  - `php bin/console server:run`
-  - Go to [http://127.0.0.1:8000](http://127.0.0.1:8000)
-- If you use docker :
-  - `docker-compose build`
-  - `docker-compose up -d`
+  - PHP
+      - Normal
+          - ```shell
+              composer install
+              php bin/console doctrine:schema:update --force
+              php bin/console doctrine:fixtures:load
+              composer dump-autoload --optimize --no-dev --classmap-authoritative
+              php bin/console server:run
+              ```
+      - Docker
+          - ```shell
+              docker-compose build && docker-compose up -d
+              ./docker/composer install
+              ./docker/console bin/console doctrine:schema:update --force
+              ./docker/console bin/console doctrine:fixtures:load
+              ./docker/composer dump-autoload --optimize --no-dev --classmap-authoritative
+              ```
+  - Theme
+      - ```shell
+          yarn install
+          yarn run encore production
+          ```
   - Go to [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 # Themes and languages

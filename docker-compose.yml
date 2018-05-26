@@ -32,6 +32,6 @@ services:
       - MYSQL_PASSWORD=${DATABASE_PWD}
       - MYSQL_ROOT_HOST=%
     ports:
-      - "${DATABASE_PORT}:3306"
+      - "${DOCKER_MYSQL_PORT}:3306"
     volumes:
       - ./shared/db:/var/lib/mysql
