@@ -8,7 +8,7 @@
         "ext-iconv": "*",
         "ext-intl": "*",
         "doctrine/doctrine-fixtures-bundle": "^3.0",
-        "php-translation/symfony-bundle": "^0.7",
+        "php-translation/symfony-bundle": "^0.8",
         "sensio/framework-extra-bundle": "^5.1",
         "sensiolabs/security-checker": "^4.1",
         "symfony/asset": "^4.1",
