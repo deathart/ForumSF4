@@ -65,6 +65,9 @@
                 display: inline-block;
                 >img {
                     float: left;
+                    @media (max-width: 1280px) {
+                        display: none !important;
+                    }
                 }
                 >.info {
                     float: left;

@@ -59,7 +59,7 @@
                     width: 5%;
                     height: 75px;
                     position: relative;
-                    @media (max-width: 576px) {
+                    @media (max-width: 1024px) {
                         display: none;
                     }
                     >i {
@@ -127,7 +127,9 @@
                         display: none;
                     }
                     >img {
-                        display: inline-block;
+                        @media (max-width: 1280px) {
+                            display: none;
+                        }
                         float: left;
                     }
                     >.info {
@@ -195,6 +197,9 @@
                     width: 5%;
                     height: 50px;
                     position: relative;
+                    @media (max-width: 1280px) {
+                        display: none;
+                    }
                     >i {
                         font-size: 35px;
                         cursor: pointer;
@@ -238,8 +243,10 @@
                     width: 29%;
                     position: relative;
                     >img {
-                        display: inline-block;
                         float: left;
+                        @media (max-width: 1280px) {
+                            display: none;
+                        }
                     }
                     >.info {
                         margin-left: 1%;
