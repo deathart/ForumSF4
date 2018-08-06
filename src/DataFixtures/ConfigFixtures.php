@@ -14,6 +14,9 @@ class ConfigFixtures extends Fixture
             ['name' => 'title', 'value' => 'Forum Name', 'type' => 'simple'],
             ['name' => 'desc', 'value' => 'No other bulletin board software offers a greater complement of features, while maintaining efficiency and ease of use.', 'type' => 'text'],
             ['name' => 'lang', 'value' => 'en', 'type' => 'simple'],
+            ['name' => 'facebook_link', 'value' => 'https://facebook.com', 'type' => 'simple'],
+            ['name' => 'twitter_link', 'value' => 'https://twitter.com', 'type' => 'simple'],
+            ['name' => 'google_link', 'value' => 'https://google.com', 'type' => 'simple'],
         ];
 
         foreach ($configs as $data) {

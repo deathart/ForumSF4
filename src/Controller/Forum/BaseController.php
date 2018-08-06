@@ -121,6 +121,9 @@ class BaseController extends Controller
         $this->data['foruminfo'] = [
             'title' => $this->GetConfig('title'),
             'description' => $this->GetConfig('desc'),
+            'facebook_link' => $this->GetConfig('facebook_link'),
+            'twitter_link' => $this->GetConfig('twitter_link'),
+            'google_link' => $this->GetConfig('google_link'),
         ];
 
         $this->data['titlePage'] = $this->title;
