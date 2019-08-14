@@ -6263,9 +6263,9 @@ webpack-manifest-plugin@^2.0.2:
     lodash ">=3.5 <5"
     tapable "^1.0.0"
 
-webpack-notifier@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/webpack-notifier/-/webpack-notifier-1.7.0.tgz#4e03ea3ba1c0588d863935363f145d067815068a"
+webpack-notifier@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/webpack-notifier/-/webpack-notifier-1.8.0.tgz#994bdde0fcefc5f1a92b6d91353c8152ddd9c583"
   dependencies:
     node-notifier "^5.1.2"
     object-assign "^4.1.0"
