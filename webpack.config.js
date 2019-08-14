@@ -18,21 +18,18 @@ Encore
     //Add public
     .addPlugin(new webpack.ProvidePlugin({ Cookies: 'js-cookie/src/js.cookie.js' }))
     //Add shared
-    .createSharedEntry('js/vendor', [
-        'jquery',
-        'bootstrap',
-        'jquery-toast-plugin'
-    ])
+    .createSharedEntry('js/vendor', './webpack.shared.js')
+    .enableSingleRuntimeChunk()
     //Set css settings
     .enableSassLoader()
     .enablePostCssLoader((options) => {
-         options.config = {
-             path: 'config/postcss.config.js'
-         };
+        options.config = {
+            path: 'config/postcss.config.js'
+        };
     })
     //Set babel
     .configureBabel(function(babelConfig) {
-        babelConfig.presets.push('env');
+
     })
     //Makes jQuery available everywhere
     .autoProvidejQuery()
