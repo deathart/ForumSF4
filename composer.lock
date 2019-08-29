@@ -5284,16 +5284,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v4.1.4",
+            "version": "v4.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "86cdb930a6a855b0ab35fb60c1504cb36184f843"
+                "reference": "e89969c00d762349f078db1128506f7f3dcc0d4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/86cdb930a6a855b0ab35fb60c1504cb36184f843",
-                "reference": "86cdb930a6a855b0ab35fb60c1504cb36184f843",
+                "url": "https://api.github.com/repos/symfony/process/zipball/e89969c00d762349f078db1128506f7f3dcc0d4a",
+                "reference": "e89969c00d762349f078db1128506f7f3dcc0d4a",
                 "shasum": ""
             },
             "require": {
@@ -5302,7 +5302,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.1-dev"
+                    "dev-master": "4.3-dev"
                 }
             },
             "autoload": {
@@ -5329,20 +5329,20 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-08-03T11:13:38+00:00"
+            "time": "2019-08-26T08:26:39+00:00"
         },
         {
             "name": "symfony/web-server-bundle",
-            "version": "v4.1.4",
+            "version": "v4.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/web-server-bundle.git",
-                "reference": "448d4437e95d0884856a1e83bc51a15b5d048060"
+                "reference": "dc26b980900ddf3e9feade14e5b21c029e8ca92f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/web-server-bundle/zipball/448d4437e95d0884856a1e83bc51a15b5d048060",
-                "reference": "448d4437e95d0884856a1e83bc51a15b5d048060",
+                "url": "https://api.github.com/repos/symfony/web-server-bundle/zipball/dc26b980900ddf3e9feade14e5b21c029e8ca92f",
+                "reference": "dc26b980900ddf3e9feade14e5b21c029e8ca92f",
                 "shasum": ""
             },
             "require": {
@@ -5361,7 +5361,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.1-dev"
+                    "dev-master": "4.3-dev"
                 }
             },
             "autoload": {
@@ -5388,7 +5388,7 @@
             ],
             "description": "Symfony WebServerBundle",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26T09:10:45+00:00"
+            "time": "2019-08-20T14:27:59+00:00"
         }
     ],
     "aliases": [],
