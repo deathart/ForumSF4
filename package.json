@@ -1,6 +1,6 @@
 {
     "devDependencies": {
-        "@babel/preset-env": "^7.6.2",
+        "@babel/preset-env": "^7.7.1",
         "autoprefixer": "^9.6.1",
         "jquery": "^3.4.1",
         "node-sass": "^4.12.0",
